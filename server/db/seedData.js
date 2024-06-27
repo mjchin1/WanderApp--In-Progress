@@ -51,3 +51,11 @@ const users = [
     password: "letsgo99",
   },
 ];
+
+module.exports = {
+  arrivals,
+  departures,
+  activities,
+  calendar,
+  users,
+};
