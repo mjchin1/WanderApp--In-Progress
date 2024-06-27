@@ -24,26 +24,30 @@ const departures = [
 
 const activities = [
   {
-    activityName: "",
-    activityDescription: "",
-    activityPhoto: "",
-    activityWebsite: "",
+    activityName: "Wine Tasting in Porto",
+    activityDescription:
+      "Visitng the oldest winery in Porto for a tour and a tasting.",
+    activityPhoto:
+      "https://images.prismic.io/bounce/acec95d0-acc6-42e0-883c-57d168a9ffd0_maksym-kaharlytskyi-3uJt73tr4hI-unsplash.jpg?auto=format%2Ccompress&w=1466&fit=crop&ar=3%3A2",
+    activityWebsite:
+      "https://www.tripadvisor.com/Attraction_Products-g189169-t11891-zfg11868-a_contentId.123435055902+14327704512-Northern_Portugal.html",
   },
 ];
 
 const calendar = [
   {
-    eventName: "",
-    eventDate: "",
-    eventTime: "",
-    eventDescription: "",
-    eventWebsite: "",
+    eventName: "Dinner at Belcanto",
+    eventDate: "8/17/2024",
+    eventTime: "7:30pm",
+    eventDescription: "Meet at the restaurant at 7:15pm",
+    eventWebsite: "https://www.belcanto.pt/en/",
   },
 ];
 
 const users = [
   {
-    name: "",
-    password: "",
+    name: "Melissa",
+    username: "Melissa1",
+    password: "letsgo99",
   },
 ];
