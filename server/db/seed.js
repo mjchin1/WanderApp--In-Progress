@@ -13,7 +13,7 @@ const dropTables = async () => {
   try {
     console.log("Dropping tables...");
     await client.query(`
-      DROP TABLE IF EXISTS trips;
+      DROP TABLE IF EXISTS trips CASCADE;
       DROP TABLE IF EXISTS arrivals;
       DROP TABLE IF EXISTS departures;
       DROP TABLE IF EXISTS activities;
@@ -37,7 +37,7 @@ const createTables = async () => {
             destination TEXT,
             start_date TEXT,
             end_date TEXT,
-            trip_photo TEXT,
+            trip_photo TEXT
         );
        
         CREATE TABLE arrivals (
@@ -49,7 +49,7 @@ const createTables = async () => {
             travel_origin TEXT,
             departure_time TEXT,
             travel_destination TEXT,
-            arrival_time TEXT,
+            arrival_time TEXT
         );
 
         CREATE TABLE departures (
@@ -61,7 +61,7 @@ const createTables = async () => {
           travel_origin TEXT,
           departure_time TEXT,
           travel_destination TEXT,
-          arrival_time TEXT,
+          arrival_time TEXT
         );
 
         CREATE TABLE activities (
@@ -70,7 +70,7 @@ const createTables = async () => {
           activity_name TEXT,
           activity_description TEXT,
           activity_photo TEXT, 
-          activity_website TEXT,
+          activity_website TEXT
         );
 
         CREATE TABLE calendar (
@@ -80,17 +80,17 @@ const createTables = async () => {
           event_time TEXT,
           event_name TEXT,
           event_description TEXT,
-          event_website TEXT,
+          event_website TEXT
         );
 
         CREATE TABLE users (
           user_id SERIAL PRIMARY KEY,
           name TEXT,
-          password TEXT,
+          password TEXT
         );
 
     `);
-    console.log("tables have been built!");
+    console.log("Tables have been built!");
   } catch (error) {
     console.error(error);
   }
@@ -107,7 +107,7 @@ const createInitialTrips = async () => {
         [trip.destination, trip.startDate, trip.endDate, trip.tripPhoto]
       );
     }
-    console.log("created trips!");
+    console.log("Created Trips!");
   } catch (error) {
     throw error;
   }
@@ -133,7 +133,7 @@ const createInitialArrivals = async () => {
         ]
       );
     }
-    console.log("created arrivals!");
+    console.log("Created Arrivals!");
   } catch (error) {
     throw error;
   }
@@ -159,7 +159,7 @@ const createInitialDepartures = async () => {
         ]
       );
     }
-    console.log("created departures!");
+    console.log("Created Departures!");
   } catch (error) {
     throw error;
   }
@@ -182,7 +182,7 @@ const createInitialActivities = async () => {
         ]
       );
     }
-    console.log("created activities!");
+    console.log("Created Activities!");
   } catch (error) {
     throw error;
   }
@@ -193,7 +193,7 @@ const createInitialCalendar = async () => {
     for (const event of calendar) {
       await client.query(
         `
-                  INSERT INTO calendars(trip_id, event_date, event_time, event_name, event_description, event_website)
+                  INSERT INTO calendar(trip_id, event_date, event_time, event_name, event_description, event_website)
                   VALUES($1, $2, $3, $4, $5, $6);
               `,
         [
@@ -206,7 +206,7 @@ const createInitialCalendar = async () => {
         ]
       );
     }
-    console.log("created calendar!");
+    console.log("Created Calendar!");
   } catch (error) {
     throw error;
   }
@@ -223,7 +223,7 @@ const createInitialUsers = async () => {
         [users.name, users.password]
       );
     }
-    console.log("created users!");
+    console.log("Created Users!");
   } catch (error) {
     throw error;
   }
