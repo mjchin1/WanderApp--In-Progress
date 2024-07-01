@@ -77,7 +77,7 @@ const createTables = async () => {
           event_id SERIAL PRIMARY KEY,
           trip_id INTEGER REFERENCES trips(trip_id) ON DELETE CASCADE,
           event_date TEXT,
-          event_start TEXT,
+          event_time TEXT,
           event_name TEXT,
           event_description TEXT,
           event_website TEXT,
@@ -95,3 +95,90 @@ const createTables = async () => {
     console.error(error);
   }
 };
+
+const createInitialTrips = async () => {
+  try {
+    for (const trip of trips) {
+      await client.query(
+        `
+                INSERT INTO trips(destination, start_date, end_date, trip_photo)
+                VALUES($1, $2, $3, $4);
+            `,
+        [trip.destination, trip.startDate, trip.endDate, trip.tripPhoto]
+      );
+    }
+    console.log("created trips!");
+  } catch (error) {
+    throw error;
+  }
+};
+
+const createInitialArrivals = async () => {
+  try {
+    for (const arrival of arrivals) {
+      await client.query(
+        `
+                INSERT INTO arrivals(trip_id, traveler_name, travel_date, trip_number, travel_origin, departure_time, travel_destination, arrival_time)
+                VALUES($1, $2, $3, $4, $5, $6, $7, $8);
+            `,
+        [
+          arrival.tripId,
+          arrival.travelerName,
+          arrival.travelDate,
+          arrival.tripNumber,
+          arrival.travelOrigin,
+          arrival.departureTime,
+          arrival.travelDestination,
+          arrival.arrivalTime,
+        ]
+      );
+    }
+    console.log("created arrivals!");
+  } catch (error) {
+    throw error;
+  }
+};
+
+const createInitialDepartures = async () => {
+  try {
+    for (const departure of departures) {
+      await client.query(
+        `
+                INSERT INTO departures(trip_id, traveler_name, travel_date, trip_number, travel_origin, departure_time, travel_destination, arrival_time)
+                VALUES($1, $2, $3, $4, $5, $6, $7, $8);
+            `,
+        [
+          departure.tripId,
+          departure.travelerName,
+          departure.travelDate,
+          departure.tripNumber,
+          departure.travelOrigin,
+          departure.departureTime,
+          departure.travelDestination,
+          departure.arrivalTime,
+        ]
+      );
+    }
+    console.log("created departures!");
+  } catch (error) {
+    throw error;
+  }
+};
+
+const buildDb = async () => {
+  try {
+    client.connect();
+
+    await dropTables();
+    await createTables();
+    await createInitialTrips();
+    await createInitialArrivals();
+    await createInitialDepartures();
+  } catch (error) {
+    console.error(error);
+  } finally {
+    client.end();
+  }
+};
+
+buildDb();
