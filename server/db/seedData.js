@@ -116,6 +116,7 @@ const users = [
 ];
 
 module.exports = {
+  trips,
   arrivals,
   departures,
   activities,
