@@ -165,15 +165,81 @@ const createInitialDepartures = async () => {
   }
 };
 
+const createInitialActivities = async () => {
+  try {
+    for (const activity of activities) {
+      await client.query(
+        `
+                  INSERT INTO activities(trip_id, activity_name, activity_description, activity_photo, activity_website)
+                  VALUES($1, $2, $3, $4, $5);
+              `,
+        [
+          activity.tripId,
+          activity.activityName,
+          activity.activityDescription,
+          activity.activityPhoto,
+          activity.activityWebsite,
+        ]
+      );
+    }
+    console.log("created activities!");
+  } catch (error) {
+    throw error;
+  }
+};
+
+const createInitialCalendar = async () => {
+  try {
+    for (const event of calendar) {
+      await client.query(
+        `
+                  INSERT INTO calendars(trip_id, event_date, event_time, event_name, event_description, event_website)
+                  VALUES($1, $2, $3, $4, $5, $6);
+              `,
+        [
+          event.tripId,
+          event.eventDate,
+          event.eventTime,
+          event.eventName,
+          event.eventDescription,
+          event.eventWebsite,
+        ]
+      );
+    }
+    console.log("created calendar!");
+  } catch (error) {
+    throw error;
+  }
+};
+
+const createInitialUsers = async () => {
+  try {
+    for (const user of users) {
+      await client.query(
+        `
+                  INSERT INTO users(name, password)
+                  VALUES($1, $2);
+              `,
+        [users.name, users.password]
+      );
+    }
+    console.log("created users!");
+  } catch (error) {
+    throw error;
+  }
+};
+
 const buildDb = async () => {
   try {
     client.connect();
-
     await dropTables();
     await createTables();
     await createInitialTrips();
     await createInitialArrivals();
     await createInitialDepartures();
+    await createInitialActivities();
+    await createInitialCalendar();
+    await createInitialUsers();
   } catch (error) {
     console.error(error);
   } finally {
