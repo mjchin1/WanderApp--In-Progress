@@ -8,11 +8,11 @@ const trips = [
   },
 
   {
-    destination: "Antigua, Guatemala",
-    startDate: "10/30/2024",
-    endDate: "11/6/2024",
+    destination: "Copenhagen, Denmark",
+    startDate: "10/31/2024",
+    endDate: "11/7/2024",
     tripPhoto:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Santa_Catalina_Arch_-_Antigua_Guatemala_Feb_2020.jpg/1200px-Santa_Catalina_Arch_-_Antigua_Guatemala_Feb_2020.jpg",
+      "https://media.cntraveler.com/photos/5c002c7745e16c465f875830/2:1/w_2560%2Cc_limit/GettyImages-1011529218.jpg",
   },
 ];
 
@@ -31,12 +31,12 @@ const arrivals = [
   {
     tripId: 2,
     travelerName: "Melissa",
-    travelDate: "10/30/2024",
-    tripNumber: "UA 2006",
+    travelDate: "10/31/2024",
+    tripNumber: "SK 944",
     travelOrigin: "Chicago, IL",
-    departureTime: "8:54am",
-    travelDestination: "Guatemala City, Guatemala",
-    arrivalTime: "12:35pm",
+    departureTime: "8:10pm",
+    travelDestination: "Copenhagen, Denmark",
+    arrivalTime: "10:05am",
   },
 ];
 
@@ -55,12 +55,12 @@ const departures = [
   {
     tripId: 2,
     travelerName: "Melissa",
-    travelDate: "11/6/2024",
-    tripNumber: "UA 2007",
-    travelOrigin: "Guatemala City, Guatemala",
-    departureTime: "1:28pm",
+    travelDate: "11/7/2024",
+    tripNumber: "SK 943",
+    travelOrigin: "Copenhagen, Denmark",
+    departureTime: "1:35pm",
     travelDestination: "Chicago, IL",
-    arrivalTime: "6:10pm",
+    arrivalTime: "3:50pm",
   },
 ];
 
@@ -78,11 +78,12 @@ const activities = [
 
   {
     tripId: 2,
-    activityName: "Visit Parque Central",
+    activityName: "Visit Rosenborg Garden",
     activityDescription: "Take a stroll before getting lunch",
     activityPhoto:
-      "https://d3e1m60ptf1oym.cloudfront.net/ed60df84-5d8b-4895-af5f-f56a2261bc2f/20181202_7938_xlarge.jpg",
-    activityWebsite: "",
+      "https://thinkcopenhagen.com/wp-content/uploads/2022/07/Kings-Garden1_Copenhagen.jpg",
+    activityWebsite:
+      "https://www.visitcopenhagen.com/copenhagen/planning/kings-garden-gdk420899",
   },
 ];
 
@@ -98,11 +99,11 @@ const calendar = [
 
   {
     tripId: 2,
-    eventName: "Dinner at Barriga Llena",
+    eventName: "Dinner at Host",
     eventDate: "11/2/2024",
     eventTime: "7:30pm",
     eventDescription: "Meet at the restaurant at 7:15pm",
-    eventWebsite: "https://www.instagram.com/tenemoslabarrigallena/?hl=en",
+    eventWebsite: "https://cofoco.dk/en/hoest/",
   },
 ];
 
