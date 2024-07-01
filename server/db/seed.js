@@ -64,6 +64,31 @@ const createTables = async () => {
           arrival_time TEXT,
         );
 
+        CREATE TABLE activities (
+          activity_id SERIAL PRIMARY KEY,
+          trip_id INTEGER REFERENCES trips(trip_id) ON DELETE CASCADE,
+          activity_name TEXT,
+          activity_description TEXT,
+          activity_photo TEXT, 
+          activity_website TEXT,
+        );
+
+        CREATE TABLE calendar (
+          event_id SERIAL PRIMARY KEY,
+          trip_id INTEGER REFERENCES trips(trip_id) ON DELETE CASCADE,
+          event_date TEXT,
+          event_start TEXT,
+          event_name TEXT,
+          event_description TEXT,
+          event_website TEXT,
+        );
+
+        CREATE TABLE users (
+          user_id SERIAL PRIMARY KEY,
+          name TEXT,
+          password TEXT,
+        );
+
     `);
     console.log("tables have been built!");
   } catch (error) {
