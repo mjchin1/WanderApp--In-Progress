@@ -3,7 +3,7 @@ const client = require("../client");
 async function getArrivalById(id) {
   try {
     const {
-      rows: [activity],
+      rows: [arrival],
     } = await client.query(
       `
           SELECT * FROM arrivals
