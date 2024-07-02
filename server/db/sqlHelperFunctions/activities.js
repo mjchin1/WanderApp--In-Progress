@@ -17,7 +17,6 @@ async function getActivityById(id) {
   }
 }
 
-
 async function getAllActivitiesByTripId(tripId) {
   try {
     const { rows } = await client.query(
@@ -32,7 +31,6 @@ async function getAllActivitiesByTripId(tripId) {
     throw error;
   }
 }
-
 
 async function createActivity(body) {
   const {
@@ -71,7 +69,7 @@ async function deleteActivity(id) {
       rows: [activity],
     } = await client.query(
       `
-        DELETE FROM activity
+        DELETE FROM activities
         WHERE activity_id = $1
         RETURNING *;
       `,
