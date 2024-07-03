@@ -101,9 +101,9 @@ const createInitialTrips = async () => {
     for (const trip of trips) {
       await client.query(
         `
-                INSERT INTO trips(destination, start_date, end_date, trip_photo)
-                VALUES($1, $2, $3, $4);
-            `,
+          INSERT INTO trips(destination, start_date, end_date, trip_photo)
+          VALUES($1, $2, $3, $4);
+        `,
         [trip.destination, trip.startDate, trip.endDate, trip.tripPhoto]
       );
     }
@@ -118,9 +118,9 @@ const createInitialArrivals = async () => {
     for (const arrival of arrivals) {
       await client.query(
         `
-                INSERT INTO arrivals(trip_id, traveler_name, travel_date, trip_number, travel_origin, departure_time, travel_destination, arrival_time)
-                VALUES($1, $2, $3, $4, $5, $6, $7, $8);
-            `,
+          INSERT INTO arrivals(trip_id, traveler_name, travel_date, trip_number, travel_origin, departure_time, travel_destination, arrival_time)
+          VALUES($1, $2, $3, $4, $5, $6, $7, $8);
+        `,
         [
           arrival.tripId,
           arrival.travelerName,
@@ -144,9 +144,9 @@ const createInitialDepartures = async () => {
     for (const departure of departures) {
       await client.query(
         `
-                INSERT INTO departures(trip_id, traveler_name, travel_date, trip_number, travel_origin, departure_time, travel_destination, arrival_time)
-                VALUES($1, $2, $3, $4, $5, $6, $7, $8);
-            `,
+          INSERT INTO departures(trip_id, traveler_name, travel_date, trip_number, travel_origin, departure_time, travel_destination, arrival_time)
+          VALUES($1, $2, $3, $4, $5, $6, $7, $8);
+        `,
         [
           departure.tripId,
           departure.travelerName,
@@ -170,9 +170,9 @@ const createInitialActivities = async () => {
     for (const activity of activities) {
       await client.query(
         `
-                  INSERT INTO activities(trip_id, activity_name, activity_description, activity_photo, activity_website)
-                  VALUES($1, $2, $3, $4, $5);
-              `,
+          INSERT INTO activities(trip_id, activity_name, activity_description, activity_photo, activity_website)
+          VALUES($1, $2, $3, $4, $5);
+        `,
         [
           activity.tripId,
           activity.activityName,
@@ -193,9 +193,9 @@ const createInitialCalendar = async () => {
     for (const event of calendar) {
       await client.query(
         `
-                  INSERT INTO calendar(trip_id, event_date, event_time, event_name, event_description, event_website)
-                  VALUES($1, $2, $3, $4, $5, $6);
-              `,
+          INSERT INTO calendar(trip_id, event_date, event_time, event_name, event_description, event_website)
+          VALUES($1, $2, $3, $4, $5, $6);
+        `,
         [
           event.tripId,
           event.eventDate,
@@ -217,9 +217,9 @@ const createInitialUsers = async () => {
     for (const user of users) {
       await client.query(
         `
-                  INSERT INTO users(name, password)
-                  VALUES($1, $2);
-              `,
+          INSERT INTO users(name, password)
+          VALUES($1, $2);
+        `,
         [users.name, users.password]
       );
     }
