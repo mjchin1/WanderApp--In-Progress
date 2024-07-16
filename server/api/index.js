@@ -7,10 +7,10 @@ router.use("/arrivals", require("./arrivals"));
 
 router.use("/calendar", require("./calendar"));
 
-router.use("/depatures", require("./departures"));
+// router.use("/depatures", require("./departures"));
 
-router.use("/trips", require("./trips"));
+// router.use("/trips", require("./trips"));
 
-router.use("/users", require("./users"));
+// router.use("/users", require("./users"));
 
 module.exports = router;
