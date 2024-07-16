@@ -2,7 +2,7 @@ const trips = [
   {
     destination: "Lisbon, Portugal",
     startDate: "8/16/2024",
-    tripEndDate: "8/23/2024",
+    endDate: "8/23/2024",
     tripPhoto:
       "https://www.travelandleisure.com/thmb/LzWpzDihxjffaFmM9TZWCvm9VyY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/lisbon-portugal-LISBONTG0521-c933a0fb669647619fa580f6c602c4c8.jpg",
   },

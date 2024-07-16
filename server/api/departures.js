@@ -3,6 +3,7 @@ const router = express.Router();
 
 const {
   getDepartureById,
+  getAllDepartures,
   getAllDeparturesByTripId,
   createDeparture,
   deleteDeparture,
@@ -18,13 +19,12 @@ router.get("/trip/:id", async (req, res, next) => {
   }
 });
 
-router.post("/create", async (req, res, next) => {
+router.get("/", async (req, res, next) => {
   try {
-    const departure = await createDeparture(req.body);
-    res.send(departure);
+    const departures = await getAllDepartures();
+    res.send(departures);
   } catch (error) {
     next(error);
-    throw new Error(`${error.message}`);
   }
 });
 
@@ -34,6 +34,16 @@ router.get("/:id", async (req, res, next) => {
     res.send(departure);
   } catch (error) {
     next(error);
+  }
+});
+
+router.post("/", async (req, res, next) => {
+  try {
+    const departure = await createDeparture(req.body);
+    res.send(departure);
+  } catch (error) {
+    next(error);
+    throw new Error(`${error.message}`);
   }
 });
 

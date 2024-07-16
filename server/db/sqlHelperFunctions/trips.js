@@ -2,17 +2,14 @@ const client = require("../client");
 
 //Will eventually need to add a "getTripsByUserId" function
 
-async function getAllTrips(tripId) {
+async function getAllTrips() {
   try {
-    const { rows } = await client.query(
-      `
+    const { rows } = await client.query(`
           SELECT * FROM trips;
-      `,
-      [tripId]
-    );
+      `);
     return rows;
-  } catch (error) {
-    throw error;
+  } catch (err) {
+    throw err;
   }
 }
 

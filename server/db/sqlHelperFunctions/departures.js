@@ -1,5 +1,34 @@
 const client = require("../client");
 
+async function getAllDeparturesByTripId(tripId) {
+  try {
+    const { rows } = await client.query(
+      `
+          SELECT * FROM departures
+          WHERE departures.trip_id = $1;
+      `,
+      [tripId]
+    );
+    return rows;
+  } catch (error) {
+    throw error;
+  }
+}
+
+async function getAllDepartures() {
+  try {
+    const { rows } = await client.query(
+      `
+          SELECT * FROM departures
+      `
+    );
+    return rows;
+  } catch (error) {
+    throw error;
+  }
+}
+
+
 async function getDepartureById(id) {
   try {
     const {
@@ -12,21 +41,6 @@ async function getDepartureById(id) {
       [id]
     );
     return departure;
-  } catch (error) {
-    throw error;
-  }
-}
-
-async function getAllDeparturesByTripId(tripId) {
-  try {
-    const { rows } = await client.query(
-      `
-          SELECT * FROM departures
-          WHERE departures.trip_id = $1;
-      `,
-      [tripId]
-    );
-    return rows;
   } catch (error) {
     throw error;
   }
@@ -114,6 +128,7 @@ async function updateDeparture(id, body = {}) {
 
 module.exports = {
   getDepartureById,
+  getAllDepartures,
   getAllDeparturesByTripId,
   createDeparture,
   deleteDeparture,

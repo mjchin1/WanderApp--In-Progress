@@ -11,7 +11,7 @@ const {
 
 router.get("/", async (req, res, next) => {
   try {
-    const trips = await getAllTrips(req.params.id);
+    const trips = await getAllTrips();
     res.send(trips);
   } catch (error) {
     next(error);

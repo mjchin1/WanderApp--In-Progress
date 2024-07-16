@@ -7,7 +7,7 @@ router.use("/arrivals", require("./arrivals"));
 
 router.use("/calendar", require("./calendar"));
 
-router.use("/depatures", require("./departures"));
+router.use("/departures", require("./departures"));
 
 router.use("/trips", require("./trips"));
 
