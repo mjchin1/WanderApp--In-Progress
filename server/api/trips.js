@@ -27,7 +27,7 @@ router.get("/:id", async (req, res, next) => {
   }
 });
 
-router.post("/:id", async (req, res, next) => {
+router.post("/create", async (req, res, next) => {
   try {
     const trip = await createTrip(req.body);
     res.send(trip);

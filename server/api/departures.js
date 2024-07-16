@@ -18,7 +18,7 @@ router.get("/trip/:id", async (req, res, next) => {
   }
 });
 
-router.post("/:id", async (req, res, next) => {
+router.post("/create", async (req, res, next) => {
   try {
     const departure = await createDeparture(req.body);
     res.send(departure);
