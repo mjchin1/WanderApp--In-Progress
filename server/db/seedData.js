@@ -81,7 +81,7 @@ const activities = [
     activityName: "Visit Rosenborg Garden",
     activityDescription: "Take a stroll before getting lunch",
     activityPhoto:
-      "https://thinkcopenhagen.com/wp-content/uploads/2022/07/Kings-Garden1_Copenhagen.jpg",
+      "https://traveladdicts.net/wp-content/uploads/2017/05/Copenhagen-Denmark-Rosenborg-Castle-Slot-from-gardens.jpg",
     activityWebsite:
       "https://www.visitcopenhagen.com/copenhagen/planning/kings-garden-gdk420899",
   },

@@ -7,7 +7,18 @@ const {
   createActivity,
   deleteActivity,
   updateActivity,
+  getAllActivities
 } = require("../db/sqlHelperFunctions/activities");
+
+
+router.get("/", async (req, res, next) => {
+  try {
+    const activities = await getAllActivities();
+    res.send(activities);
+  } catch (error) {
+    next(error);
+  }
+});
 
 router.get("/trip/:id", async (req, res, next) => {
   try {

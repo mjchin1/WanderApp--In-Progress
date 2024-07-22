@@ -17,6 +17,20 @@ async function getActivityById(id) {
   }
 }
 
+async function getAllActivities() {
+  try {
+    const { rows } = await client.query(
+      `
+          SELECT * FROM activities;
+      `,
+
+    );
+    return rows;
+  } catch (error) {
+    throw error;
+  }
+}
+
 async function getAllActivitiesByTripId(tripId) {
   try {
     const { rows } = await client.query(
@@ -111,5 +125,6 @@ module.exports = {
   getAllActivitiesByTripId,
   createActivity,
   deleteActivity,
-  updateActivity
+  updateActivity,
+  getAllActivities
 };
