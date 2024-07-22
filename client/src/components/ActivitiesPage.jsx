@@ -30,19 +30,22 @@ function ActivitiesPage() {
     <>
       <h1>Activity Ideas</h1>
 
+
+      <div className="activityContainer">
       {activities.map((activity) => (
           <>
           <div key={activity.activity_id} className="activityCard">
             <div className="activityDetails">
               <p className="activityHeading">{activity.activity_name}</p>
-              <p className="activityHeading">{activity.activity_description}</p>
-              <a className="activityHeading" href={activity.activity_website} target="_blank">Website</a>
+              <a className="activityHeading" href={activity.activity_website} target="_blank">Website</a> <br/>
               <img className="activityPhoto"src={activity.activity_photo}></img>
             </div>
           </div>
     
           </>
       ))}
+
+      </div>
 
     </> )
 }

@@ -70,3 +70,14 @@ button:focus-visible {
 .tripPhoto {
   width: 40vw;
 }
+
+.activityContainer {
+  display: inline-flex;
+
+}
+
+.activityPhoto {
+  width: 25vw;
+  margin-left: 20px;
+  margin-right: 20px;
+}
