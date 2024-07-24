@@ -2,16 +2,14 @@ const client = require("../client");
 
 async function getArrivalById(id) {
   try {
-    const {
-      rows: [arrival],
-    } = await client.query(
+    const { rows } = await client.query(
       `
           SELECT * FROM arrivals
           WHERE arrivals.arrival_id = $1;
       `,
       [id]
     );
-    return arrival;
+    return rows;
   } catch (error) {
     throw error;
   }

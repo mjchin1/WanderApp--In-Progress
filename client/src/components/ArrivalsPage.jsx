@@ -28,7 +28,7 @@ function ArrivalsPage() {
 
   return (
     <>
-      <h1>Activity Ideas</h1>
+      <h1>Arrivals</h1>
 
 
       <div className="arrivalContainer">
