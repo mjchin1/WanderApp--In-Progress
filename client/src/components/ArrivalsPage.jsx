@@ -36,15 +36,18 @@ function ArrivalsPage() {
           <>
           <div key={arrival.arrival_id} className="arrivalCard">
             <div className="arrivalDetails">
-              <p className="arrivalHeading">{arrival.arrival_name}</p>
-              <a className="arrivalHeading" href={arrival.arrival_website} target="_blank">Website</a> <br/>
-              <img className="arrivalPhoto"src={arrival.arrival_photo}></img>
+              <p className="arrivalInfo">{arrival.traveler_name}</p>
+              <p className="arrivalInfo">{arrival.travel_date}</p>
+              <p className="arrivalInfo">{arrival.trip_number}</p>
+              <p className="arrivalInfo">{arrival.travel_origin}</p>
+              <p className="arrivalInfo">{arrival.departure_time}</p>
+              <p className="arrivalInfo">{arrival.travel_destination}</p>
+              <p className="arrivalInfo">{arrival.arrival_time}</p>
             </div>
           </div>
     
           </>
       ))}
-
       </div>
 
     </> )
