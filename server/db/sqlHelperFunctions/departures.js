@@ -28,19 +28,16 @@ async function getAllDepartures() {
   }
 }
 
-
 async function getDepartureById(id) {
   try {
-    const {
-      rows: [departure],
-    } = await client.query(
+    const { rows } = await client.query(
       `
           SELECT * FROM departures
           WHERE departures.departure_id = $1;
       `,
       [id]
     );
-    return departure;
+    return rows;
   } catch (error) {
     throw error;
   }
