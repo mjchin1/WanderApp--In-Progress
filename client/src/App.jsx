@@ -5,6 +5,7 @@ import Navigations from './components/Navigations'
 import ActivitiesPage from './components/ActivitiesPage'
 import SingleActivity from './components/SingleActivity'
 import ArrivalsPage from './components/ArrivalsPage'
+import DeparturesPage from './components/DeparturesPage'
 import './App.css'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
     <Route path='/activities' element={<ActivitiesPage/>} />
     <Route path='/activity' element={<SingleActivity/>} />
     <Route path='/arrivals' element={<ArrivalsPage/>} />
+    <Route path='/departures' element={<DeparturesPage/>} />
     </Routes>
     </>
   )
