@@ -86,3 +86,7 @@ a {
   padding-left: 5px; 
   padding-right: 5px;
 }
+
+.arrivalContainer {
+  border: solid;
+}

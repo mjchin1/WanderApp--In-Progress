@@ -4,6 +4,7 @@ function ArrivalsPage() {
 
   const [arrivals, setArrivals] = useState([])
 
+
   useEffect(() => {
     async function fetchArrivals() {
       try {
@@ -31,7 +32,7 @@ function ArrivalsPage() {
       <h1>Arrivals</h1>
 
 
-      <div className="arrivalContainer">
+      <button className="arrivalContainer">
       {arrivals.map((arrival) => (
           <>
           <div key={arrival.arrival_id} className="arrivalCard">
@@ -48,7 +49,7 @@ function ArrivalsPage() {
     
           </>
       ))}
-      </div>
+      </button>
 
     </> )
 }
