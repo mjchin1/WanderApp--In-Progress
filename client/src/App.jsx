@@ -6,6 +6,7 @@ import ActivitiesPage from './components/ActivitiesPage'
 import SingleActivity from './components/SingleActivity'
 import ArrivalsPage from './components/ArrivalsPage'
 import DeparturesPage from './components/DeparturesPage'
+import SingleArrival from './components/SingleArrival'
 import './App.css'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
     <Route path='/activity' element={<SingleActivity/>} />
     <Route path='/arrivals' element={<ArrivalsPage/>} />
     <Route path='/departures' element={<DeparturesPage/>} />
+    <Route path='/arrivals/:id' element={<SingleArrival/>}/>
     </Routes>
     </>
   )

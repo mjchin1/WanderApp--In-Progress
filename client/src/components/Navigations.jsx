@@ -8,6 +8,7 @@ export default function Navigations() {
             <Link to = '/activity'>Activity</Link>
             <Link to = '/arrivals'>Arrivals</Link>
             <Link to = '/departures'>Departures</Link>
+            <Link to = '/arrivals/2'>Single Arrival</Link>
         </nav>
     );
 };

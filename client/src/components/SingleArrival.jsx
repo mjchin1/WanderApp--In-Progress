@@ -7,7 +7,7 @@ function SingleArrival() {
   useEffect(() => {
     async function fetchArrival() {
       try {
-        const response = await fetch(`http://localhost:8080/api/arrivals/${arrival.arrival_id}`, {
+        const response = await fetch(`http://localhost:8080/api/arrivals/2`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

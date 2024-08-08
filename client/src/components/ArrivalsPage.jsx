@@ -1,8 +1,16 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function ArrivalsPage() {
 
-  const [arrivals, setArrivals] = useState([])
+  const [arrivals, setArrivals] = useState([]);
+  const [arrivalId, setArrivalId] = useState([]);
+  const navigate = useNavigate();
+
+  function handleClick() {
+    setArrivalId(arrival.arrival_id)
+    navigate("/arrivals/2")
+  }
 
 
   useEffect(() => {
@@ -32,7 +40,7 @@ function ArrivalsPage() {
       <h1>Arrivals</h1>
 
 
-      <button className="arrivalContainer">
+      <button className="arrivalContainer" onClick={handleClick}>
       {arrivals.map((arrival) => (
           <>
           <div key={arrival.arrival_id} className="arrivalCard">
