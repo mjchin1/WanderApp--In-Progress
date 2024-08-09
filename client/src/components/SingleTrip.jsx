@@ -1,15 +1,13 @@
 import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
 
-function TripsPage({ trip, setTrip }) {
-  const navigate = useNavigate()
+function SingleTrip({ trip }) {
 
   const [trips, setTrips] = useState([])
 
   useEffect(() => {
     async function fetchTrips() {
       try {
-        const response = await fetch("http://localhost:8080/api/trips/", {
+        const response = await fetch(`http://localhost:8080/api/trips/${trip.trip_id}`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -32,23 +30,15 @@ function TripsPage({ trip, setTrip }) {
     <>
       <h1>Your Trips</h1>
 
-      {trips.map((trip) => (
-          <>
-          <button key={trip.trip_id} className="tripCard" onClick={()=> {
-            setTrip(trip)
-            navigate(`/trip/${trip.trip_id}`)
-          }}>
+          <button key={trip.trip_id} className="tripCard">
             <div className="tripDetails">
               <p className="tripHeading">{trip.destination}</p>
               <p className="tripDates">{trip.start_date} to {trip.end_date}</p>
               <img className="tripPhoto"src={trip.trip_photo}></img>
             </div>
           </button>
-    
-          </>
-      ))}
 
     </> )
 }
 
-export default TripsPage 
+export default SingleTrip

@@ -5,11 +5,6 @@ function ArrivalsPage({ arrivals, setArrivals, arrival, setArrival }) {
 
   const navigate = useNavigate();
 
-  function handleClick() {
-    navigate("/arrivals/2")
-  }
-
-
   useEffect(() => {
     async function fetchArrivals() {
       try {
