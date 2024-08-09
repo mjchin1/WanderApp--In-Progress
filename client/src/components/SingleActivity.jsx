@@ -1,20 +1,17 @@
 import { useState, useEffect } from 'react'
 
-function SingleActivity() {
-
-  const [activity, setActivity] = useState({})
+function SingleActivity( { activity }) {
 
   useEffect(() => {
     async function fetchActivity() {
       try {
-        const response = await fetch("http://localhost:8080/api/activities/1", {
+        const response = await fetch(`http://localhost:8080/api/activities/${activity.activity_id}`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
           },
         });
         const result = await response.json();
-        setActivity(result);
         console.log(result);
       } catch (error) {
         throw new Error(`${error.message}`);
@@ -23,8 +20,6 @@ function SingleActivity() {
     fetchActivity();
   }, []);
 
-
- 
 
   return (
     <>

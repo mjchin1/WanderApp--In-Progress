@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
-function ActivitiesPage() {
+function ActivitiesPage( { setActivity }) {
 
   const [activities, setActivities] = useState([])
+  const navigate = useNavigate()
 
   useEffect(() => {
     async function fetchActivities() {
@@ -34,13 +36,16 @@ function ActivitiesPage() {
       <div className="activityContainer">
       {activities.map((activity) => (
           <>
-          <div key={activity.activity_id} className="activityCard">
+          <button key={activity.activity_id} className="activityCard" onClick={()=>{
+            setActivity(activity);
+            navigate(`activities/${activity.activity_id}`)
+          }}>
             <div className="activityDetails">
               <p className="activityHeading">{activity.activity_name}</p>
               <a className="activityHeading" href={activity.activity_website} target="_blank">Website</a> <br/>
               <img className="activityPhoto"src={activity.activity_photo}></img>
             </div>
-          </div>
+          </button>
     
           </>
       ))}
