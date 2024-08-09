@@ -1,20 +1,17 @@
 import { useState, useEffect } from 'react'
 
-function SingleArrival() {
-
-  const [arrival, setArrival] = useState([])
+function SingleArrival({ arrivals, setArrivals, arrival, setArrival }) {
 
   useEffect(() => {
     async function fetchArrival() {
       try {
-        const response = await fetch(`http://localhost:8080/api/arrivals/2`, {
+        const response = await fetch(`http://localhost:8080/api/arrivals/${arrival_arrival_id}`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
           },
         });
         const result = await response.json();
-        setArrival(result);
         console.log(result);
       } catch (error) {
         throw new Error(`${error.message}`);

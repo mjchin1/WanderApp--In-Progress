@@ -1,10 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-function ArrivalsPage() {
+function ArrivalsPage({ arrivals, setArrivals, arrival, setArrival }) {
 
-  const [arrivals, setArrivals] = useState([]);
-  const [arrivalId, setArrival] = useState([]);
   const navigate = useNavigate();
 
   function handleClick() {

@@ -87,6 +87,7 @@ a {
   padding-right: 5px;
 }
 
-.arrivalContainer {
-  border: solid;
+.arrivalCard {
+  margin-left: 10px; 
+  margin-right: 10px;
 }
