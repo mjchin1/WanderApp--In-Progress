@@ -1,13 +1,15 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
-function DeparturesPage() {
+function DeparturesPage( {trip, setDeparture} ) {
 
   const [departures, setDepartures] = useState([])
+  const navigate = useNavigate()
 
   useEffect(() => {
     async function fetchDepartures() {
       try {
-        const response = await fetch("http://localhost:8080/api/departures/1", {
+        const response = await fetch(`http://localhost:8080/api/departures/trip/${trip.trip_id}`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -28,13 +30,16 @@ function DeparturesPage() {
 
   return (
     <>
-      <h1>departures</h1>
+      <h1>Departures</h1>
 
 
       <div className="departureContainer">
       {departures.map((departure) => (
           <>
-          <div key={departure.departure_id} className="departureCard">
+          <button key={departure.departure_id} className="departureCard" onClick={()=> {
+            setDeparture(departure);
+            navigate(`/departures/${departure.departure_id}`)
+          }}>
             <div className="departureDetails">
               <p className="departureInfo">{departure.traveler_name}</p>
               <p className="departureInfo">{departure.travel_date}</p>
@@ -44,7 +49,7 @@ function DeparturesPage() {
               <p className="departureInfo">{departure.travel_destination}</p>
               <p className="departureInfo">{departure.departure_time}</p>
             </div>
-          </div>
+          </button>
     
           </>
       ))}

@@ -75,8 +75,30 @@ const departures = [
   },
 
   {
+    tripId: 1,
+    travelerName: "Lucas",
+    travelDate: "08/23/2024",
+    tripNumber: "TP 243",
+    travelOrigin: "Lisbon, Portugal",
+    departureTime: "12:40pm",
+    travelDestination: "Chicago, IL",
+    arrivalTime: "4:00pm",
+  },
+
+  {
     tripId: 2,
     travelerName: "Melissa",
+    travelDate: "11/7/2024",
+    tripNumber: "SK 943",
+    travelOrigin: "Copenhagen, Denmark",
+    departureTime: "1:35pm",
+    travelDestination: "Chicago, IL",
+    arrivalTime: "3:50pm",
+  },
+
+  {
+    tripId: 2,
+    travelerName: "Lucas",
     travelDate: "11/7/2024",
     tripNumber: "SK 943",
     travelOrigin: "Copenhagen, Denmark",

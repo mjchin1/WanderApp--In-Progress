@@ -25,7 +25,7 @@ function SingleArrival({ arrivals, setArrivals, arrival, setArrival }) {
 
   return (
     <>
-      <h1>Arrivals</h1>
+      <h1>{arrival.traveler_name}'s Arrival Information</h1>
 
 
       <div className="arrivalContainer">

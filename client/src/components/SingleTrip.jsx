@@ -28,7 +28,7 @@ function SingleTrip({ trip }) {
 
   return (
     <>
-      <h1>Your Trips</h1>
+       <h1>{trip.destination}</h1>
 
           <button key={trip.trip_id} className="tripCard">
             <div className="tripDetails">
