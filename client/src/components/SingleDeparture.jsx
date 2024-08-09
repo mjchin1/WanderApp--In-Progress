@@ -35,7 +35,7 @@ function SingleDeparture({ departure }) {
               <p className="departureInfo">{departure.travel_origin}</p>
               <p className="departureInfo">{departure.departure_time}</p>
               <p className="departureInfo">{departure.travel_destination}</p>
-              <p className="departureInfo">{departure.departure_time}</p>
+              <p className="departureInfo">{departure.arrival_time}</p>
             </div>
           </div>
       </div>
