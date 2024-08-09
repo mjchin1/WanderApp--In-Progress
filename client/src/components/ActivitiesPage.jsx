@@ -1,10 +1,14 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-function ActivitiesPage( { setActivity }) {
+function ActivitiesPage( { activity, setActivity }) {
 
   const [activities, setActivities] = useState([])
   const navigate = useNavigate()
+
+  function handleClick () {
+    navigate(`activities/${activity.activity_id}`)
+  }
 
   useEffect(() => {
     async function fetchActivities() {
@@ -36,9 +40,9 @@ function ActivitiesPage( { setActivity }) {
       <div className="activityContainer">
       {activities.map((activity) => (
           <>
-          <button key={activity.activity_id} className="activityCard" onClick={()=>{
+          <button key={activity.activity_id} className="activityCard clickDiv" onClick={()=>{
             setActivity(activity);
-            navigate(`activities/${activity.activity_id}`)
+            handleClick()
           }}>
             <div className="activityDetails">
               <p className="activityHeading">{activity.activity_name}</p>

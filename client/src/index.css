@@ -94,7 +94,9 @@ a {
   margin-right: 10px;
 }
 
-.departureCard {
+
+.clickDiv {
+  background-color: #d3edf5;
   margin-left: 10px; 
   margin-right: 10px;
 }

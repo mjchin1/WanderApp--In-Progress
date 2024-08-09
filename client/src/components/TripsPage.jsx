@@ -34,7 +34,7 @@ function TripsPage({ trip, setTrip }) {
 
       {trips.map((trip) => (
           <>
-          <button key={trip.trip_id} className="tripCard" onClick={()=> {
+          <button key={trip.trip_id} className="tripCard clickDiv" onClick={()=> {
             setTrip(trip)
             navigate(`/trip/${trip.trip_id}`)
           }}>

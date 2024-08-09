@@ -25,7 +25,7 @@ function App() {
     <Navigations/>
     <Routes>
     <Route path='/' element={<TripsPage trip={trip} setTrip={setTrip}/>} />
-    <Route path='/activities' element={<ActivitiesPage setActivity={setActivity}/>} />
+    <Route path='/activities' element={<ActivitiesPage activity={activity} setActivity={setActivity}/>} />
     <Route path='/activities/:id' element={<SingleActivity activity={activity} setActivity={setActivity}/>} />
     <Route path='/arrivals' element={<ArrivalsPage arrivals={arrivals} setArrivals={setArrivals} arrival={arrival} setArrival={setArrival}/>} />
     <Route path='/departures' element={<DeparturesPage setDeparture={setDeparture} departure={departure} trip={trip}/>} />

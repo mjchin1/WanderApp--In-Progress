@@ -36,7 +36,7 @@ function DeparturesPage( {trip, setDeparture} ) {
       <div className="departureContainer">
       {departures.map((departure) => (
           <>
-          <button key={departure.departure_id} className="departureCard" onClick={()=> {
+          <button key={departure.departure_id} className="departureCard clickDiv" onClick={()=> {
             setDeparture(departure);
             navigate(`/departures/${departure.departure_id}`)
           }}>
