@@ -4,11 +4,10 @@ import { useNavigate } from 'react-router-dom'
 function ArrivalsPage() {
 
   const [arrivals, setArrivals] = useState([]);
-  const [arrivalId, setArrivalId] = useState([]);
+  const [arrivalId, setArrival] = useState([]);
   const navigate = useNavigate();
 
   function handleClick() {
-    setArrivalId(arrival.arrival_id)
     navigate("/arrivals/2")
   }
 
@@ -16,7 +15,7 @@ function ArrivalsPage() {
   useEffect(() => {
     async function fetchArrivals() {
       try {
-        const response = await fetch("http://localhost:8080/api/arrivals/1", {
+        const response = await fetch("http://localhost:8080/api/arrivals/trip/1", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -40,10 +39,13 @@ function ArrivalsPage() {
       <h1>Arrivals</h1>
 
 
-      <button className="arrivalContainer" onClick={handleClick}>
+      <div className="arrivalContainer">
       {arrivals.map((arrival) => (
           <>
-          <div key={arrival.arrival_id} className="arrivalCard">
+          <button key={arrival.arrival_id} className="arrivalCard" onClick={()=> {
+            setArrival(arrival)
+            navigate(`/arrivals/${arrival.arrival_id}`)
+          }}>
             <div className="arrivalDetails">
               <p className="arrivalInfo">{arrival.traveler_name}</p>
               <p className="arrivalInfo">{arrival.travel_date}</p>
@@ -53,11 +55,11 @@ function ArrivalsPage() {
               <p className="arrivalInfo">{arrival.travel_destination}</p>
               <p className="arrivalInfo">{arrival.arrival_time}</p>
             </div>
-          </div>
+          </button>
     
           </>
       ))}
-      </button>
+      </div>
 
     </> )
 }
