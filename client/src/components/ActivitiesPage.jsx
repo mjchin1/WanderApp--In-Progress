@@ -7,7 +7,7 @@ function ActivitiesPage( { activity, setActivity }) {
   const navigate = useNavigate()
 
   function handleClick () {
-    navigate(`activities/${activity.activity_id}`)
+    navigate(`/activities/${activity.activity_id}`)
   }
 
   useEffect(() => {
