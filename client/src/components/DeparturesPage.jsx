@@ -32,7 +32,6 @@ function DeparturesPage( {trip, setDeparture} ) {
     <>
       <h1>Departures</h1>
 
-
       <div className="departureContainer">
       {departures.map((departure) => (
           <>

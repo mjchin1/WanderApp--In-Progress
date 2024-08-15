@@ -22,6 +22,11 @@ function App() {
   return (
     <>
 
+    <div className="appHeader">
+      <h1>Wander</h1>
+      
+    </div>
+
     <Navigations/>
     <Routes>
     <Route path='/' element={<TripsPage trip={trip} setTrip={setTrip}/>} />
