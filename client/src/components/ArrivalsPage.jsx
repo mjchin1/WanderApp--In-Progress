@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-function ArrivalsPage({ trip, arrivals, setArrivals, arrival, setArrival }) {
+function ArrivalsPage({ trip, arrivals, setArrivals, setArrival }) {
 
   const navigate = useNavigate();
 
   useEffect(() => {
     async function fetchArrivals() {
       try {
-        const response = await fetch("http://localhost:8080/api/arrivals/trip/1", {
+        const response = await fetch(`http://localhost:8080/api/arrivals/trip/${trip.trip_id}`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

@@ -32,7 +32,7 @@ function App() {
     <Route path='/' element={<TripsPage trip={trip} setTrip={setTrip}/>} />
     <Route path='/activities' element={<ActivitiesPage activity={activity} setActivity={setActivity}/>} />
     <Route path='/activities/:id' element={<SingleActivity activity={activity} setActivity={setActivity}/>} />
-    <Route path='/arrivals' element={<ArrivalsPage arrivals={arrivals} setArrivals={setArrivals} arrival={arrival} setArrival={setArrival}/>} />
+    <Route path='/arrivals' element={<ArrivalsPage trip={trip} arrivals={arrivals} setArrivals={setArrivals} arrival={arrival} setArrival={setArrival}/>} />
     <Route path='/departures' element={<DeparturesPage setDeparture={setDeparture} departure={departure} trip={trip}/>} />
     <Route path='/arrivals/:id' element={<SingleArrival arrivals={arrivals} setArrivals={setArrivals} arrival={arrival} setArrival={setArrival}/>}/>
     <Route path='/trip/:id' element={<SingleTrip trip={trip}/>} />
