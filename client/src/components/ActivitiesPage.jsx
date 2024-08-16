@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-function ActivitiesPage( { activity, setActivity }) {
+function ActivitiesPage( { activity, setActivity, trip }) {
 
   const [activities, setActivities] = useState([])
   const navigate = useNavigate()
@@ -13,7 +13,7 @@ function ActivitiesPage( { activity, setActivity }) {
   useEffect(() => {
     async function fetchActivities() {
       try {
-        const response = await fetch("http://localhost:8080/api/activities", {
+        const response = await fetch(`http://localhost:8080/api/activities/trip/${trip.trip_id}`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -46,7 +46,6 @@ function ActivitiesPage( { activity, setActivity }) {
           }}>
             <div className="activityDetails">
               <p className="activityHeading">{activity.activity_name}</p>
-              <a className="activityHeading" href={activity.activity_website} target="_blank">Website</a> <br/>
               <img className="activityPhoto"src={activity.activity_photo}></img>
             </div>
           </button>
