@@ -96,9 +96,11 @@ a {
 
 
 .clickDiv {
-  background-color: #91d5fa;
+  background-color: white;
   margin-left: 10px; 
   margin-right: 10px;
+  border: solid;
+  border-width: thin;
 }
 
 .appHeader {
