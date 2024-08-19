@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function AddArrivalForm () {
+export default function AddArrivalForm ({trip}) {
   const [travelerName, setTravelerName] = useState("");
   const [travelDate, setTravelDate] = useState("");
   const [tripNumber, setTripNumber] = useState("");
@@ -8,8 +8,10 @@ export default function AddArrivalForm () {
   const [departureTime, setDepartureTime] = useState("");
   const [travelDestination, setTravelDestination] = useState("");
   const [arrivalTime, setArrivalTime] = useState("");
+  const [tripId, setTripId] = useState("");
 
   async function handleSubmit(event) {
+    setTripId(trip.trip_id)
     event.preventDefault();
     try {
       const response = await fetch('http://localhost:8080/api/activities/create', {
@@ -17,7 +19,8 @@ export default function AddArrivalForm () {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ 
+        body: JSON.stringify({
+          tripId, 
           travelerName,
           travelDate,
           tripNumber,
@@ -28,13 +31,14 @@ export default function AddArrivalForm () {
         })
       });
       const result = await response.json();
-      setTravelerName("");
-      setTravelDate("");
-      setTripNumber("");
-      setTravelOrigin("");
-      setDepartureTime("");
-      setTravelDestination("");
-      setArrivalTime("");
+      console.log(tripId)
+      // setTravelerName("");
+      // setTravelDate("");
+      // setTripNumber("");
+      // setTravelOrigin("");
+      // setDepartureTime("");
+      // setTravelDestination("");
+      // setArrivalTime("");
     } catch (error) {
     }
 
@@ -47,30 +51,37 @@ export default function AddArrivalForm () {
       <div className="arrivalFormBorder">
 
       <form className="arrivalForm" onSubmit={handleSubmit}>
+        <h3> Add an Arrival</h3>
         
         <label>
-          Traveler Name:<input value={travelerName} onChange={(event) => setTravelerName(event.target.value)} required /> <br/>
+          Traveler Name: <input value={travelerName} onChange={(event) => setTravelerName(event.target.value)}/> <br/>
         </label> <br/>
 
         <label>
-          Travel Date:<input value={travelDate} onChange={(event) => setTravelDate(event.target.value)} required /><br/>
+          Travel Date: <input value={travelDate} onChange={(event) => setTravelDate(event.target.value)}/><br/>
         </label> <br/>
 
         <label>
-          Trip Number:<br/> <input value={tripNumber} onChange={(event) => setTripNumber(event.target.value)} required /> <br/>
+          Trip Number: <input value={tripNumber} onChange={(event) => setTripNumber(event.target.value)}/> <br/>
         </label> <br/> 
-
+        
         <label> 
-          Departure Time:<input value={departureTime} onChange={(event) => setDepartureTime(event.target.value)} required /> <br/>
+         Travel Origin: <input value={travelOrigin} onChange={(event) => setTravelOrigin(event.target.value)}/> <br/>
         </label> <br/>
 
         <label> 
-         Travel Destination:<input value={travelDestination} onChange={(event) => setTravelDestination(event.target.value)} required /> <br/>
+          Departure Time: <input value={departureTime} onChange={(event) => setDepartureTime(event.target.value)}/> <br/>
         </label> <br/>
 
         <label> 
-          Arrival Time:<input value={arrivalTime} onChange={(event) => setArrivalTime(event.target.value)} required /> <br/>
+         Travel Destination: <input value={travelDestination} onChange={(event) => setTravelDestination(event.target.value)}/> <br/>
         </label> <br/>
+
+        <label> 
+          Arrival Time: <input value={arrivalTime} onChange={(event) => setArrivalTime(event.target.value)}/> <br/>
+        </label> <br/>
+
+        <button className="addArrivalButton">Add Arrival</button> <br/> <br/>
       </form>
       </div>
 

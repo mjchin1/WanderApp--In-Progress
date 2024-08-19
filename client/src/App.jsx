@@ -9,6 +9,7 @@ import DeparturesPage from './components/DeparturesPage'
 import SingleArrival from './components/SingleArrival'
 import SingleTrip from './components/SingleTrip'
 import SingleDeparture from './components/SingleDeparture'
+import AddArrivalForm from './components/AddArrivalForm'
 import './App.css'
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
     <Route path='/arrivals/:id' element={<SingleArrival arrivals={arrivals} setArrivals={setArrivals} arrival={arrival} setArrival={setArrival}/>}/>
     <Route path='/trip/:id' element={<SingleTrip trip={trip}/>} />
     <Route path='/departures/:id' element={<SingleDeparture trip={trip}  departure={departure} setDeparture={setDeparture} />} />
+    <Route path='/add-arrival' element={<AddArrivalForm trip={trip}/>}/> 
     </Routes>
     </>
   )
