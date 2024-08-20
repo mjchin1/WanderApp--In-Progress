@@ -8,13 +8,12 @@ export default function AddArrivalForm ({trip}) {
   const [departureTime, setDepartureTime] = useState("");
   const [travelDestination, setTravelDestination] = useState("");
   const [arrivalTime, setArrivalTime] = useState("");
-  const [tripId, setTripId] = useState("");
+  const [tripId, setTripId] = useState(trip.trip_id);
 
   async function handleSubmit(event) {
-    setTripId(trip.trip_id)
     event.preventDefault();
     try {
-      const response = await fetch('http://localhost:8080/api/activities/create', {
+      const response = await fetch('http://localhost:8080/api/arrivals/create', {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',
@@ -31,14 +30,15 @@ export default function AddArrivalForm ({trip}) {
         })
       });
       const result = await response.json();
+      console.log(result)
       console.log(tripId)
-      // setTravelerName("");
-      // setTravelDate("");
-      // setTripNumber("");
-      // setTravelOrigin("");
-      // setDepartureTime("");
-      // setTravelDestination("");
-      // setArrivalTime("");
+      setTravelerName("");
+      setTravelDate("");
+      setTripNumber("");
+      setTravelOrigin("");
+      setDepartureTime("");
+      setTravelDestination("");
+      setArrivalTime("");
     } catch (error) {
     }
 

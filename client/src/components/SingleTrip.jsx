@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 
 function SingleTrip({ trip }) {
+  console.log(trip.trip_id)
 
   const [trips, setTrips] = useState([])
 
