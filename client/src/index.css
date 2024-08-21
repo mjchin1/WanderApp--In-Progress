@@ -79,9 +79,11 @@ button:focus-visible {
 }
 
 .activityPhoto {
-  width: 25vw;
+  width: 20vw;
+  height: 150px;
   margin-left: 20px;
   margin-right: 20px;
+  object-fit: cover;
 }
 
 a {

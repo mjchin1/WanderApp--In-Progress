@@ -11,6 +11,7 @@ import SingleTrip from './components/SingleTrip'
 import SingleDeparture from './components/SingleDeparture'
 import AddArrivalForm from './components/AddArrivalForm'
 import AddDepartureForm from './components/AddDepartureForm'
+import AddActivityForm from './components/AddActivityForm'
 import './App.css'
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
     <Route path='/departures/:id' element={<SingleDeparture trip={trip}  departure={departure} setDeparture={setDeparture} />} />
     <Route path='/add-arrival' element={<AddArrivalForm trip={trip}/>}/> 
     <Route path='/add-departure' element={<AddDepartureForm trip={trip}/>}/> 
+    <Route path='/add-activity' element={<AddActivityForm trip={trip}/>}/> 
     </Routes>
     </>
   )

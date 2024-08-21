@@ -60,7 +60,7 @@ async function createActivity(body) {
     } = await client.query(
       `
           INSERT INTO activities(trip_id, activity_name, activity_description, activity_photo, activity_website)
-          VALUES($1, $2, $3, $4, $5);
+          VALUES($1, $2, $3, $4, $5)
           RETURNING *;
       `,
       [
