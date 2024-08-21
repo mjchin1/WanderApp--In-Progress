@@ -37,11 +37,11 @@ export default function AddActivityForm ({trip}) {
 
   return (
     <>
-    <div className="ActivityFormCard">
+    <div className="activityFormCard">
       
-      <div className="ActivityFormBorder">
+      <div className="activityFormBorder">
 
-      <form className="ActivityForm" onSubmit={handleSubmit}>
+      <form className="activityForm" onSubmit={handleSubmit}>
         <h3> Add an Activity</h3>
         
         <label>

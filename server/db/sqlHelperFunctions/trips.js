@@ -31,19 +31,19 @@ async function getTripById(id) {
 }
 
 async function createTrip(body) {
-  const { destination, startDate, tripEndDate, tripPhoto } = body;
+  const { destination, startDate, endDate, tripPhoto } = body;
   try {
     const {
-      rows: [activity],
+      rows: [trip],
     } = await client.query(
       `
         INSERT INTO trips(destination, start_date, end_date, trip_photo)
-        VALUES($1, $2, $3, $4);
+        VALUES($1, $2, $3, $4)
         RETURNING *;
       `,
-      [destination, startDate, tripEndDate, tripPhoto]
+      [destination, startDate, endDate, tripPhoto]
     );
-    return activity;
+    return trip;
   } catch (error) {
     throw error;
   }
