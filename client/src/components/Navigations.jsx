@@ -8,6 +8,7 @@ export default function Navigations() {
             <Link to = '/arrivals'>Arrivals</Link>
             <Link to = '/departures'>Departures</Link>
             <Link to = '/add-arrival'>Arrival Form</Link>
+            <Link to = '/add-departure'>Departure Form</Link>
         </nav>
     );
 };
