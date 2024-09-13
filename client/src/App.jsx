@@ -13,6 +13,7 @@ import AddArrivalForm from './components/AddArrivalForm'
 import AddDepartureForm from './components/AddDepartureForm'
 import AddActivityForm from './components/AddActivityForm'
 import AddTripForm from './components/AddTripForm'
+import DestinationsPage from './components/DestinationsPage'
 import './App.css'
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
     <Route path='/add-departure' element={<AddDepartureForm trip={trip}/>}/> 
     <Route path='/add-activity' element={<AddActivityForm trip={trip}/>}/> 
     <Route path='/add-trip' element={<AddTripForm/>}/> 
+    <Route path='/destinations' element={<DestinationsPage/>}/> 
     </Routes>
     </>
   )
