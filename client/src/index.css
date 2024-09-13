@@ -121,3 +121,11 @@ a {
 a {
   color: black;
 }
+
+.destinationButton {
+  width: 20vw;
+}
+
+.destinationButtonPic {
+  width: 15vw;
+}
