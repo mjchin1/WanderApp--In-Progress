@@ -124,8 +124,16 @@ a {
 
 .destinationButton {
   width: 20vw;
+  background-color: white;
+  border: solid;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .destinationButtonPic {
   width: 15vw;
+
+
 }
