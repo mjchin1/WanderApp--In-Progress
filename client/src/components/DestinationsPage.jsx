@@ -16,7 +16,6 @@ function DestinationsPage() {
       <button className="destinationButton" onClick={() => {
         setDestination("London");
         setDestinationPic("https://cdn.aarp.net/content/dam/aarp/travel/budget_travel/2022/06/1140-big-ben-hero.jpg");
-        console.log(destination)
       }}>
        <h3>London</h3>
        <img className="destinationButtonPic" src="https://cdn.aarp.net/content/dam/aarp/travel/budget_travel/2022/06/1140-big-ben-hero.jpg"></img> 
@@ -24,29 +23,27 @@ function DestinationsPage() {
 
       <button className="destinationButton" onClick={() => {
         setDestination("Paris");
-        setDestinationPic("");
-        console.log(destination)
+        setDestinationPic("https://media.tacdn.com/media/attractions-splice-spp-674x446/07/03/1c/9c.jpg");
       }}>
        <h3>Paris</h3>
-       <img className="destinationButtonPic" src=""></img> 
+       <img className="destinationButtonPic" src="https://media.tacdn.com/media/attractions-splice-spp-674x446/07/03/1c/9c.jpg"></img> 
       </button>
 
       <button className="destinationButton" onClick={() => {
         setDestination("Copenhagen");
-        setDestinationPic("");
-        console.log(destination)
+        setDestinationPic("https://i.natgeofe.com/n/6f896103-f5b8-426b-aef7-3dcbbee6dcf4/GettyImages1045586638.jpg");
       }}>
        <h3>Copenhagen</h3>
-       <img className="destinationButtonPic" src=""></img> 
+       <img className="destinationButtonPic" src="https://i.natgeofe.com/n/6f896103-f5b8-426b-aef7-3dcbbee6dcf4/GettyImages1045586638.jpg"></img> 
       </button>
 
       <button className="destinationButton" onClick={() => {
         setDestination("Zurich");
-        setDestinationPic("");
+        setDestinationPic("https://img.static-kl.com/images/media/506F5E1C-28C1-4555-A238CB9D4AD6039E");
         console.log(destination)
       }}>
        <h3>Zurich</h3>
-       <img className="destinationButtonPic" src=""></img> 
+       <img className="destinationButtonPic" src="https://img.static-kl.com/images/media/506F5E1C-28C1-4555-A238CB9D4AD6039E"></img> 
       </button>
 
       <button className="destinationButton" onClick={() => {

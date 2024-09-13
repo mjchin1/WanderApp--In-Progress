@@ -134,6 +134,8 @@ a {
 
 .destinationButtonPic {
   width: 15vw;
+  height: 135px;
+  object-fit: cover;
 
 
 }
