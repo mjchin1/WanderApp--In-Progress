@@ -42,6 +42,54 @@ function DestinationsPage() {
       cityName: "Tulum",
       imageUrl: "https://oasisblog.nyc3.cdn.digitaloceanspaces.com/2016/04/ik-kil-cenote01.jpg"
     },
+    {
+      cityName: "Prague",
+      imageUrl: ""
+    },
+    {
+      cityName: "Venice",
+      imageUrl: ""
+    },
+    {
+      cityName: "Antigua Guatemala",
+      imageUrl: ""
+    },
+    {
+      cityName: "Montego Bay",
+      imageUrl: ""
+    },
+    {
+      cityName: "Rio de Janeiro",
+      imageUrl: ""
+    },
+    {
+      cityName: "Accra",
+      imageUrl: ""
+    },
+    {
+      cityName: "Mexico City",
+      imageUrl: ""
+    },
+    {
+      cityName: "Barcelona",
+      imageUrl: ""
+    },
+    {
+      cityName: "Lyon",
+      imageUrl: ""
+    },
+    {
+      cityName: "Milan",
+      imageUrl: ""
+    },
+    {
+      cityName: "Oslo",
+      imageUrl: ""
+    },
+    {
+      cityName: "Santorini",
+      imageUrl: ""
+    },
   ];
 
   return (
