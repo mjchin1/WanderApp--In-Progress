@@ -4,11 +4,6 @@ function DestinationsPage() {
   const [destination, setDestination] = useState("")
   const [destinationPic, setDestinationPic] = useState("")
 
-  function handleClick() {
-   
-
-  }
-
   const destinations = [
 
     {
