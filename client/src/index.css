@@ -136,6 +136,9 @@ a {
   width: 15vw;
   height: 135px;
   object-fit: cover;
+  
+}
 
-
+.destinationButtonText {
+  font-size: 30px;
 }

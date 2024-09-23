@@ -7,12 +7,12 @@ function DestinationsPage() {
   const destinations = [
 
     {
-      cityName: "Antigua Guatemala",
-      imageUrl: "https://cdn-ecllj.nitrocdn.com/tlOjUJBEedYlFmMWnYnKfpcNXvNKiSnd/assets/images/optimized/rev-580e7a3/www.wanderingstus.com/wp-content/uploads/2023/03/wandering-stus-antigua-guatemala-2.jpg"
-    },
-    {
       cityName: "Barcelona",
       imageUrl: "https://www.thetrainline.com/cms/media/5673/alleys_in_gothic_quarter_in_barcelona_spain.jpg?mode=crop&width=660&height=440&quality=70"
+    },
+    {
+      cityName: "Brussels",
+      imageUrl: "https://fortune.com/img-assets/wp-content/uploads/2024/05/Brussels-Andrey-DenisyUK-GettyImages-1456761179-e1717061553838.jpg"
     },
     {
       cityName: "Cartagena",
@@ -96,7 +96,7 @@ function DestinationsPage() {
           setDestination(destination.cityName);
           setDestinationPic(destination.imageUrl);
         }}>
-         <h3>{destination.cityName}</h3>
+         <h3 className="destinationButtonText">{destination.cityName}</h3>
          <img className="destinationButtonPic" src={destination.imageUrl}></img> 
         </button>
       ))}
