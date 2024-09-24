@@ -32,12 +32,17 @@ export default function AddTripForm ({ destination, setDestination, destinationP
 
   return (
     <>
+
+    <div >
+    <h1> Your Trip to {destination} </h1>
+    <img className="tripPhoto" src={destinationPic}></img> 
+    </div>
+
     <div className="tripFormCard">
       
       <div className="tripFormBorder">
 
       <form className="tripForm" onSubmit={handleSubmit}>
-        <h3> Your Trip to {destination} </h3>
         
         {/* <label>
          Destination: <input value={destination} onChange={(event) => setDestination(event.target.value)}/> <br/>

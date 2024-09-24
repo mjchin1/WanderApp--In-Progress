@@ -1,6 +1,8 @@
-import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function DestinationsPage({destination, setDestination, destinationPic, setDestinationPic}) {
+
+  const navigate = useNavigate()
 
   const destinations = [
 
@@ -86,6 +88,10 @@ function DestinationsPage({destination, setDestination, destinationPic, setDesti
     },
   ];
 
+    function navToForm() {
+      navigate("/add-trip")
+    }
+
   return (
     <>
       <h1>Where To?</h1>
@@ -93,6 +99,7 @@ function DestinationsPage({destination, setDestination, destinationPic, setDesti
         <button className="destinationButton" onClick={() => {
           setDestination(destination.cityName);
           setDestinationPic(destination.imageUrl);
+          navToForm();
         }}>
          <h3 className="destinationButtonText">{destination.cityName}</h3>
          <img className="destinationButtonPic" src={destination.imageUrl}></img> 
