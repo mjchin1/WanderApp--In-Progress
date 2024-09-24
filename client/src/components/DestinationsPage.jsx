@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react'
 
-function DestinationsPage() {
-  const [destination, setDestination] = useState("")
-  const [destinationPic, setDestinationPic] = useState("")
+function DestinationsPage({destination, setDestination, destinationPic, setDestinationPic}) {
 
   const destinations = [
 

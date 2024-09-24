@@ -18,11 +18,13 @@ import './App.css'
 
 function App() {
 
-  const [arrival, setArrival] = useState({})
-  const [arrivals, setArrivals] = useState([])
-  const [trip, setTrip] = useState({})
-  const [departure, setDeparture] = useState({})
-  const [activity, setActivity] = useState({})
+  const [arrival, setArrival] = useState({});
+  const [arrivals, setArrivals] = useState([]);
+  const [trip, setTrip] = useState({});
+  const [departure, setDeparture] = useState({});
+  const [activity, setActivity] = useState({});
+  const [destination, setDestination] = useState("");
+  const [destinationPic, setDestinationPic] = useState("");
 
   return (
     <>
@@ -45,8 +47,8 @@ function App() {
     <Route path='/add-arrival' element={<AddArrivalForm trip={trip}/>}/> 
     <Route path='/add-departure' element={<AddDepartureForm trip={trip}/>}/> 
     <Route path='/add-activity' element={<AddActivityForm trip={trip}/>}/> 
-    <Route path='/add-trip' element={<AddTripForm/>}/> 
-    <Route path='/destinations' element={<DestinationsPage/>}/> 
+    <Route path='/add-trip' element={<AddTripForm destination={destination} setDestination={setDestination} destinationPic={destinationPic} setDestinationPic={setDestinationPic}/>}/> 
+    <Route path='/destinations' element={<DestinationsPage destination={destination} setDestination={setDestination} destinationPic={destinationPic} setDestinationPic={setDestinationPic}/>}/> 
     </Routes>
     </>
   )
