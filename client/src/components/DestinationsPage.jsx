@@ -101,8 +101,9 @@ function DestinationsPage({destination, setDestination, destinationPic, setDesti
           setDestinationPic(destination.imageUrl);
           navToForm();
         }}>
-         <h3 className="destinationButtonText">{destination.cityName}</h3>
+         
          <img className="destinationButtonPic" src={destination.imageUrl}></img> 
+         <h3 className="destinationButtonText">{destination.cityName.toUpperCase()}</h3>
         </button>
       ))}
 

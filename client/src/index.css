@@ -123,22 +123,26 @@ a {
 }
 
 .destinationButton {
-  width: 20vw;
-  background-color: white;
+  width: 30vw;
+  background-color: black;
   border: solid;
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
+  border-radius: 0%;
 }
 
 .destinationButtonPic {
-  width: 15vw;
-  height: 135px;
+  padding-top: 20px;
+  width: 25vw;
+  height: 300px;
   object-fit: cover;
   
 }
 
 .destinationButtonText {
-  font-size: 30px;
+  font-size: 40px;
+  color: white;
+  font-family: Palatino,URW Palladio L,serif;
 }
