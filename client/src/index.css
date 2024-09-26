@@ -124,8 +124,8 @@ a {
 
 .destinationButton {
   width: 30vw;
-  background-color: black;
-  border: solid;
+  background-color: white;
+  /* border: solid; */
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 10px;
@@ -143,6 +143,9 @@ a {
 
 .destinationButtonText {
   font-size: 40px;
-  color: white;
+  border: double;
+  border-width: thick;
   font-family: Palatino,URW Palladio L,serif;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
