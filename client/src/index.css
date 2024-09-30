@@ -116,6 +116,24 @@ a {
   font-size: 90px;
   background-color: #3de068;
   color: white;
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  animation: shrink 2s;
+  animation-range-start: 0%; */
+}
+
+@keyframes shrink {
+  from {
+    height: 320px;
+    font-size: 90px;
+  }
+
+  to {
+    height: 70px;
+    font-size: 20px;
+  }
 }
 
 a {
