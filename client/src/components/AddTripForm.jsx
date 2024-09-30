@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function AddTripForm ({ destination, setDestination, destinationPic, setDestinationPic }) {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   const [tripPhoto, setTripPhoto] = useState(destinationPic);
+  const navigate = useNavigate();
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -28,6 +30,8 @@ export default function AddTripForm ({ destination, setDestination, destinationP
     } catch (error) {
     }
 
+    navigate("/");
+
   }
 
   return (
@@ -48,12 +52,12 @@ export default function AddTripForm ({ destination, setDestination, destinationP
          Destination: <input value={destination} onChange={(event) => setDestination(event.target.value)}/> <br/>
         </label> <br/> */}
 
-        <label>
-          Start Date: <input type="date" value={startDate} onChange={(event) => setStartDate(event.target.value)}/><br/>
+        <label className="tripFormText">
+          When are you going? <input type="date" value={startDate} onChange={(event) => setStartDate(event.target.value)}/><br/>
         </label> <br/>
 
-        <label>
-          End Date: <input type="date" value={endDate} onChange={(event) => setEndDate(event.target.value)}/> <br/>
+        <label className="tripFormText">
+          When are you returning? <input type="date" value={endDate} onChange={(event) => setEndDate(event.target.value)}/> <br/>
         </label> <br/> 
         
         {/* <label> 
