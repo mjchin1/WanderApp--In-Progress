@@ -34,6 +34,7 @@ function App() {
       
     </div>
 
+    <div className="appBody">
     <Navigations/>
     <Routes>
     <Route path='/' element={<TripsPage trip={trip} setTrip={setTrip}/>} />
@@ -50,6 +51,7 @@ function App() {
     <Route path='/add-trip' element={<AddTripForm destination={destination} setDestination={setDestination} destinationPic={destinationPic} setDestinationPic={setDestinationPic}/>}/> 
     <Route path='/destinations' element={<DestinationsPage destination={destination} setDestination={setDestination} destinationPic={destinationPic} setDestinationPic={setDestinationPic}/>}/> 
     </Routes>
+    </div>
     </>
   )
 }

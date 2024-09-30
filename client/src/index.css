@@ -105,6 +105,10 @@ a {
   border-width: thin;
 }
 
+.appBody {
+  top: 30vw;
+
+}
 .appHeader {
   width: 100vw;
   margin: 0 auto;
@@ -116,12 +120,12 @@ a {
   font-size: 90px;
   background-color: #3de068;
   color: white;
-  /* position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
-  animation: shrink 2s;
-  animation-range-start: 0%; */
+  animation: shrink linear;
+  animation-timeline: scroll();
 }
 
 @keyframes shrink {
