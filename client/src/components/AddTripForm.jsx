@@ -50,13 +50,12 @@ export default function AddTripForm ({ destination, setDestination, destinationP
 
       <form className="tripForm" onSubmit={handleSubmit}>
         
-      
         {!startDate && !endDate? <label className="tripFormText">
-          When are you traveling to {destination}? <input type="date" value={startDate} onChange={(event) => setStartDate(event.target.value)}/><br/>
+          When are you going? <input type="date" value={startDate} onChange={(event) => setStartDate(event.target.value)}/><br/>
         </label> : null}
 
        {startDate && !endDate? <label className="tripFormText">
-          When are you leaving {destination}? <input type="date" value={endDate} onChange={(event) => setEndDate(event.target.value)}/> <br/>
+          When are you leaving? <input type="date" value={endDate} onChange={(event) => setEndDate(event.target.value)}/> <br/>
         </label> : null}
         
         {/* <label> 

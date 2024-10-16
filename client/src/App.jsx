@@ -34,7 +34,7 @@ function App() {
     </div>
     </div>
     
-    <Navigations/>
+    <Navigations/> <br/> <br/>
 
     <div className="appBody">
   

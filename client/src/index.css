@@ -105,9 +105,9 @@ a {
   border-width: thin;
 }
 
-/* .appBody {
-  top: 30vw;
-} */
+.appBody {
+  margin-top: 330px;
+}
 .appHeader {
   width: 100vw;
   height: 320px;
@@ -127,8 +127,16 @@ a {
 }
 
 .navBar {
-  margin-top: 360px;
+  margin-top: 320px;
   margin-bottom: 0;
+  position: fixed;
+  background-color: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 20px;
+  height: 40px;
+
 }
 
 
@@ -177,9 +185,10 @@ a {
 }
 
 .tripFormText {
-  font-size: 30px;
+  font-size: 50px;
 }
 
 input {
-  height: 15px;
+  height: 50px;
+  font-size: 40px;
 }
