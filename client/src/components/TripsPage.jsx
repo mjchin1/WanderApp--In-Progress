@@ -6,6 +6,12 @@ function TripsPage({ trip, setTrip }) {
 
   const [trips, setTrips] = useState([])
 
+  function navToTripsPage() {
+
+    navigate("/add-trip")
+
+  }
+
   useEffect(() => {
     async function fetchTrips() {
       try {
@@ -30,7 +36,7 @@ function TripsPage({ trip, setTrip }) {
 
   return (
     <>
-      <h1>Your Trips</h1>
+      {trips? <h1>Upcoming Trips</h1> :  <h1> No Upcoming Trips</h1> }
 
       {trips.map((trip) => (
           <>
@@ -47,6 +53,10 @@ function TripsPage({ trip, setTrip }) {
     
           </>
       ))}
+
+      <br/> <br/>
+
+          <button onClick={() => {navToTripsPage()}}> Plan a Trip</button>
 
     </> )
 }
