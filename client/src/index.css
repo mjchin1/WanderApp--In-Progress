@@ -120,12 +120,12 @@ a {
   font-size: 90px;
   background-color: #3de068;
   color: white;
-  position: sticky;
+  /* position: sticky;
   top: 0;
   left: 0;
   right: 0;
   animation: shrink forwards;
-  animation-timeline: scroll();
+  animation-timeline: scroll(); */
 }
 
 @keyframes shrink {
