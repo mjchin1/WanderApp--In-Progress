@@ -37,10 +37,10 @@ export default function AddTripForm ({ destination, setDestination, destinationP
   return (
     <>
 
-    <div >
+    {/* <div >
     <h1> Your Trip to {destination} </h1>
     <img className="tripPhoto" src={destinationPic}></img> 
-    </div>
+    </div> */}
 
     <div className="tripFormCard">
       
@@ -53,11 +53,11 @@ export default function AddTripForm ({ destination, setDestination, destinationP
         </label> <br/> */}
 
         <label className="tripFormText">
-          When are you going? <input type="date" value={startDate} onChange={(event) => setStartDate(event.target.value)}/><br/>
+          When are you leaving for {destination}? <input type="date" value={startDate} onChange={(event) => setStartDate(event.target.value)}/><br/>
         </label> <br/>
 
         <label className="tripFormText">
-          When are you returning? <input type="date" value={endDate} onChange={(event) => setEndDate(event.target.value)}/> <br/>
+          When are you returning from {destination}? <input type="date" value={endDate} onChange={(event) => setEndDate(event.target.value)}/> <br/>
         </label> <br/> 
         
         {/* <label> 

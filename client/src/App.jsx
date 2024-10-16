@@ -28,10 +28,10 @@ function App() {
 
   return (
     <>
-
+    <div className="appHeaderContainer">
     <div className="appHeader">
       <h1>Wander</h1>
-      
+    </div>
     </div>
 
     <div className="appBody">

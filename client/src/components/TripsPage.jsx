@@ -8,7 +8,7 @@ function TripsPage({ trip, setTrip }) {
 
   function navToTripsPage() {
 
-    navigate("/add-trip")
+    navigate("/destinations")
 
   }
 
@@ -56,7 +56,9 @@ function TripsPage({ trip, setTrip }) {
 
       <br/> <br/>
 
-          <button onClick={() => {navToTripsPage()}}> Plan a Trip</button>
+      <button onClick={() => {navToTripsPage()}}> Plan a Trip</button>
+
+      <br/> <br/> <br/>
 
     </> )
 }
