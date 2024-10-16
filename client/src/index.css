@@ -105,11 +105,9 @@ a {
   border-width: thin;
 }
 
-.appBody {
+/* .appBody {
   top: 30vw;
-  margin-top: 27vw;
-
-}
+} */
 .appHeader {
   width: 100vw;
   height: 320px;
@@ -126,6 +124,11 @@ a {
   right: 0;
   /* animation: shrink forwards;
   animation-timeline: scroll(); */
+}
+
+.navBar {
+  margin-top: 360px;
+  margin-bottom: 0;
 }
 
 

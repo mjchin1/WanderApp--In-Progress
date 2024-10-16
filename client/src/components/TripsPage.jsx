@@ -9,6 +9,7 @@ function TripsPage({ trip, setTrip }) {
   function navToTripsPage() {
 
     navigate("/destinations")
+    window.scroll(0,0)
 
   }
 

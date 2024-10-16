@@ -33,9 +33,11 @@ function App() {
       <h1>Wander</h1>
     </div>
     </div>
+    
+    <Navigations/>
 
     <div className="appBody">
-    <Navigations/>
+  
     <Routes>
     <Route path='/' element={<TripsPage trip={trip} setTrip={setTrip}/>} />
     <Route path='/activities' element={<ActivitiesPage trip={trip} activity={activity} setActivity={setActivity}/>} />
