@@ -37,10 +37,12 @@ export default function AddTripForm ({ destination, setDestination, destinationP
   return (
     <>
 
-    {/* <div >
-    <h1> Your Trip to {destination} </h1>
+   {destination && startDate && endDate ? <div >
+    <h1>Trip to {destination} </h1>
     <img className="tripPhoto" src={destinationPic}></img> 
-    </div> */}
+    <h1>{startDate} to {endDate}</h1>
+    </div> : null } 
+
 
     <div className="tripFormCard">
       
@@ -48,23 +50,21 @@ export default function AddTripForm ({ destination, setDestination, destinationP
 
       <form className="tripForm" onSubmit={handleSubmit}>
         
-        {/* <label>
-         Destination: <input value={destination} onChange={(event) => setDestination(event.target.value)}/> <br/>
-        </label> <br/> */}
+      
+        {!startDate && !endDate? <label className="tripFormText">
+          When are you traveling to {destination}? <input type="date" value={startDate} onChange={(event) => setStartDate(event.target.value)}/><br/>
+        </label> : null}
 
-        <label className="tripFormText">
-          When are you leaving for {destination}? <input type="date" value={startDate} onChange={(event) => setStartDate(event.target.value)}/><br/>
-        </label> <br/>
-
-        <label className="tripFormText">
-          When are you returning from {destination}? <input type="date" value={endDate} onChange={(event) => setEndDate(event.target.value)}/> <br/>
-        </label> <br/> 
+       {startDate && !endDate? <label className="tripFormText">
+          When are you leaving {destination}? <input type="date" value={endDate} onChange={(event) => setEndDate(event.target.value)}/> <br/>
+        </label> : null}
         
         {/* <label> 
          Trip Photo: <input value={tripPhoto} onChange={(event) => setTripPhoto(event.target.value)}/> <br/>
         </label> <br/> */}
 
-        <button className="addTripButton">Add Trip</button> <br/> <br/>
+
+       {startDate && endDate ? <button className="addTripButton">Add Trip</button> : null}
       </form>
       </div>
 
