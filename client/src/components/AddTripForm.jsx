@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export default function AddTripForm ({ destination, setDestination, destinationPic, setDestinationPic }) {
+export default function AddTripForm ({ destination, setDestination, destinationPic, setDestinationPic, trip, setTrip }) {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   const [tripPhoto, setTripPhoto] = useState(destinationPic);
@@ -27,10 +27,11 @@ export default function AddTripForm ({ destination, setDestination, destinationP
       setStartDate("");
       setEndDate("");
       setTripPhoto("");
+      setTrip(result)
     } catch (error) {
     }
 
-    navigate("/");
+    navigate(`/trip/${trip.trip_id}`);
 
   }
 
