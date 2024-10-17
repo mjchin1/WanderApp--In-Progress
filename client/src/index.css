@@ -94,6 +94,21 @@ a {
 .arrivalCard {
   margin-left: 10px; 
   margin-right: 10px;
+  font-size: 20px;
+}
+
+.arrivalInfo {
+  text-align: left;
+}
+.arrivalContainer {
+  text-align: left;
+  margin: 0 auto;
+  font-size: 25px;
+  border: solid;
+}
+
+.arrivalsButton {
+  text-align: center;
 }
 
 

@@ -31,13 +31,10 @@ function SingleArrival({ arrivals, setArrivals, arrival, setArrival }) {
       <div className="arrivalContainer">
           <div key={arrival.arrival_id} className="arrivalCard">
             <div className="arrivalDetails">
-              <p className="arrivalInfo">{arrival.traveler_name}</p>
-              <p className="arrivalInfo">{arrival.travel_date}</p>
-              <p className="arrivalInfo">{arrival.trip_number}</p>
-              <p className="arrivalInfo">{arrival.travel_origin}</p>
-              <p className="arrivalInfo">{arrival.departure_time}</p>
-              <p className="arrivalInfo">{arrival.travel_destination}</p>
-              <p className="arrivalInfo">{arrival.arrival_time}</p>
+              {/* <p className="arrivalInfo">{arrival.traveler_name}</p> */}
+              <p className="arrivalInfo">Flight Number: {arrival.trip_number}</p>
+              <p className="arrivalInfo">Leaves {arrival.travel_origin} on {arrival.travel_date} at {arrival.departure_time} </p>
+              <p className="arrivalInfo"> Arrives in {arrival.travel_destination} at {arrival.arrival_time} </p>
             </div>
           </div>
       </div>
