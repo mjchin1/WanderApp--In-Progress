@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
-function SingleTrip({ trip }) {
-  console.log(trip.trip_id)
+function SingleTrip({ trip, arrival, departure }) {
+  const navigate = useNavigate()
 
   const [trips, setTrips] = useState([])
 
@@ -24,20 +25,34 @@ function SingleTrip({ trip }) {
     fetchTrips();
   }, []);
 
+  function navToArrivals() {
+    navigate("/arrivals")
+  }
+  function navToDepartures() {
+    navigate("/departures")
+  }
+
+  function navToActivities() {
+    navigate("/activities")
+  }
+
 
  
 
   return (
     <>
-       <h1>{trip.destination}</h1>
+      <div className="tripCard">
+        <h1>Your Trip to {trip.destination}</h1>
+        <h1 className="tripDates">{trip.start_date} to {trip.end_date}</h1>
+        <br/> <img className="tripPhoto"src={trip.trip_photo}></img> <br/> <br/>
 
-          <button key={trip.trip_id} className="tripCard">
-            <div className="tripDetails">
-              <p className="tripHeading">{trip.destination}</p>
-              <p className="tripDates">{trip.start_date} to {trip.end_date}</p>
-              <img className="tripPhoto"src={trip.trip_photo}></img>
-            </div>
-          </button>
+        <button onClick={()=>{navToArrivals()}}>Arrivals</button> 
+        <button onClick={()=>{navToDepartures()}}>Departures</button> 
+        <button onClick={()=>{navToActivities()}}>Activities</button>
+        <button>Travel Buddies</button>
+        
+      </div>
+       
 
     </> )
 }
