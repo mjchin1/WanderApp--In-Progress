@@ -72,6 +72,30 @@ button:focus-visible {
   height: 325px;
   object-fit: cover;
 }
+.tripCard {
+  width: 70vw;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.tripButton {
+  width: 20vw;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.tripButtonDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40vw;
+}
+
+.tripPhotoDiv {
+  display: inline-flex;
+}
 
 .activityContainer {
   display: inline-flex;

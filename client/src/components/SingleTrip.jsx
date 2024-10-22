@@ -41,16 +41,23 @@ function SingleTrip({ trip, arrival, departure }) {
 
   return (
     <>
-      <div className="tripCard">
-        <h1>Your Trip to {trip.destination}</h1>
-        <h1 className="tripDates">{trip.start_date} to {trip.end_date}</h1>
-        <br/> <img className="tripPhoto"src={trip.trip_photo}></img> <br/> <br/>
 
-        <button onClick={()=>{navToArrivals()}}>Arrivals</button> 
-        <button onClick={()=>{navToDepartures()}}>Departures</button> 
-        <button onClick={()=>{navToActivities()}}>Activities</button>
-        <button>Travel Buddies</button>
+      <h1>Your Trip to {trip.destination}</h1>
+      <h1 className="tripDates">{trip.start_date} to {trip.end_date}</h1>
+      <div className="tripCard">
         
+        <div className="tripButtonDiv">
+        <button className="tripButton" onClick={()=>{navToArrivals()}}>Arrivals</button> 
+        <button className="tripButton" onClick={()=>{navToDepartures()}}>Departures</button> 
+        <button className="tripButton" onClick={()=>{navToActivities()}}>Activities</button>
+        <button className="tripButton">Travel Buddies</button>
+        </div>
+        
+        <div className="tripPhotoDiv">
+        <br/> <img className="tripPhoto"src={trip.trip_photo}></img> <br/> <br/>
+        </div>
+
+     
       </div>
        
 
