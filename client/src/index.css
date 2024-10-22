@@ -104,12 +104,31 @@ a {
   text-align: left;
   margin: 0 auto;
   font-size: 25px;
-  border: solid;
 }
 
 .arrivalsButton {
   text-align: center;
 }
+
+.departureCard {
+  margin-left: 10px; 
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.departureInfo {
+  text-align: left;
+}
+.departureContainer {
+  text-align: left;
+  margin: 0 auto;
+  font-size: 25px;
+}
+
+.departuresButton {
+  text-align: center;
+}
+
 
 
 .clickDiv {
