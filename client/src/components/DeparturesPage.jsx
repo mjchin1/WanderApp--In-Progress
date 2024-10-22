@@ -41,12 +41,12 @@ function DeparturesPage( {trip, setDeparture} ) {
           }}>
 
           <div className="departureDetails">
-              <p className="departureInfo">{departure.traveler_name}</p>
-              <p className="departureInfo">Flight Number: {departure.trip_number}</p>
-              <p className="departureInfo">Leaves {departure.travel_origin} on {departure.travel_date} at {departure.departure_time} </p>
-              <p className="departureInfo"> Arrives in {departure.travel_destination} at {departure.departure_time} </p>
+              <p className="departureInfo departingTravelerName">{departure.traveler_name}</p>
+              <p className="departureInfo">Traveling on {departure.travel_date} </p>
+              <p className="departureInfo">Leaving {departure.travel_origin} at {departure.departure_time}</p>
+              <p className="departureInfo"> Arriving in {departure.travel_destination} at {departure.departure_time} </p>
               <button className="departuresButton"> Edit </button>
-          </div>
+            </div>
           </button>
     
           </>
