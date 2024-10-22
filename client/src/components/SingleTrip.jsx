@@ -44,7 +44,7 @@ function SingleTrip({ trip, arrival, departure }) {
 
       <h1>Your Trip to {trip.destination}</h1>
       <h1 className="tripDates">{trip.start_date} to {trip.end_date}</h1>
-      <div className="tripCard">
+      <div className="singleTripCard">
         
         <div className="tripButtonDiv">
         <button className="tripButton" onClick={()=>{navToArrivals()}}>Arrivals</button> 

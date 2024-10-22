@@ -72,7 +72,8 @@ button:focus-visible {
   height: 325px;
   object-fit: cover;
 }
-.tripCard {
+
+.singleTripCard {
   width: 70vw;
   display: flex;
   justify-content: space-between;
