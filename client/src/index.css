@@ -125,6 +125,11 @@ a {
 .arrivalInfo {
   text-align: left;
 }
+
+.arrivingTravelerName {
+  font-size: 30px;
+  font-weight: bold;
+}
 .arrivalContainer {
   text-align: left;
   margin: 0 auto;
