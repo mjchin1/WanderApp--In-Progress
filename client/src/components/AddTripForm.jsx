@@ -56,7 +56,7 @@ export default function AddTripForm ({ destination, setDestination, destinationP
         </label> : null}
 
        {startDate && !endDate? <label className="tripFormText">
-          When are you leaving? <input type="date" value={endDate} onChange={(event) => setEndDate(event.target.value)}/> <br/>
+          When are you returning? <input type="date" value={endDate} onChange={(event) => setEndDate(event.target.value)}/> <br/>
         </label> : null}
         
         {/* <label> 
