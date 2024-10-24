@@ -40,7 +40,7 @@ export default function AddTripForm ({ destination, setDestination, destinationP
 
    {destination && startDate && endDate ? <div >
     <h1>Trip to {destination} </h1>
-    <img className="tripPhoto" src={destinationPic}></img> 
+    {/* <img className="tripPhoto" src={destinationPic}></img>  */}
     <h1>{startDate} to {endDate}</h1>
     </div> : null } 
 
@@ -64,7 +64,7 @@ export default function AddTripForm ({ destination, setDestination, destinationP
         </label> <br/> */}
 
 
-       {startDate && endDate ? <button className="addTripButton">Add Trip</button> : null}
+       {startDate && endDate ? <button className="addTripButton">Confirm Trip</button> : null}
       </form>
       </div>
 
