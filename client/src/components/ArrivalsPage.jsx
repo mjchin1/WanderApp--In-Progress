@@ -32,21 +32,21 @@ function ArrivalsPage({ trip, arrivals, setArrivals, setArrival }) {
       <h1>Arrivals</h1>
 
 
-      <div>
+      <div className="arrivalsPageContainer">
       {arrivals.map((arrival) => (
           <>
-          <button key={arrival.arrival_id} className="arrivalCard clickDiv" onClick={()=> {
-            setArrival(arrival)
-            navigate(`/arrivals/${arrival.arrival_id}`)
-          }}>
+          <div key={arrival.arrival_id} className="arrivalCard" >
             <div className="arrivalDetails">
               <p className="arrivalInfo arrivingTravelerName">{arrival.traveler_name}</p>
               <p className="arrivalInfo">Traveling on {arrival.travel_date} </p>
               <p className="arrivalInfo">Leaving {arrival.travel_origin} at {arrival.departure_time}</p>
               <p className="arrivalInfo"> Arriving in {arrival.travel_destination} at {arrival.arrival_time} </p>
-              <button className="arrivalsButton"> Edit </button>
+              <button className="arrivalsButton" onClick={()=> {
+            setArrival(arrival)
+            navigate(`/arrivals/${arrival.arrival_id}`)
+          }}> More Info </button>
             </div>
-          </button>
+          </div>
     
           </>
       ))}

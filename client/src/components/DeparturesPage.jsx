@@ -32,22 +32,22 @@ function DeparturesPage( {trip, setDeparture} ) {
     <>
       <h1>Departures</h1>
 
-      <div className="departureContainer">
+      <div className="departuresPageContainer">
       {departures.map((departure) => (
           <>
-          <button key={departure.departure_id} className="departureCard clickDiv" onClick={()=> {
-            setDeparture(departure);
-            navigate(`/departures/${departure.departure_id}`)
-          }}>
+          <div key={departure.departure_id} className="departureCard clickDiv" >
 
           <div className="departureDetails">
               <p className="departureInfo departingTravelerName">{departure.traveler_name}</p>
               <p className="departureInfo">Traveling on {departure.travel_date} </p>
               <p className="departureInfo">Leaving {departure.travel_origin} at {departure.departure_time}</p>
               <p className="departureInfo"> Arriving in {departure.travel_destination} at {departure.departure_time} </p>
-              <button className="departuresButton"> Edit </button>
+              <button className="departuresButton" onClick={()=> {
+            setDeparture(departure);
+            navigate(`/departures/${departure.departure_id}`)
+          }}> Edit </button>
             </div>
-          </button>
+          </div>
     
           </>
       ))}
