@@ -45,6 +45,8 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 button:hover {
   border-color: #646cff;
@@ -95,6 +97,10 @@ button:focus-visible {
 }
 
 .tripPhotoDiv {
+  display: inline-flex;
+}
+
+.tripActionButtons {
   display: inline-flex;
 }
 

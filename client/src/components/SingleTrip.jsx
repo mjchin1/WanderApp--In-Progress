@@ -34,6 +34,10 @@ function SingleTrip({ trips, setTrips, trip, setTrip, arrival, departure }) {
     navigate("/activities")
   }
 
+  function navToHome() {
+    navigate("/")
+  }
+
 
  
 
@@ -58,7 +62,13 @@ function SingleTrip({ trips, setTrips, trip, setTrip, arrival, departure }) {
       </div>
       <br/> <br/>
 
+    <div className="tripActionButtons">
       <RemoveTripButton trip={trip} trips={trips} setTrips={setTrips}/>
+      <button onClick={()=> {
+        navToHome()
+      }}>Back to All Trips</button>
+
+    </div>
        
 
     </> )
