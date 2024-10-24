@@ -25,6 +25,7 @@ function App() {
   const [activity, setActivity] = useState({});
   const [destination, setDestination] = useState("");
   const [destinationPic, setDestinationPic] = useState("");
+  const [trips, setTrips] = useState([])
 
   return (
     <>
@@ -39,13 +40,13 @@ function App() {
     <div className="appBody">
   
     <Routes>
-    <Route path='/' element={<TripsPage trip={trip} setTrip={setTrip}/>} />
+    <Route path='/' element={<TripsPage trips={trips} setTrips={setTrips} trip={trip} setTrip={setTrip}/>} />
     <Route path='/activities' element={<ActivitiesPage trip={trip} activity={activity} setActivity={setActivity}/>} />
     <Route path='/activities/:id' element={<SingleActivity activity={activity} setActivity={setActivity}/>} />
     <Route path='/arrivals' element={<ArrivalsPage trip={trip} arrivals={arrivals} setArrivals={setArrivals} arrival={arrival} setArrival={setArrival}/>} />
     <Route path='/departures' element={<DeparturesPage setDeparture={setDeparture} departure={departure} trip={trip}/>} />
     <Route path='/arrivals/:id' element={<SingleArrival arrivals={arrivals} setArrivals={setArrivals} arrival={arrival} setArrival={setArrival}/>}/>
-    <Route path='/trip/:id' element={<SingleTrip trip={trip} arrival={arrival} departure={departure}/>} />
+    <Route path='/trip/:id' element={<SingleTrip trips={trips} setTrips={setTrips} trip={trip} arrival={arrival} departure={departure}/>} />
     <Route path='/departures/:id' element={<SingleDeparture trip={trip}  departure={departure} setDeparture={setDeparture} />} />
     <Route path='/add-arrival' element={<AddArrivalForm trip={trip}/>}/> 
     <Route path='/add-departure' element={<AddDepartureForm trip={trip}/>}/> 

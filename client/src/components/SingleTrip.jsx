@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import RemoveTripButton from './RemoveTripButton'
 
-function SingleTrip({ trip, arrival, departure }) {
+function SingleTrip({ trips, setTrips, trip, setTrip, arrival, departure }) {
   const navigate = useNavigate()
 
-  const [trips, setTrips] = useState([])
-
   useEffect(() => {
-    async function fetchTrips() {
+    async function fetchTrip() {
       try {
         const response = await fetch(`http://localhost:8080/api/trips/${trip.trip_id}`, {
           method: "GET",
@@ -16,13 +15,12 @@ function SingleTrip({ trip, arrival, departure }) {
           },
         });
         const result = await response.json();
-        setTrips(result);
         console.log(result);
       } catch (error) {
         throw new Error(`${error.message}`);
       }
     }
-    fetchTrips();
+    fetchTrip();
   }, []);
 
   function navToArrivals() {
@@ -56,9 +54,11 @@ function SingleTrip({ trip, arrival, departure }) {
         <div className="tripPhotoDiv">
         <br/> <img className="tripPhoto"src={trip.trip_photo}></img> <br/> <br/>
         </div>
-
      
       </div>
+      <br/> <br/>
+
+      <RemoveTripButton trip={trip} trips={trips} setTrips={setTrips}/>
        
 
     </> )

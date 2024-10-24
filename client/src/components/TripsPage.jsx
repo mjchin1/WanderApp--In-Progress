@@ -1,10 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-function TripsPage({ trip, setTrip }) {
+function TripsPage({ trip, setTrip, trips, setTrips }) {
   const navigate = useNavigate()
-
-  const [trips, setTrips] = useState([])
 
   function navToTripsPage() {
 
