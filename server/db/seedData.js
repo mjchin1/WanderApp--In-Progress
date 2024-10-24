@@ -1,16 +1,16 @@
 const trips = [
   {
     destination: "Lisbon, Portugal",
-    startDate: "8/16/2024",
-    endDate: "8/23/2024",
+    startDate: "2024-08-16",
+    endDate: "2024-08-23",
     tripPhoto:
       "https://www.travelandleisure.com/thmb/LzWpzDihxjffaFmM9TZWCvm9VyY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/lisbon-portugal-LISBONTG0521-c933a0fb669647619fa580f6c602c4c8.jpg",
   },
 
   {
     destination: "Copenhagen, Denmark",
-    startDate: "10/31/2024",
-    endDate: "11/7/2024",
+    startDate: "2024-10-31",
+    endDate: "2024-11-07",
     tripPhoto:
       "https://media.cntraveler.com/photos/5c002c7745e16c465f875830/2:1/w_2560%2Cc_limit/GettyImages-1011529218.jpg",
   },
@@ -20,7 +20,7 @@ const arrivals = [
   {
     tripId: 1,
     travelerName: "Melissa",
-    travelDate: "08/16/2024",
+    travelDate: "2024-08-16",
     tripNumber: "TP 244",
     travelOrigin: "Chicago, IL",
     departureTime: "6:00pm",
@@ -31,7 +31,7 @@ const arrivals = [
   {
     tripId: 1,
     travelerName: "Lucas",
-    travelDate: "08/16/2024",
+    travelDate: "2024-08-16",
     tripNumber: "TP 244",
     travelOrigin: "Chicago, IL",
     departureTime: "6:00pm",
@@ -42,7 +42,7 @@ const arrivals = [
   {
     tripId: 2,
     travelerName: "Melissa",
-    travelDate: "10/31/2024",
+    travelDate: "2024-10-31",
     tripNumber: "SK 944",
     travelOrigin: "Chicago, IL",
     departureTime: "8:10pm",
@@ -53,7 +53,7 @@ const arrivals = [
   {
     tripId: 2,
     travelerName: "Lucas",
-    travelDate: "10/31/2024",
+    travelDate: "2024-10-31",
     tripNumber: "SK 944",
     travelOrigin: "Chicago, IL",
     departureTime: "8:10pm",
@@ -66,7 +66,7 @@ const departures = [
   {
     tripId: 1,
     travelerName: "Melissa",
-    travelDate: "08/23/2024",
+    travelDate: "2024-08-23",
     tripNumber: "TP 243",
     travelOrigin: "Lisbon, Portugal",
     departureTime: "12:40pm",
@@ -77,7 +77,7 @@ const departures = [
   {
     tripId: 1,
     travelerName: "Lucas",
-    travelDate: "08/23/2024",
+    travelDate: "2024-08-23",
     tripNumber: "TP 243",
     travelOrigin: "Lisbon, Portugal",
     departureTime: "12:40pm",
@@ -88,7 +88,7 @@ const departures = [
   {
     tripId: 2,
     travelerName: "Melissa",
-    travelDate: "11/7/2024",
+    travelDate: "2024-11-07",
     tripNumber: "SK 943",
     travelOrigin: "Copenhagen, Denmark",
     departureTime: "1:35pm",
@@ -99,7 +99,7 @@ const departures = [
   {
     tripId: 2,
     travelerName: "Lucas",
-    travelDate: "11/7/2024",
+    travelDate: "2024-11-07",
     tripNumber: "SK 943",
     travelOrigin: "Copenhagen, Denmark",
     departureTime: "1:35pm",
@@ -135,7 +135,7 @@ const calendar = [
   {
     tripId: 1,
     eventName: "Dinner at Belcanto",
-    eventDate: "8/17/2024",
+    eventDate: "2024-08-17",
     eventTime: "7:30pm",
     eventDescription: "Meet at the restaurant at 7:15pm",
     eventWebsite: "https://www.belcanto.pt/en/",
@@ -144,7 +144,7 @@ const calendar = [
   {
     tripId: 2,
     eventName: "Dinner at Host",
-    eventDate: "11/2/2024",
+    eventDate: "2024-11-02",
     eventTime: "7:30pm",
     eventDescription: "Meet at the restaurant at 7:15pm",
     eventWebsite: "https://cofoco.dk/en/hoest/",
