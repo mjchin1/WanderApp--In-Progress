@@ -45,7 +45,7 @@ function DeparturesPage( {trip, setDeparture} ) {
               <button className="departuresButton" onClick={()=> {
             setDeparture(departure);
             navigate(`/departures/${departure.departure_id}`)
-          }}> Edit </button>
+          }}> More Info </button>
             </div>
           </div>
     
