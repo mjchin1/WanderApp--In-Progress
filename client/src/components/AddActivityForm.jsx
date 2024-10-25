@@ -1,5 +1,11 @@
 import { useState } from 'react';
-import ActivityTypes from './ActivityTypes';
+import Dine from "../assets/Dine.png"
+import Drink from "../assets/Drink.png"
+import Entertainment from "../assets/Entertainment.png"
+import Nature from "../assets/Nature.png"
+import Dancing from "../assets/Dancing.png"
+import Shopping from "../assets/Shopping.png"
+import Explore from "../assets/Explore.png"
 
 export default function AddActivityForm ({trip}) {
   const [activityName, setActivityName] = useState("");
@@ -7,6 +13,44 @@ export default function AddActivityForm ({trip}) {
   const [activityPhoto, setActivityPhoto] = useState("");
   const [activityWebsite, setActivityWebsite] = useState("");
   const [tripId, setTripId] = useState(trip.trip_id);
+
+  const activityTypes = [
+
+    {
+      description: "Dine",
+      image: Dine
+    },
+
+    {
+      description: "Drink",
+      image: Drink
+    },
+
+    {
+      description: "Entertainment",
+      image: Entertainment
+    },
+
+    {
+      description: "Nature",
+      image: Nature
+    },
+
+    {
+      description: "Dance",
+      image: Dancing
+    },
+
+    {
+      description: "Shop",
+      image: Shopping
+    },
+    {
+      description: "Explore",
+      image: Explore
+    },
+   
+  ];
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -41,12 +85,22 @@ export default function AddActivityForm ({trip}) {
     <div className="activityFormCard">
       
       <div className="activityFormBorder">
+      <h3> Add an Activity</h3>
+
+      <h1>What kind of activity is this?</h1>
+      {activityTypes.map((type) => (
+      <button className="activityTypeButton" onClick={()=>{
+        setActivityDescription(type.description)
+        setActivityPhoto(type.image)
+      }}>
+        {type.description} <br/> <br/>
+      <img className="activityIcon" src={type.image}></img> 
+      </button>
+      ))} <br/>
+
 
       <form className="activityForm" onSubmit={handleSubmit}>
-        <h3> Add an Activity</h3>
 
-        <ActivityTypes setActivityDescription={setActivityDescription} setActivityPhoto={setActivityPhoto}/> <br/> <br/>
-        
         <label>
          Activity Name: <input value={activityName} onChange={(event) => setActivityName(event.target.value)}/> <br/>
         </label> <br/>
