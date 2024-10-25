@@ -33,12 +33,12 @@ function ActivityTypes({}) {
     },
 
     {
-      description: "Dancing",
+      description: "Dance",
       image: Dancing
     },
 
     {
-      description: "Shopping",
+      description: "Shop",
       image: Shopping
     },
     {
@@ -51,10 +51,10 @@ function ActivityTypes({}) {
 
   return (
     <>
-      <h1>Where To?</h1>
+      <h1>What kind of activity is this?</h1>
       {activityTypes.map((type) => (
-        <button className="destinationButton">
-          {type.description}
+        <button className="activityTypeButton">
+          {type.description} <br/> <br/>
          <img className="activityIcon" src={type.image}></img> 
         </button>
       ))}

@@ -121,6 +121,18 @@ button:focus-visible {
   object-fit: cover;
 }
 
+.activityIcon {
+  height: 100px;
+  
+}
+
+.activityTypeButton {
+  background-color: white;
+  width: 200px;
+  border: solid;
+  font-size: 20px;
+}
+
 a {
   padding-left: 5px; 
   padding-right: 5px;

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import ActivityTypes from './ActivityTypes';
 
 export default function AddActivityForm ({trip}) {
   const [activityName, setActivityName] = useState("");
@@ -43,6 +44,8 @@ export default function AddActivityForm ({trip}) {
 
       <form className="activityForm" onSubmit={handleSubmit}>
         <h3> Add an Activity</h3>
+
+        <ActivityTypes/> <br/> <br/>
         
         <label>
          Activity Name: <input value={activityName} onChange={(event) => setActivityName(event.target.value)}/> <br/>
