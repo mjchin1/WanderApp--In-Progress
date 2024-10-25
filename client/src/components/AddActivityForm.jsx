@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import Dine from "../assets/Dine.png"
 import Drink from "../assets/Drink.png"
 import Entertainment from "../assets/Entertainment.png"
@@ -13,6 +14,12 @@ export default function AddActivityForm ({trip}) {
   const [activityPhoto, setActivityPhoto] = useState("");
   const [activityWebsite, setActivityWebsite] = useState("");
   const [tripId, setTripId] = useState(trip.trip_id);
+
+  const navigate = useNavigate();
+
+  function navToActivities() {
+    navigate("/activities");
+  };
 
   const activityTypes = [
 
@@ -75,6 +82,7 @@ export default function AddActivityForm ({trip}) {
       setActivityDescription("");
       setActivityPhoto("");
       setActivityWebsite("");
+      navToActivities();
     } catch (error) {
     }
 
