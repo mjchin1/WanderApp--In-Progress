@@ -45,20 +45,20 @@ export default function AddActivityForm ({trip}) {
       <form className="activityForm" onSubmit={handleSubmit}>
         <h3> Add an Activity</h3>
 
-        <ActivityTypes/> <br/> <br/>
+        <ActivityTypes setActivityDescription={setActivityDescription} setActivityPhoto={setActivityPhoto}/> <br/> <br/>
         
         <label>
          Activity Name: <input value={activityName} onChange={(event) => setActivityName(event.target.value)}/> <br/>
         </label> <br/>
 
-        <label>
+        {/* <label>
           Activity Description: <input value={activityDescription} onChange={(event) => setActivityDescription(event.target.value)}/><br/>
         </label> <br/>
 
         <label>
           Activity Photo: <input value={activityPhoto} onChange={(event) => setActivityPhoto(event.target.value)}/> <br/>
         </label> <br/> 
-        
+         */}
         <label> 
          Activity Website: <input value={activityWebsite} onChange={(event) => setActivityWebsite(event.target.value)}/> <br/>
         </label> <br/>

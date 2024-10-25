@@ -7,7 +7,7 @@ import Shopping from "../assets/Shopping.png"
 import Explore from "../assets/Explore.png"
 
 
-function ActivityTypes({}) {
+function ActivityTypes({setActivityPhoto, setActivityDescription}) {
 
 
   const activityTypes = [
@@ -53,7 +53,10 @@ function ActivityTypes({}) {
     <>
       <h1>What kind of activity is this?</h1>
       {activityTypes.map((type) => (
-        <button className="activityTypeButton">
+        <button className="activityTypeButton" onClick={()=>{
+          setActivityDescription(type.description)
+          setActivityPhoto(type.image)
+        }}>
           {type.description} <br/> <br/>
          <img className="activityIcon" src={type.image}></img> 
         </button>
