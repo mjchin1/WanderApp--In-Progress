@@ -100,6 +100,10 @@ button:focus-visible {
   display: inline-flex;
 }
 
+.tripCard {
+  margin-bottom: 20px;
+}
+
 .tripActionButtons {
   display: inline-flex;
 }
@@ -288,6 +292,11 @@ a {
 
 .tripFormText {
   font-size: 50px;
+}
+
+.dateConfirmationButton {
+  font-size: 30px;
+  margin-left: 10px;
 }
 
 input {

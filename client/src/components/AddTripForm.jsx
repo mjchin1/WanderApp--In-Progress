@@ -3,7 +3,9 @@ import { useNavigate } from 'react-router-dom';
 
 export default function AddTripForm ({ destination, setDestination, destinationPic, setDestinationPic, trip, setTrip }) {
   const [startDate, setStartDate] = useState("");
+  const [startConfirmation, setStartConfirmation] = useState(null)
   const [endDate, setEndDate] = useState("");
+  const [endConfirmation, setEndConfirmation] = useState(null)
   const [tripPhoto, setTripPhoto] = useState(destinationPic);
   const navigate = useNavigate();
 
@@ -38,7 +40,7 @@ export default function AddTripForm ({ destination, setDestination, destinationP
   return (
     <>
 
-   {destination && startDate && endDate ? <div >
+   {destination && startConfirmation && endConfirmation ? <div >
     <h1>Trip to {destination} </h1>
     {/* <img className="tripPhoto" src={destinationPic}></img>  */}
     <h1>{startDate} to {endDate}</h1>
@@ -51,12 +53,14 @@ export default function AddTripForm ({ destination, setDestination, destinationP
 
       <form className="tripForm" onSubmit={handleSubmit}>
         
-        {!startDate && !endDate? <label className="tripFormText">
-          When are you going? <input type="date" value={startDate} onChange={(event) => setStartDate(event.target.value)}/><br/>
+        {!startConfirmation && !endConfirmation? <label className="tripFormText">
+          When are you going? <input type="date" value={startDate} onChange={(event) => setStartDate(event.target.value)}/>
+          <button className="dateConfirmationButton" onClick={()=> {setStartConfirmation("confirmed")}}>Confirm Date</button>
         </label> : null}
 
-       {startDate && !endDate? <label className="tripFormText">
-          When are you returning? <input type="date" value={endDate} onChange={(event) => setEndDate(event.target.value)}/> <br/>
+       {startConfirmation && !endConfirmation? <label className="tripFormText">
+          When are you returning? <input type="date" value={endDate} onChange={(event) => setEndDate(event.target.value)}/>
+          <button className="dateConfirmationButton" onClick={()=> {setEndConfirmation("confirmed")}}>Confirm Date</button>
         </label> : null}
         
         {/* <label> 
@@ -64,7 +68,7 @@ export default function AddTripForm ({ destination, setDestination, destinationP
         </label> <br/> */}
 
 
-       {startDate && endDate ? <button className="addTripButton">Confirm Trip</button> : null}
+       {startConfirmation && endConfirmation ? <button className="addTripButton">Confirm Trip</button> : null}
       </form>
       </div>
 

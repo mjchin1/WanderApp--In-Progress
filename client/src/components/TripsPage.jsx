@@ -37,6 +37,8 @@ function TripsPage({ trip, setTrip, trips, setTrips }) {
     <>
       {trips? <h1>Upcoming Trips</h1> :  <h1> No Upcoming Trips</h1> }
 
+      <button onClick={() => {navToTripsPage()}}> Plan a Trip</button> <br/> <br/>
+
       {trips.map((trip) => (
           <>
           <button key={trip.trip_id} className="tripCard clickDiv" onClick={()=> {
@@ -54,8 +56,6 @@ function TripsPage({ trip, setTrip, trips, setTrips }) {
       ))}
 
       <br/> <br/>
-
-      <button onClick={() => {navToTripsPage()}}> Plan a Trip</button>
 
       <br/> <br/> <br/>
 
