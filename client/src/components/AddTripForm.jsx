@@ -68,7 +68,7 @@ export default function AddTripForm ({ destination, setDestination, destinationP
         </label> <br/> */}
 
 
-       {startConfirmation && endConfirmation ? <button className="addTripButton">Confirm Trip</button> : null}
+       {startConfirmation && endConfirmation ? <button className="addTripButton">Confirm Trip Details</button> : null}
       </form>
       </div>
 
