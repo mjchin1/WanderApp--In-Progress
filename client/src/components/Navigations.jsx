@@ -13,6 +13,8 @@ export default function Navigations() {
             <Link to = '/add-trip'>Add Trip Form</Link>
             <Link to = '/destinations'>Destinations</Link>
             <Link to = '/trip/:id'>Single Trip</Link>
+            <Link to = '/activity-types'>Activity Types</Link>
+
         </nav>
     );
 };
