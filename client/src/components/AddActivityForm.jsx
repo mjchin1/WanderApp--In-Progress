@@ -93,9 +93,10 @@ export default function AddActivityForm ({trip}) {
     <div className="activityFormCard">
       
       <div className="activityFormBorder">
-      <h3> Add an Activity</h3>
+      <h1> Add an Activity</h1>
 
-      <h1>What kind of activity is this?</h1>
+      <div className="activityCategoriesContainer">
+      <h2>Choose an Activity Category: </h2>
       {activityTypes.map((type) => (
       <button className="activityTypeButton" onClick={()=>{
         setActivityDescription(type.description)
@@ -105,6 +106,8 @@ export default function AddActivityForm ({trip}) {
       <img className="activityIcon" src={type.image}></img> 
       </button>
       ))} <br/> <br/>
+
+    </div>
 
 
       <form className="activityForm" onSubmit={handleSubmit}>
