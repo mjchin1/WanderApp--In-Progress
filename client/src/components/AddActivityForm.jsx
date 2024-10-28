@@ -104,7 +104,7 @@ export default function AddActivityForm ({trip}) {
         {type.description} <br/> <br/>
       <img className="activityIcon" src={type.image}></img> 
       </button>
-      ))} <br/>
+      ))} <br/> <br/>
 
 
       <form className="activityForm" onSubmit={handleSubmit}>

@@ -114,8 +114,8 @@ button:focus-visible {
 }
 
 .activityPhoto {
-  width: 20vw;
-  height: 150px;
+  width: 15vw;
+  height: 175px;
   margin-left: 20px;
   margin-right: 20px;
   object-fit: cover;
