@@ -10,6 +10,10 @@ function ActivitiesPage( { activity, setActivity, trip }) {
     navigate(`/activities/${activity.activity_id}`)
   }
 
+  function navToForm() {
+    navigate("/add-activity")
+  }
+
   useEffect(() => {
     async function fetchActivities() {
       try {
@@ -54,6 +58,10 @@ function ActivitiesPage( { activity, setActivity, trip }) {
       ))}
 
       </div>
+      <br/> <br/>
+      <button onClick={()=> {
+        navToForm()
+      }}>Add Activities</button>
 
     </> )
 }
