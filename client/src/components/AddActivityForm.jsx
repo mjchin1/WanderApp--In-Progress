@@ -14,6 +14,8 @@ export default function AddActivityForm ({trip}) {
   const [activityPhoto, setActivityPhoto] = useState("");
   const [activityWebsite, setActivityWebsite] = useState("");
   const [tripId, setTripId] = useState(trip.trip_id);
+  const [activityNameStatus, setActivityNameStatus] = useState(null)
+  const [activityWebsiteStatus, setActivityWebsiteStatus] = useState(null)
 
   const navigate = useNavigate();
 
@@ -95,7 +97,7 @@ export default function AddActivityForm ({trip}) {
       <div className="activityFormBorder">
       <h1> Add an Activity</h1>
 
-      <div className="activityCategoriesContainer">
+     { !activityDescription && !activityPhoto? <div className="activityCategoriesContainer">
       <h2>Choose an Activity Category: </h2>
       {activityTypes.map((type) => (
       <button className="activityTypeButton" onClick={()=>{
@@ -108,14 +110,22 @@ export default function AddActivityForm ({trip}) {
       ))} <br/> <br/>
 
     </div>
-
-
+    : null}
+    
       <form className="activityForm" onSubmit={handleSubmit}>
+      
+      { activityDescription && activityPhoto && !activityNameStatus ? 
+      <>
+      <label>
+         Activity Name: <input value={activityName} onChange={(event) => setActivityName(event.target.value)}/> 
+        </label>
+        <button onClick={()=>{
+          setActivityNameStatus("confirmed")
+        }}>Next</button>
 
-        <label>
-         Activity Name: <input value={activityName} onChange={(event) => setActivityName(event.target.value)}/> <br/>
-        </label> <br/>
-
+        </>
+      : null}
+     
         {/* <label>
           Activity Description: <input value={activityDescription} onChange={(event) => setActivityDescription(event.target.value)}/><br/>
         </label> <br/>
@@ -124,11 +134,21 @@ export default function AddActivityForm ({trip}) {
           Activity Photo: <input value={activityPhoto} onChange={(event) => setActivityPhoto(event.target.value)}/> <br/>
         </label> <br/> 
          */}
-        <label> 
-         Activity Website: <input value={activityWebsite} onChange={(event) => setActivityWebsite(event.target.value)}/> <br/>
-        </label> <br/>
+        { activityDescription && activityPhoto && activityNameStatus && !activityWebsiteStatus ? 
+        <>
+        <label>
+         Activity Website: <input value={activityWebsite} onChange={(event) => setActivityWebsite(event.target.value)}/>
+        </label>
+       <button onClick={()=>{
+          setActivityWebsiteStatus("confirmed")
+        }}>Next</button>
+
+        </> 
+        : null}
 
         <button className="addActivityButton">Add Activity</button> <br/> <br/>
+
+
       </form>
       </div>
 
