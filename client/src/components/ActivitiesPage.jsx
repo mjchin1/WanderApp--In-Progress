@@ -44,13 +44,13 @@ function ActivitiesPage( { activity, setActivity, trip }) {
       <div className="activityContainer">
       {activities.map((activity) => (
           <>
-          <button key={activity.activity_id} className="activityCard clickDiv" onClick={()=>{
+          <button key={activity.activity_id} className="activityPageButton clickDiv" onClick={()=>{
             setActivity(activity);
             handleClick()
           }}>
             <div className="activityDetails">
               <p className="activityHeading">{activity.activity_name}</p>
-              <img className="activityPhoto"src={activity.activity_photo}></img>
+              <img className="activityIcon"src={activity.activity_photo}></img> <br/> <br/>
             </div>
           </button>
     

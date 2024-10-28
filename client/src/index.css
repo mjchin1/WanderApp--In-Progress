@@ -110,20 +110,35 @@ button:focus-visible {
 
 .activityContainer {
   display: inline-flex;
-
 }
 
+
 .activityPhoto {
-  width: 15vw;
+  width: 10vw;
   height: 175px;
   margin-left: 20px;
   margin-right: 20px;
   object-fit: cover;
 }
 
+.singleActivityContainer {
+  border: solid;
+  padding: 20px;
+  border-radius: 30px;
+}
+.singleActivityPhoto {
+  width: 10vw;
+  height: 175px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-bottom: 20px;
+  object-fit: cover;
+  /* border: solid; */
+  border-radius: 30px;
+}
+
 .activityIcon {
   height: 100px;
-  
 }
 
 .activityTypeButton {
@@ -131,6 +146,36 @@ button:focus-visible {
   width: 200px;
   border: solid;
   font-size: 20px;
+}
+.activityPageButton {
+  background-color: white;
+  width: 255px;
+  border: solid;
+  font-size: 20px;
+}
+
+
+.singleActivityDetails {
+  display: flex;
+  justify-content: center;
+}
+
+
+.activityLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.activityLinkButton {
+  width: 200px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.buttonBreak {
+  margin-bottom: 10px;
 }
 
 a {

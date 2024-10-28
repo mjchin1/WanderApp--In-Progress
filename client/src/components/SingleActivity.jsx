@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 function SingleActivity( { activity }) {
 
@@ -23,15 +24,23 @@ function SingleActivity( { activity }) {
 
   return (
     <>
-      <h1>{activity.activity_name}</h1>
 
-      <div className="activityContainer">
+
+      
+
+      <div className="singleActivityContainer">
+      <h1>{activity.activity_name}</h1>
   
           <div key={activity.activity_id} className="activityCard">
-            <div className="activityDetails">
-              <p className="activityHeading">{activity.activity_description}</p>
-              <a className="activityHeading" href={activity.activity_website} target="_blank">Website</a> <br/>
-              <img className="activityPhoto"src={activity.activity_photo}></img>
+            <div className="singleActivityDetails">
+              <div className="activityLinks">
+              <Link to={activity.activity_website} target="_blank"><button className="activityLinkButton">See Website</button></Link>
+              <button className="activityLinkButton">Add to Calendar</button>
+              <button className="activityLinkButton">Remove From List</button>
+              </div>
+              <div className="activityPhotoDiv">
+              <img className="singleActivityPhoto"src={activity.activity_photo}></img>
+              </div>
             </div>
           </div>
       </div>
