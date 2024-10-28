@@ -38,7 +38,7 @@ function ActivitiesPage( { activity, setActivity, trip }) {
 
   return (
     <>
-      <h1>Activity Ideas</h1>
+      <h1>Wander List</h1>
 
 
       <div className="activityContainer">
@@ -61,7 +61,7 @@ function ActivitiesPage( { activity, setActivity, trip }) {
       <br/> <br/>
       <button onClick={()=> {
         navToForm()
-      }}>Add Activities</button>
+      }}>Add an Activity</button>
 
     </> )
 }
