@@ -146,7 +146,19 @@ export default function AddActivityForm ({trip}) {
         </> 
         : null}
 
-        <button className="addActivityButton">Add Activity</button> <br/> <br/>
+       
+       { activityDescription && activityPhoto && activityNameStatus && activityWebsiteStatus ? 
+       <>
+        <button className="activityTypeButton" >
+        {activityName} <br/> <br/>
+        <img className="activityIcon" src={activityPhoto}></img> 
+        </button> <br/>
+
+        <button className="addActivityButton">Add Activity</button>
+
+        </>
+
+      : null}
 
 
       </form>
