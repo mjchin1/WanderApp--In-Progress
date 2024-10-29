@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-function ActivitiesPage( { activity, setActivity, trip }) {
+function ActivitiesPage( { activity, setActivity, trip, activities, setActivities }) {
 
-  const [activities, setActivities] = useState([])
   const navigate = useNavigate()
 
   function handleClick () {

@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import RemoveActivityButton from './RemoveActivityButton'
 
-function SingleActivity( { activity }) {
+function SingleActivity( { activity, activities, setActivities }) {
 
   useEffect(() => {
     async function fetchActivity() {
@@ -42,6 +43,7 @@ function SingleActivity( { activity }) {
               <img className="singleActivityPhoto"src={activity.activity_photo}></img>
               </div>
             </div>
+            <RemoveActivityButton activity={activity} activities={activities} setActivities={setActivities}/>
           </div>
       </div>
 
