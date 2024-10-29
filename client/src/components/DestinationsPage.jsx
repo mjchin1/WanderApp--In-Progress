@@ -20,7 +20,7 @@ function DestinationsPage({destination, setDestination, destinationPic, setDesti
     },
     {
       cityName: "Copenhagen",
-      imageUrl: "https://i.natgeofe.com/n/6f896103-f5b8-426b-aef7-3dcbbee6dcf4/GettyImages1045586638.jpg",
+      imageUrl: "https://media.cntraveler.com/photos/5c002c7745e16c465f875830/2:1/w_2560%2Cc_limit/GettyImages-1011529218.jpg",
     },
     {
       cityName: "Lisbon",

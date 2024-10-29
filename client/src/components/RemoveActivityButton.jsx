@@ -23,8 +23,8 @@ export default function RemoveActivityButton({ activity, setActivities, activiti
     }
   }
   return (
-    <div className="removeButton">
-      <button onClick={() => {
+    <div> 
+      <button className="activityLinkButton" onClick={() => {
         handleClick();
         navToActivities();
       }}>Delete Activity</button>

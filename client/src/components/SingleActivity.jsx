@@ -37,13 +37,12 @@ function SingleActivity( { activity, activities, setActivities }) {
               <div className="activityLinks">
               <Link to={activity.activity_website} target="_blank"><button className="activityLinkButton">See Website</button></Link>
               <button className="activityLinkButton">Add to Calendar</button>
-              <button className="activityLinkButton">Remove From List</button>
+              <RemoveActivityButton activity={activity} activities={activities} setActivities={setActivities}/>
               </div>
               <div className="activityPhotoDiv">
               <img className="singleActivityPhoto"src={activity.activity_photo}></img>
               </div>
             </div>
-            <RemoveActivityButton activity={activity} activities={activities} setActivities={setActivities}/>
           </div>
       </div>
 
