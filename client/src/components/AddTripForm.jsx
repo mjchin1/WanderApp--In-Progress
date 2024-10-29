@@ -54,13 +54,15 @@ export default function AddTripForm ({ destination, setDestination, destinationP
       <form className="tripForm" onSubmit={handleSubmit}>
         
         {!startConfirmation && !endConfirmation? <label className="tripFormText">
-          When are you going? <input type="date" value={startDate} onChange={(event) => setStartDate(event.target.value)}/>
-          <button className="dateConfirmationButton" onClick={()=> {setStartConfirmation("confirmed")}}>Confirm Date</button>
+          When are you going to {destination}? <br/>
+          <input type="date" value={startDate} onChange={(event) => setStartDate(event.target.value)}/> <br/>
+          <button className="dateConfirmationButton" onClick={()=> {setStartConfirmation("confirmed")}}>Next</button>
         </label> : null}
 
        {startConfirmation && !endConfirmation? <label className="tripFormText">
-          When are you returning? <input type="date" value={endDate} onChange={(event) => setEndDate(event.target.value)}/>
-          <button className="dateConfirmationButton" onClick={()=> {setEndConfirmation("confirmed")}}>Confirm Date</button>
+          When are you returning from {destination}? <br/>
+          <input type="date" value={endDate} onChange={(event) => setEndDate(event.target.value)}/> <br/>
+          <button className="dateConfirmationButton" onClick={()=> {setEndConfirmation("confirmed")}}>Next</button>
         </label> : null}
         
         {/* <label> 
