@@ -345,15 +345,16 @@ a {
   width: 25vw;
   height: 300px;
   object-fit: cover;
+  border-radius: 50px;
 }
 
 .destinationButtonText {
-  font-size: 40px;
-  border: double;
+  font-size: 30px;
+  text-align: left;
   border-width: thick;
   font-family: Palatino,URW Palladio L,serif;
-  padding-top: 5px;
   padding-bottom: 5px;
+  padding-left: 30px;
 }
 
 .tripFormText {
