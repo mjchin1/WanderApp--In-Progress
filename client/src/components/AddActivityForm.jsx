@@ -116,9 +116,10 @@ export default function AddActivityForm ({trip}) {
       
       { activityDescription && activityPhoto && !activityNameStatus ? 
       <>
-      <label>
-         Activity Name: <input value={activityName} onChange={(event) => setActivityName(event.target.value)}/> 
-        </label>
+      <label className="formText">
+         Name of your activity <br/>
+         <input value={activityName} onChange={(event) => setActivityName(event.target.value)}/> 
+        </label> <br/> <br/>
         <button onClick={()=>{
           setActivityNameStatus("confirmed")
         }}>Next</button>
@@ -136,12 +137,15 @@ export default function AddActivityForm ({trip}) {
          */}
         { activityDescription && activityPhoto && activityNameStatus && !activityWebsiteStatus ? 
         <>
-        <label>
-         Activity Website: <input value={activityWebsite} onChange={(event) => setActivityWebsite(event.target.value)}/>
-        </label>
-       <button onClick={()=>{
+        <label className="formText">
+         Add a Website <br/> 
+         <input value={activityWebsite} onChange={(event) => setActivityWebsite(event.target.value)}/>
+        </label> <br/> <br/>
+       { activityWebsite ? <button onClick={()=>{
           setActivityWebsiteStatus("confirmed")
-        }}>Next</button>
+        }}>Next</button> : <button onClick={()=>{
+          setActivityWebsiteStatus("confirmed")
+        }}>Skip</button> }
 
         </> 
         : null}

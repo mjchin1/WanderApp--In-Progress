@@ -160,6 +160,9 @@ button:focus-visible {
   font-size: 20px;
 }
 
+.formText {
+  font-size: 40px;
+}
 
 .singleActivityDetails {
   display: flex;

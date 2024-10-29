@@ -35,7 +35,7 @@ function SingleActivity( { activity, activities, setActivities }) {
           <div key={activity.activity_id} className="activityCard">
             <div className="singleActivityDetails">
               <div className="activityLinks">
-              <Link to={activity.activity_website} target="_blank"><button className="activityLinkButton">See Website</button></Link>
+              {activity.activity_website ? <Link to={activity.activity_website} target="_blank"><button className="activityLinkButton">See Website</button></Link> : null}
               <button className="activityLinkButton">Add to Calendar</button>
               <RemoveActivityButton activity={activity} activities={activities} setActivities={setActivities}/>
               </div>
