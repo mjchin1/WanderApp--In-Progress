@@ -51,7 +51,7 @@ function SingleTrip({ trips, setTrips, trip, setTrip, arrival, departure }) {
         <div className="tripButtonDiv">
         <button className="tripButton" onClick={()=>{navToArrivals()}}>Arrivals</button> 
         <button className="tripButton" onClick={()=>{navToDepartures()}}>Departures</button> 
-        <button className="tripButton" onClick={()=>{navToActivities()}}>Wander List</button>
+        <button className="tripButton" onClick={()=>{navToActivities()}}>Activities</button>
         <button className="tripButton">Travelers</button>
         </div>
         

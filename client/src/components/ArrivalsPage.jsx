@@ -56,7 +56,7 @@ function ArrivalsPage({ trip, arrivals, setArrivals, setArrival }) {
       </div> <br/> <br/>
       <button onClick={()=>{
         navToTrip()
-      }}>Back to Trip</button>
+      }}>Back</button>
 
     </> )
 }
