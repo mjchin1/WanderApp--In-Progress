@@ -7,7 +7,6 @@ function SingleArrival({ arrivals, setArrivals, arrival, setArrival }) {
 
   function navToArrivals(){
     navigate("/arrivals")
-    
   }
 
   useEffect(() => {

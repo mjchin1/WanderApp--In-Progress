@@ -6,7 +6,7 @@ function ArrivalsPage({ trip, arrivals, setArrivals, setArrival }) {
   const navigate = useNavigate();
 
   function navToTrip() {
-    navigate(`/trip/${trip.triip_id}`)
+    navigate(`/trip/${trip.trip_id}`)
   }
 
   useEffect(() => {
@@ -56,7 +56,7 @@ function ArrivalsPage({ trip, arrivals, setArrivals, setArrival }) {
       </div> <br/> <br/>
       <button onClick={()=>{
         navToTrip()
-      }}>Back</button>
+      }}>Back to Trip</button>
 
     </> )
 }

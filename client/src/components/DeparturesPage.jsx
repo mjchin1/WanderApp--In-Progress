@@ -6,6 +6,11 @@ function DeparturesPage( {trip, setDeparture} ) {
   const [departures, setDepartures] = useState([])
   const navigate = useNavigate()
 
+  function navToTrip() {
+    navigate(`/trip/${trip.trip_id}`)
+  }
+
+
   useEffect(() => {
     async function fetchDepartures() {
       try {
@@ -51,7 +56,11 @@ function DeparturesPage( {trip, setDeparture} ) {
     
           </>
       ))}
-      </div>
+      </div> <br/>
+
+      <button onClick={()=>{
+        navToTrip()
+      }}>Back to Trip</button>
 
     </> )
 }

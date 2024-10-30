@@ -1,6 +1,13 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 function SingleDeparture({ departure }) {
+
+  const navigate  = useNavigate();
+
+  function navToDepartures(){
+    navigate("/departures")
+  }
 
   useEffect(() => {
     async function fetchDeparture() {
@@ -38,7 +45,10 @@ function SingleDeparture({ departure }) {
               <p className="departureInfo">{departure.arrival_time}</p>
             </div>
           </div>
-      </div>
+      </div> <br/>
+
+      <button onClick={()=>{
+        navToDepartures()}}>Back to All Departures</button>
 
     </> )
 }
