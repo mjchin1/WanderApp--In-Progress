@@ -5,6 +5,10 @@ function ArrivalsPage({ trip, arrivals, setArrivals, setArrival }) {
 
   const navigate = useNavigate();
 
+  function navToTrip() {
+    navigate(`/trip/${trip.triip_id}`)
+  }
+
   useEffect(() => {
     async function fetchArrivals() {
       try {
@@ -47,10 +51,12 @@ function ArrivalsPage({ trip, arrivals, setArrivals, setArrival }) {
           }}> More Info </button>
             </div>
           </div>
-    
           </>
       ))}
-      </div>
+      </div> <br/> <br/>
+      <button onClick={()=>{
+        navToTrip()
+      }}>Back to Trip</button>
 
     </> )
 }
