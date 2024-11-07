@@ -37,8 +37,11 @@ function ActivitiesPage( { activity, setActivity, trip, activities, setActivitie
 
   return (
     <>
-      <h1>Wander List</h1>
+      <h1>Trip Activities</h1>
 
+      <button onClick={()=> {
+        navToForm()
+      }}>Add an Activity</button>  <br/> <br/>
 
       <div className="activityContainer">
       {activities.map((activity) => (
@@ -57,10 +60,7 @@ function ActivitiesPage( { activity, setActivity, trip, activities, setActivitie
       ))}
 
       </div>
-      <br/> <br/>
-      <button onClick={()=> {
-        navToForm()
-      }}>Add an Activity</button>
+     
 
     </> )
 }

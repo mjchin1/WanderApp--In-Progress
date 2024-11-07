@@ -9,6 +9,10 @@ function ArrivalsPage({ trip, arrivals, setArrivals, setArrival }) {
     navigate(`/trip/${trip.trip_id}`)
   }
 
+  function navToArrivalForm() {
+    navigate("/add-arrival")
+  }
+
   useEffect(() => {
     async function fetchArrivals() {
       try {
@@ -34,6 +38,10 @@ function ArrivalsPage({ trip, arrivals, setArrivals, setArrival }) {
   return (
     <>
       <h1>Arrivals</h1>
+      <button onClick={()=>{
+        navToArrivalForm()
+      }}>Add an Arrival</button> <br/> <br/>
+
 
 
       <div className="arrivalsPageContainer">

@@ -10,6 +10,9 @@ function DeparturesPage( {trip, setDeparture} ) {
     navigate(`/trip/${trip.trip_id}`)
   }
 
+  function navToDepartureForm() {
+    navigate("/add-departure")
+  }
 
   useEffect(() => {
     async function fetchDepartures() {
@@ -36,6 +39,10 @@ function DeparturesPage( {trip, setDeparture} ) {
   return (
     <>
       <h1>Departures</h1>
+
+      <button onClick={()=>{
+        navToDepartureForm()
+      }}>Add a Departure</button> <br/> <br/>
 
       <div className="departuresPageContainer">
       {departures.map((departure) => (
