@@ -58,7 +58,7 @@ const createTables = async () => {
           trip_id INTEGER REFERENCES trips(trip_id) ON DELETE CASCADE,
           traveler_name TEXT,
           travel_date TEXT,
-          arrrival_date TEXT,
+          arrival_date TEXT,
           trip_number TEXT, 
           travel_origin TEXT,
           departure_time TEXT,
@@ -120,13 +120,14 @@ const createInitialArrivals = async () => {
     for (const arrival of arrivals) {
       await client.query(
         `
-          INSERT INTO arrivals(trip_id, traveler_name, travel_date, trip_number, travel_origin, departure_time, travel_destination, arrival_time)
-          VALUES($1, $2, $3, $4, $5, $6, $7, $8);
+          INSERT INTO arrivals(trip_id, traveler_name, travel_date, arrival_date, trip_number, travel_origin, departure_time, travel_destination, arrival_time)
+          VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9);
         `,
         [
           arrival.tripId,
           arrival.travelerName,
           arrival.travelDate,
+          arrival.arrivalDate,
           arrival.tripNumber,
           arrival.travelOrigin,
           arrival.departureTime,
@@ -146,13 +147,14 @@ const createInitialDepartures = async () => {
     for (const departure of departures) {
       await client.query(
         `
-          INSERT INTO departures(trip_id, traveler_name, travel_date, trip_number, travel_origin, departure_time, travel_destination, arrival_time)
-          VALUES($1, $2, $3, $4, $5, $6, $7, $8);
+          INSERT INTO departures(trip_id, traveler_name, travel_date, arrival_date, trip_number, travel_origin, departure_time, travel_destination, arrival_time)
+          VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9);
         `,
         [
           departure.tripId,
           departure.travelerName,
           departure.travelDate,
+          departure.arrivalDate,
           departure.tripNumber,
           departure.travelOrigin,
           departure.departureTime,
