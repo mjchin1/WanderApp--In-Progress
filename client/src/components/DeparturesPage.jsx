@@ -53,7 +53,7 @@ function DeparturesPage( {trip, setDeparture} ) {
               <p className="departureInfo departingTravelerName">{departure.traveler_name}</p>
               <p className="departureInfo">Traveling on {departure.travel_date} </p>
               <p className="departureInfo">Leaving {departure.travel_origin} at {departure.departure_time}</p>
-              <p className="departureInfo"> Arriving in {departure.travel_destination} at {departure.departure_time} </p>
+              <p className="departureInfo"> Arriving in {departure.travel_destination} on {departure.arrival_date} at {departure.departure_time} </p>
               <button className="departuresButton" onClick={()=> {
             setDeparture(departure);
             navigate(`/departures/${departure.departure_id}`)
