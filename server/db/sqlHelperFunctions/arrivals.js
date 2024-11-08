@@ -35,6 +35,7 @@ async function createArrival(body) {
     tripId,
     travelerName,
     travelDate,
+    arrivalDate,
     tripNumber,
     travelOrigin,
     departureTime,
@@ -46,14 +47,15 @@ async function createArrival(body) {
       rows: [arrival],
     } = await client.query(
       `
-          INSERT INTO arrivals(trip_id, traveler_name, travel_date, trip_number, travel_origin, departure_time, travel_destination, arrival_time)
-          VALUES($1, $2, $3, $4, $5, $6, $7, $8)
+          INSERT INTO arrivals(trip_id, traveler_name, travel_date, arrival_date, trip_number, travel_origin, departure_time, travel_destination, arrival_time)
+          VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9)
           RETURNING *;
       `,
       [
         tripId,
         travelerName,
         travelDate,
+        arrivalDate,
         tripNumber,
         travelOrigin,
         departureTime,
