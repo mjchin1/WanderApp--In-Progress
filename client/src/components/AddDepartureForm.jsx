@@ -3,6 +3,7 @@ import { useState } from 'react';
 export default function AddArrivalForm ({trip}) {
   const [travelerName, setTravelerName] = useState("");
   const [travelDate, setTravelDate] = useState("");
+  const [arrivalDate, setArrivalDate] = useState("");
   const [tripNumber, setTripNumber] = useState("");
   const [travelOrigin, setTravelOrigin] = useState("");
   const [departureTime, setDepartureTime] = useState("");
@@ -22,6 +23,7 @@ export default function AddArrivalForm ({trip}) {
           tripId, 
           travelerName,
           travelDate,
+          arrivalDate,
           tripNumber,
           travelOrigin,
           departureTime,
@@ -34,6 +36,7 @@ export default function AddArrivalForm ({trip}) {
       console.log(tripId)
       setTravelerName("");
       setTravelDate("");
+      setArrivalDate("");
       setTripNumber("");
       setTravelOrigin("");
       setDepartureTime("");
@@ -73,10 +76,9 @@ export default function AddArrivalForm ({trip}) {
         Departure Date <input value={travelDate} onChange={(event) => setTravelDate(event.target.value)}/><br/>
         </label> <br/>
 
-          {/* <label>
-          Arrival Date <input value={travelDate} onChange={(event) => setTravelDate(event.target.value)}/><br/>
-          </label> <br/> */}
-
+        <label>
+        Arrival Date <input value={arrivalDate} onChange={(event) => setArrivalDate(event.target.value)}/><br/>
+        </label> <br/>
 
         <label> 
           Departure Time <input value={departureTime} onChange={(event) => setDepartureTime(event.target.value)}/> <br/>
