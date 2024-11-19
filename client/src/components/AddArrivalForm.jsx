@@ -14,6 +14,10 @@ export default function AddArrivalForm ({trip}) {
 
   const navigate = useNavigate(); 
 
+  function navToArrivals() {
+    navigate("/arrivals")
+  }
+
   async function handleSubmit(event) {
     event.preventDefault();
     try {
@@ -45,7 +49,7 @@ export default function AddArrivalForm ({trip}) {
       setDepartureTime("");
       setTravelDestination("");
       setArrivalTime("");
-      navigate("/arrivals")
+      navToArrivals()
 
     } catch (error) {
     }
@@ -54,6 +58,10 @@ export default function AddArrivalForm ({trip}) {
 
   return (
     <>
+      <button className="addArrivalButton" onClick={()=>{
+        navToArrivals();
+      }}>Back to Arrivals</button> <br/> <br/>
+    
     <div className="arrivalDepartureFormCard">
       
       <div className="arrivalFormBorder">
@@ -87,22 +95,14 @@ export default function AddArrivalForm ({trip}) {
         Arrival Date/Time <br/> <input className="dateTimeInput" type="date" value={arrivalDate} onChange={(event) => setArrivalDate(event.target.value)}/>
         <input className="dateTimeInput" type="time" value={arrivalTime} onChange={(event) => setArrivalTime(event.target.value)}/>
         </label> <br/>
-
-        {/* <label> 
-        Departure Time<input placeholder="Departure Time" type="time" value={departureTime} onChange={(event) => setDepartureTime(event.target.value)}/> <br/>
-        </label> <br/> */}
-        {/* <label> 
-        Arrival time<input className="dateTimeInput" type="time" value={arrivalTime} onChange={(event) => setArrivalTime(event.target.value)}/> <br/>
-        </label> <br/> */}
         </div> <br/>
 
 
-        <button className="addArrivalButton">Add Arrival</button> <br/> <br/>
-      </form>
+        <button className="addArrivalButton">Add Arrival</button>
+      </form> <br/>
       </div>
 
-    </div>
-    
+    </div> <br/>
     </>
   );
 };
