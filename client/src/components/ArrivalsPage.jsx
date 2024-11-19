@@ -54,10 +54,10 @@ function ArrivalsPage({ trip, arrivals, setArrivals, setArrival }) {
           <>
           <div key={arrival.arrival_id} className="arrivalCard" >
             <div className="arrivalDetails">
-              <p className="arrivalInfo arrivingTravelerName">{arrival.traveler_name}</p>
-              <p className="arrivalInfo">Traveling on {arrival.travel_date} </p>
-              <p className="arrivalInfo">Leaving {arrival.travel_origin} at {arrival.departure_time}</p>
-              <p className="arrivalInfo"> Arriving in {arrival.travel_destination} on {arrival.arrival_date} at {arrival.arrival_time} </p>
+              <p className="arrivalInfo arrivalHeading">{arrival.traveler_name}</p>
+              <p className="arrivalInfo arrivalHeading">{arrival.travel_origin} to {arrival.travel_destination} </p>
+              <p className="arrivalInfo">Traveling on {arrival.travel_date}  at {arrival.departure_time}</p>
+              <p className="arrivalInfo"> Arriving in  on {arrival.arrival_date} at {arrival.arrival_time} </p>
               <button className="arrivalsButton" onClick={()=> {
             setArrival(arrival)
             navigate(`/arrivals/${arrival.arrival_id}`)
