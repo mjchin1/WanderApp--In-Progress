@@ -40,7 +40,12 @@ function ArrivalsPage({ trip, arrivals, setArrivals, setArrival }) {
       <h1>Arrivals</h1>
       <button onClick={()=>{
         navToArrivalForm()
-      }}>Add an Arrival</button> <br/> <br/>
+      }}>Add an Arrival</button> 
+      
+      <button onClick={()=>{
+        navToTrip()
+      }}>Back to Trip</button>
+<br/> <br/>
 
 
 
@@ -62,10 +67,7 @@ function ArrivalsPage({ trip, arrivals, setArrivals, setArrival }) {
           </>
       ))}
       </div> <br/> <br/>
-      <button onClick={()=>{
-        navToTrip()
-      }}>Back to Trip</button>
-
+    
     </> )
 }
 

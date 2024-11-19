@@ -195,6 +195,7 @@ a {
 .arrivalCard {
   margin-left: 10px; 
   margin-right: 10px;
+  margin-bottom: 20px;
   font-size: 20px;
   border: solid;
   border-width: thin;
@@ -221,6 +222,8 @@ a {
 
 .arrivalsPageContainer {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .arrivalsButton {

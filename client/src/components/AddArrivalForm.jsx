@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom'
 
 export default function AddArrivalForm ({trip}) {
   const [travelerName, setTravelerName] = useState("");
@@ -10,6 +11,8 @@ export default function AddArrivalForm ({trip}) {
   const [travelDestination, setTravelDestination] = useState("");
   const [arrivalTime, setArrivalTime] = useState("");
   const [tripId, setTripId] = useState(trip.trip_id);
+
+  const navigate = useNavigate(); 
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -42,6 +45,8 @@ export default function AddArrivalForm ({trip}) {
       setDepartureTime("");
       setTravelDestination("");
       setArrivalTime("");
+      navigate("/arrivals")
+
     } catch (error) {
     }
 
