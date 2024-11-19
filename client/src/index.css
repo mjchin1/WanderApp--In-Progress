@@ -232,11 +232,14 @@ a {
 
 .departuresPageContainer {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .departureCard {
   margin-left: 10px; 
   margin-right: 10px;
+  margin-bottom: 20px;
   font-size: 20px;
   border: solid;
   border-width: thin;
