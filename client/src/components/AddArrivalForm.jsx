@@ -58,7 +58,7 @@ export default function AddArrivalForm ({trip}) {
 
   return (
     <>
-      <button className="addArrivalButton" onClick={()=>{
+      <button onClick={()=>{
         navToArrivals();
       }}>Back to Arrivals</button> <br/> <br/>
     
@@ -88,7 +88,7 @@ export default function AddArrivalForm ({trip}) {
         
         <label className="dateTimeField">
         Departure Date/Time <br/><input className="dateTimeInput" type="date" value={travelDate} onChange={(event) => setTravelDate(event.target.value)}/>
-        <input type="time" className="dateTimeInput" value={departureTime} onChange={(event) => setDepartureTime(event.target.value)}/>
+        <input className="dateTimeInput" type="time" value={departureTime} onChange={(event) => setDepartureTime(event.target.value)}/>
         </label> <br/> <br/>
 
         <label>
