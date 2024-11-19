@@ -36,14 +36,12 @@ function SingleDeparture({ departure }) {
       <div className="departureContainer">
           <div key={departure.departure_id} className="departureCard">
             <div className="departureDetails">
-              <p className="departureInfo">{departure.traveler_name}</p>
-              <p className="departureInfo">{departure.travel_date}</p>
-              <p className="departureInfo">{departure.trip_number}</p>
-              <p className="departureInfo">{departure.travel_origin}</p>
-              <p className="departureInfo">{departure.departure_time}</p>
-              <p className="departureInfo">{departure.travel_destination}</p>
-              <p className="departureInfo">{departure.arrival_date}</p>
-              <p className="departureInfo">{departure.arrival_time}</p>
+              <p className="departureInfo departureHeading">{departure.traveler_name}</p>
+              <p className="departureInfo">Flight/Travel Number: {departure.trip_number}</p>
+              <p className="departureInfo">Departure City: {departure.travel_origin}</p>
+              <p className="departureInfo">Departure Date/Time: {departure.travel_date} at {departure.departure_time}</p>
+              <p className="departureInfo">Destination City: {departure.travel_destination}</p>
+              <p className="departureInfo">Arrival Date/Time: {departure.arrival_date} at {departure.arrival_time}</p>
             </div>
           </div>
       </div> <br/>
