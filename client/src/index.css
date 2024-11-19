@@ -376,19 +376,21 @@ a {
 
 .formFields {
   text-align: left;
-  padding-left: 15px;
 }
 
 .arrivalDepartureFormCard {
   border: solid;
   width: 400px;
   border-radius: 30px;
+  display: flex;
+  justify-content: center;
  
 }
 
 input {
-  height: 20px;
-  width: 200px;
+  height: 30px;
+  width: 305px;
+  font-size: 20px;
 }
 
 label {
@@ -396,4 +398,10 @@ label {
 }
 
 .addArrivalButton {
+}
+
+.dateTimeInput {
+  width: 150px;
+  margin-right: 5px;
+
 }

@@ -58,37 +58,38 @@ export default function AddArrivalForm ({trip}) {
         
         <div className="formFields">
         <label>
-          Traveler Name <input value={travelerName} onChange={(event) => setTravelerName(event.target.value)}/> <br/>
+        <input placeholder="Traveler Name" value={travelerName} onChange={(event) => setTravelerName(event.target.value)}/> <br/>
         </label> <br/>
         
         <label>
-         Flight/Trip Number <input value={tripNumber} onChange={(event) => setTripNumber(event.target.value)}/> <br/>
+        <input placeholder="Flight/Trip Number (ex. AA 543)" value={tripNumber} onChange={(event) => setTripNumber(event.target.value)}/> <br/>
         </label> <br/> 
         
         <label> 
-         Departure City <input value={travelOrigin} onChange={(event) => setTravelOrigin(event.target.value)}/> <br/>
+        <input placeholder="Departure City" value={travelOrigin} onChange={(event) => setTravelOrigin(event.target.value)}/> <br/>
         </label> <br/>
 
         <label> 
-         Destination City <input value={travelDestination} onChange={(event) => setTravelDestination(event.target.value)}/> <br/>
+        <input placeholder="Destination City" value={travelDestination} onChange={(event) => setTravelDestination(event.target.value)}/> <br/>
         </label> <br/>
         
+        <label className="dateTimeField">
+        Departure Date/Time <br/><input className="dateTimeInput" type="date" value={travelDate} onChange={(event) => setTravelDate(event.target.value)}/>
+        <input type="time" className="dateTimeInput" value={departureTime} onChange={(event) => setDepartureTime(event.target.value)}/>
+        </label> <br/> <br/>
 
         <label>
-          Departure Date <input value={travelDate} onChange={(event) => setTravelDate(event.target.value)}/><br/>
+        Arrival Date/Time <br/> <input className="dateTimeInput" type="date" value={arrivalDate} onChange={(event) => setArrivalDate(event.target.value)}/>
+        <input className="dateTimeInput" type="time" value={arrivalTime} onChange={(event) => setArrivalTime(event.target.value)}/>
         </label> <br/>
 
-        <label>
-          Arrival Date <input value={arrivalDate} onChange={(event) => setArrivalDate(event.target.value)}/><br/>
-        </label> <br/>
-
-        <label> 
-          Departure Time <input value={departureTime} onChange={(event) => setDepartureTime(event.target.value)}/> <br/>
-        </label> <br/>
-        <label> 
-          Arrival Time <input value={arrivalTime} onChange={(event) => setArrivalTime(event.target.value)}/> <br/>
-        </label> <br/>
-        </div>
+        {/* <label> 
+        Departure Time<input placeholder="Departure Time" type="time" value={departureTime} onChange={(event) => setDepartureTime(event.target.value)}/> <br/>
+        </label> <br/> */}
+        {/* <label> 
+        Arrival time<input className="dateTimeInput" type="time" value={arrivalTime} onChange={(event) => setArrivalTime(event.target.value)}/> <br/>
+        </label> <br/> */}
+        </div> <br/>
 
 
         <button className="addArrivalButton">Add Arrival</button> <br/> <br/>
