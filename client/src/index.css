@@ -369,7 +369,31 @@ a {
   margin-left: 10px;
 }
 
-input {
+.tripInput {
   height: 50px;
   font-size: 40px;
+}
+
+.formFields {
+  text-align: left;
+  padding-left: 15px;
+}
+
+.arrivalDepartureFormCard {
+  border: solid;
+  width: 400px;
+  border-radius: 30px;
+ 
+}
+
+input {
+  height: 20px;
+  width: 200px;
+}
+
+label {
+  font-size: 20px;
+}
+
+.addArrivalButton {
 }

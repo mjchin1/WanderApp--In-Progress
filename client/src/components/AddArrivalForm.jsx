@@ -49,13 +49,14 @@ export default function AddArrivalForm ({trip}) {
 
   return (
     <>
-    <div className="arrivalFormCard">
+    <div className="arrivalDepartureFormCard">
       
       <div className="arrivalFormBorder">
+      <h3> Add an Arrival</h3>
 
       <form className="arrivalForm" onSubmit={handleSubmit}>
-        <h3> Add an Arrival</h3>
         
+        <div className="formFields">
         <label>
           Traveler Name <input value={travelerName} onChange={(event) => setTravelerName(event.target.value)}/> <br/>
         </label> <br/>
@@ -87,9 +88,8 @@ export default function AddArrivalForm ({trip}) {
         <label> 
           Arrival Time <input value={arrivalTime} onChange={(event) => setArrivalTime(event.target.value)}/> <br/>
         </label> <br/>
+        </div>
 
-       
-       
 
         <button className="addArrivalButton">Add Arrival</button> <br/> <br/>
       </form>
