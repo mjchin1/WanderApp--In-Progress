@@ -70,9 +70,10 @@ button:focus-visible {
 }
 
 .tripPhoto {
-  width: 40vw;
+  width: 35vw;
   height: 325px;
   object-fit: cover;
+  margin-bottom: 10px;
 }
 
 .singleTripCard {
@@ -102,6 +103,16 @@ button:focus-visible {
 
 .tripCard {
   margin-bottom: 20px;
+  border: solid;
+  width: 40vw;
+  border-radius: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.tripsContainer {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .tripActionButtons {

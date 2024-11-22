@@ -39,21 +39,25 @@ function TripsPage({ trip, setTrip, trips, setTrips }) {
 
       <button onClick={() => {navToTripsPage()}}> Plan a Trip</button> <br/> <br/>
 
+      <div className="tripsContainer">
       {trips.map((trip) => (
           <>
-          <button key={trip.trip_id} className="tripCard clickDiv" onClick={()=> {
-            setTrip(trip)
-            navigate(`/trip/${trip.trip_id}`)
-          }}>
+            <div className="tripCard">
             <div className="tripDetails">
               <p className="tripHeading">{trip.destination}</p>
               <p className="tripDates">{trip.start_date} to {trip.end_date}</p>
-              <img className="tripPhoto"src={trip.trip_photo}></img>
+              <img className="tripPhoto"src={trip.trip_photo}></img> <br/>
+              <button key={trip.trip_id} onClick={()=> {
+            setTrip(trip)
+            navigate(`/trip/${trip.trip_id}`)
+          }}> See Trip </button> <br/> <br/>
             </div>
-          </button>
-    
+            </div>
+        
           </>
       ))}
+
+      </div>
 
       <br/> <br/>
 

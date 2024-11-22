@@ -63,10 +63,10 @@ function SingleTrip({ trips, setTrips, trip, setTrip, arrival, departure }) {
       <br/> <br/>
 
     <div className="tripActionButtons">
-      <RemoveTripButton trip={trip} trips={trips} setTrips={setTrips}/>
       <button onClick={()=> {
         navToHome()
       }}>Back to All Trips</button>
+      <RemoveTripButton trip={trip} trips={trips} setTrips={setTrips}/>
 
     </div>
        
