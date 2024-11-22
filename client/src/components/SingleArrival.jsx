@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import RemoveArrivalButton from './RemoveArrivalButton'
 
 function SingleArrival({ arrivals, setArrivals, arrival, setArrival }) {
 
@@ -49,7 +50,8 @@ function SingleArrival({ arrivals, setArrivals, arrival, setArrival }) {
       </div> <br/>
       <button onClick={()=>{
         navToArrivals()
-      }}>Back to All Arrivals</button> 
+      }}>Back to All Arrivals</button>
+      <RemoveArrivalButton arrival={arrival} arrivals={arrivals} setArrivals={setArrivals}/> 
 
     </> )
 }
