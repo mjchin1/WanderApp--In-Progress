@@ -113,6 +113,7 @@ button:focus-visible {
 .tripsContainer {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .tripActionButtons {
