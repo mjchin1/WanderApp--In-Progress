@@ -40,12 +40,12 @@ function DeparturesPage( {trip, setDeparture} ) {
     <>
       <h1>Departures</h1>
 
-      <button onClick={()=>{
-        navToDepartureForm()
-      }}>Add a Departure</button> 
        <button onClick={()=>{
         navToTrip()
-      }}>Back to Trip</button> <br/> <br/>
+      }}>Back to Trip</button>
+       <button onClick={()=>{
+        navToDepartureForm()
+      }}>Add a Departure</button> <br/> <br/>
 
       <div className="departuresPageContainer">
       {departures.map((departure) => (
