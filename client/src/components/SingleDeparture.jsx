@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
+import RemoveDepartureButton from './RemoveDepartureButton'
 
-function SingleDeparture({ departure }) {
+function SingleDeparture({ departure, departures, setDepartures}) {
 
   const navigate  = useNavigate();
 
@@ -45,10 +46,11 @@ function SingleDeparture({ departure }) {
             </div>
           </div>
       </div> <br/>
-
+      <div className="arrivalDepartureButtons">
       <button onClick={()=>{
         navToDepartures()}}>Back to All Departures</button>
-
+      <RemoveDepartureButton departure={departure} departures={departures} setDepartures={setDepartures}/>
+      </div>
     </> )
 }
 

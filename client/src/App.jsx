@@ -23,11 +23,13 @@ function App() {
   const [arrivals, setArrivals] = useState([]);
   const [trip, setTrip] = useState({});
   const [departure, setDeparture] = useState({});
+  const [departures, setDepartures] = useState([])
   const [activity, setActivity] = useState({});
   const [destination, setDestination] = useState("");
   const [destinationPic, setDestinationPic] = useState("");
   const [trips, setTrips] = useState([])
   const [activities, setActivities] = useState([])
+
 
   return (
     <>
@@ -46,10 +48,10 @@ function App() {
     <Route path='/activities' element={<ActivitiesPage trip={trip} activity={activity} setActivity={setActivity} activities={activities} setActivities={setActivities}/>} />
     <Route path='/activities/:id' element={<SingleActivity activity={activity} setActivity={setActivity} activities={activities} setActivities={setActivities}/>} />
     <Route path='/arrivals' element={<ArrivalsPage trip={trip} arrivals={arrivals} setArrivals={setArrivals} arrival={arrival} setArrival={setArrival}/>} />
-    <Route path='/departures' element={<DeparturesPage setDeparture={setDeparture} departure={departure} trip={trip}/>} />
+    <Route path='/departures' element={<DeparturesPage setDeparture={setDeparture} setDepartures={setDepartures} departures={departures} trip={trip}/>} />
     <Route path='/arrivals/:id' element={<SingleArrival arrivals={arrivals} setArrivals={setArrivals} arrival={arrival} setArrival={setArrival}/>}/>
     <Route path='/trip/:id' element={<SingleTrip trips={trips} setTrips={setTrips} trip={trip} arrival={arrival} departure={departure}/>} />
-    <Route path='/departures/:id' element={<SingleDeparture trip={trip}  departure={departure} setDeparture={setDeparture} />} />
+    <Route path='/departures/:id' element={<SingleDeparture trip={trip}  departure={departure} setDepartures={setDepartures} departures={departures} />} />
     <Route path='/add-arrival' element={<AddArrivalForm trip={trip}/>}/> 
     <Route path='/add-departure' element={<AddDepartureForm trip={trip}/>}/> 
     <Route path='/add-activity' element={<AddActivityForm trip={trip}/>}/> 

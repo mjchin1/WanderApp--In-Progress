@@ -232,6 +232,11 @@ a {
   font-size: 25px;
 }
 
+.arrivalDepartureButtons{
+  display: flex;
+  justify-content: center;
+}
+
 .arrivalsPageContainer {
   display: flex;
   flex-wrap: wrap;

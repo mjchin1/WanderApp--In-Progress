@@ -48,10 +48,12 @@ function SingleArrival({ arrivals, setArrivals, arrival, setArrival }) {
             </div>
           </div>
       </div> <br/>
+      <div className="arrivalDepartureButtons">
       <button onClick={()=>{
         navToArrivals()
       }}>Back to All Arrivals</button>
       <RemoveArrivalButton arrival={arrival} arrivals={arrivals} setArrivals={setArrivals}/> 
+      </div>
 
     </> )
 }

@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-function DeparturesPage( {trip, setDeparture} ) {
+function DeparturesPage( {trip, setDeparture, setDepartures, departures} ) {
 
-  const [departures, setDepartures] = useState([])
   const navigate = useNavigate()
 
   function navToTrip() {
