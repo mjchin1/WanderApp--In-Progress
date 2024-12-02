@@ -3,6 +3,22 @@ import { useNavigate } from 'react-router-dom'
 import RemoveTripButton from './RemoveTripButton'
 
 function SingleTrip({ trips, setTrips, trip, setTrip, arrival, departure }) {
+  
+  const months = [
+    {Jan: "01"}, 
+    {Feb: "02"},
+    {March:"03"},
+    {April: "04"},
+    {May: "05"},
+    {June: "06"},
+    {July: "07"},
+    {Aug: "08"},
+    {Sept: "09"},
+    {Oct: "10"},
+    {Nov: "11"},
+    {Dec: "12"},
+  ]
+
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -43,6 +59,8 @@ function SingleTrip({ trips, setTrips, trip, setTrip, arrival, departure }) {
 
   return (
     <>
+
+      <h1>{trip.start_date}</h1>
 
       <h1>Your Trip to {trip.destination}</h1>
       <h1 className="tripDates">{trip.start_date} to {trip.end_date}</h1>
