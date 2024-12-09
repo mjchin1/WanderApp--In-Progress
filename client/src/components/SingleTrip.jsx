@@ -1,23 +1,9 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import RemoveTripButton from './RemoveTripButton'
+import moment from 'moment'
 
 function SingleTrip({ trips, setTrips, trip, setTrip, arrival, departure }) {
-  
-  const months = [
-    {Jan: "01"}, 
-    {Feb: "02"},
-    {March:"03"},
-    {April: "04"},
-    {May: "05"},
-    {June: "06"},
-    {July: "07"},
-    {Aug: "08"},
-    {Sept: "09"},
-    {Oct: "10"},
-    {Nov: "11"},
-    {Dec: "12"},
-  ]
 
   const navigate = useNavigate()
 
@@ -63,7 +49,7 @@ function SingleTrip({ trips, setTrips, trip, setTrip, arrival, departure }) {
       <h1>{trip.start_date}</h1>
 
       <h1>Your Trip to {trip.destination}</h1>
-      <h1 className="tripDates">{trip.start_date} to {trip.end_date}</h1>
+      <h1 className="tripDates">{moment(trip.start_date).format('MMMM Do YYYY')} to {trip.end_date}</h1>
       <div className="singleTripCard">
         
         <div className="tripButtonDiv">
@@ -72,7 +58,7 @@ function SingleTrip({ trips, setTrips, trip, setTrip, arrival, departure }) {
         <button className="tripButton" onClick={()=>{navToActivities()}}>Activities</button>
         <button className="tripButton">Travelers</button>
         </div>
-        
+    
         <div className="tripPhotoDiv">
         <br/> <img className="tripPhoto"src={trip.trip_photo}></img> <br/> <br/>
         </div>
