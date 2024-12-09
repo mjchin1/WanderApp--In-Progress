@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import moment from 'moment'
 
 function TripsPage({ trip, setTrip, trips, setTrips }) {
   const navigate = useNavigate()
@@ -45,7 +46,7 @@ function TripsPage({ trip, setTrip, trips, setTrips }) {
             <div className="tripCard">
             <div className="tripDetails">
               <p className="tripHeading">{trip.destination}</p>
-              <p className="tripDates">{trip.start_date} to {trip.end_date}</p>
+              <p className="tripDates">{moment(trip.start_date).format('MMM Do YYYY')} - {moment(trip.end_date).format('MMM Do YYYY')}</p>
               <img className="tripPhoto"src={trip.trip_photo}></img> <br/>
               <button key={trip.trip_id} onClick={()=> {
             setTrip(trip)

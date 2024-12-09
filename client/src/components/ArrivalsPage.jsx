@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import moment from 'moment';
 
 function ArrivalsPage({ trip, arrivals, setArrivals, setArrival }) {
 
@@ -59,8 +60,8 @@ function ArrivalsPage({ trip, arrivals, setArrivals, setArrival }) {
             <div className="arrivalDetails">
               <p className="arrivalInfo arrivalHeading">{arrival.traveler_name}</p>
               <p className="arrivalInfo arrivalHeading">{arrival.travel_origin} to {arrival.travel_destination} </p>
-              <p className="arrivalInfo">Traveling on {arrival.travel_date}  at {arrival.departure_time}</p>
-              <p className="arrivalInfo"> Arriving in  on {arrival.arrival_date} at {arrival.arrival_time} </p>
+              <p className="arrivalInfo">Traveling on {moment(arrival.travel_date).format('MMM Do YYYY')} at {arrival.departure_time}</p>
+              <p className="arrivalInfo"> Arriving in  on {moment(arrival.arrival_date).format('MMM Do YYYY')} at {arrival.arrival_time} </p>
               <button className="arrivalsButton" onClick={()=> {
             setArrival(arrival)
             navigate(`/arrivals/${arrival.arrival_id}`)
