@@ -16,6 +16,7 @@ import AddTripForm from './components/AddTripForm'
 import DestinationsPage from './components/DestinationsPage'
 import ActivityTypes from './components/ActivityTypes'
 import './App.css'
+import moment from 'moment'
 
 function App() {
 
@@ -30,6 +31,9 @@ function App() {
   const [trips, setTrips] = useState([])
   const [activities, setActivities] = useState([])
 
+  function formatDate(date) {
+    return moment(date).format("MMM Do, YYYY");
+  }
 
   return (
     <>
@@ -44,14 +48,14 @@ function App() {
     <div className="appBody">
   
     <Routes>
-    <Route path='/' element={<TripsPage trips={trips} setTrips={setTrips} trip={trip} setTrip={setTrip}/>} />
+    <Route path='/' element={<TripsPage trips={trips} setTrips={setTrips} trip={trip} setTrip={setTrip} formatDate={formatDate}/> } />
     <Route path='/activities' element={<ActivitiesPage trip={trip} activity={activity} setActivity={setActivity} activities={activities} setActivities={setActivities}/>} />
     <Route path='/activities/:id' element={<SingleActivity activity={activity} setActivity={setActivity} activities={activities} setActivities={setActivities}/>} />
-    <Route path='/arrivals' element={<ArrivalsPage trip={trip} arrivals={arrivals} setArrivals={setArrivals} arrival={arrival} setArrival={setArrival}/>} />
-    <Route path='/departures' element={<DeparturesPage setDeparture={setDeparture} setDepartures={setDepartures} departures={departures} trip={trip}/>} />
-    <Route path='/arrivals/:id' element={<SingleArrival arrivals={arrivals} setArrivals={setArrivals} arrival={arrival} setArrival={setArrival}/>}/>
-    <Route path='/trip/:id' element={<SingleTrip trips={trips} setTrips={setTrips} trip={trip} arrival={arrival} departure={departure}/>} />
-    <Route path='/departures/:id' element={<SingleDeparture trip={trip}  departure={departure} setDepartures={setDepartures} departures={departures} />} />
+    <Route path='/arrivals' element={<ArrivalsPage trip={trip} arrivals={arrivals} setArrivals={setArrivals} arrival={arrival} setArrival={setArrival} formatDate={formatDate}/>} />
+    <Route path='/departures' element={<DeparturesPage setDeparture={setDeparture} setDepartures={setDepartures} departures={departures} trip={trip} formatDate={formatDate}/>} />
+    <Route path='/arrivals/:id' element={<SingleArrival arrivals={arrivals} setArrivals={setArrivals} arrival={arrival} setArrival={setArrival} formatDate={formatDate}/>}/>
+    <Route path='/trip/:id' element={<SingleTrip trips={trips} setTrips={setTrips} trip={trip} arrival={arrival} departure={departure} formatDate={formatDate}/>} />
+    <Route path='/departures/:id' element={<SingleDeparture trip={trip}  departure={departure} setDepartures={setDepartures} departures={departures} formatDate={formatDate} />} />
     <Route path='/add-arrival' element={<AddArrivalForm trip={trip}/>}/> 
     <Route path='/add-departure' element={<AddDepartureForm trip={trip}/>}/> 
     <Route path='/add-activity' element={<AddActivityForm trip={trip}/>}/> 

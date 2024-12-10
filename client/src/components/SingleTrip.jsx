@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import RemoveTripButton from './RemoveTripButton'
 import moment from 'moment'
 
-function SingleTrip({ trips, setTrips, trip, setTrip, arrival, departure }) {
+function SingleTrip({ trips, setTrips, trip, setTrip, arrival, departure, formatDate}) {
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -46,7 +46,7 @@ function SingleTrip({ trips, setTrips, trip, setTrip, arrival, departure }) {
     <>
 
       <h1>Your Trip to {trip.destination}</h1>
-      <h1 className="tripDates">{moment(trip.start_date).format("MMM Do, YYYY")} - {moment(trip.end_date).format("MMM Do, YYYY")}</h1>
+      <h1 className="tripDates">{formatDate(trip.start_date)} - {formatDate(trip.end_date)}</h1>
       <div className="singleTripCard">
         
         <div className="tripButtonDiv">
