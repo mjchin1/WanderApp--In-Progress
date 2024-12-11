@@ -24,9 +24,9 @@ const arrivals = [
     arrivalDate: "2024-08-17",
     tripNumber: "TP 244",
     travelOrigin: "Chicago, IL",
-    departureTime: "6:00pm",
+    departureTime: "18:00",
     travelDestination: "Lisbon, Portugal",
-    arrivalTime: "7:55am",
+    arrivalTime: "07:55",
   },
 
   {
@@ -36,9 +36,9 @@ const arrivals = [
     arrivalDate: "2024-08-17",
     tripNumber: "TP 244",
     travelOrigin: "Chicago, IL",
-    departureTime: "6:00pm",
+    departureTime: "18:00",
     travelDestination: "Lisbon, Portugal",
-    arrivalTime: "7:55am",
+    arrivalTime: "07:55",
   },
 
   {
@@ -48,9 +48,9 @@ const arrivals = [
     arrivalDate: "2024-11-01",
     tripNumber: "SK 944",
     travelOrigin: "Chicago, IL",
-    departureTime: "8:10pm",
+    departureTime: "20:10",
     travelDestination: "Copenhagen, Denmark",
-    arrivalTime: "10:05am",
+    arrivalTime: "10:05",
   },
 
   {
@@ -60,9 +60,9 @@ const arrivals = [
     arrivalDate: "2024-11-01",
     tripNumber: "SK 944",
     travelOrigin: "Chicago, IL",
-    departureTime: "8:10pm",
+    departureTime: "20:10",
     travelDestination: "Copenhagen, Denmark",
-    arrivalTime: "10:05am",
+    arrivalTime: "10:05",
   },
 ];
 
@@ -74,9 +74,9 @@ const departures = [
     arrivalDate: "2024-08-23",
     tripNumber: "TP 243",
     travelOrigin: "Lisbon, Portugal",
-    departureTime: "12:40pm",
+    departureTime: "12:40",
     travelDestination: "Chicago, IL",
-    arrivalTime: "4:00pm",
+    arrivalTime: "16:00",
   },
 
   {
@@ -86,9 +86,9 @@ const departures = [
     arrivalDate: "2024-08-23",
     tripNumber: "TP 243",
     travelOrigin: "Lisbon, Portugal",
-    departureTime: "12:40pm",
+    departureTime: "12:40",
     travelDestination: "Chicago, IL",
-    arrivalTime: "4:00pm",
+    arrivalTime: "16:00",
   },
 
   {
@@ -98,9 +98,9 @@ const departures = [
     arrivalDate: "2024-11-07",
     tripNumber: "SK 943",
     travelOrigin: "Copenhagen, Denmark",
-    departureTime: "1:35pm",
+    departureTime: "13:35",
     travelDestination: "Chicago, IL",
-    arrivalTime: "3:50pm",
+    arrivalTime: "15:50",
   },
 
   {
@@ -110,9 +110,9 @@ const departures = [
     arrivalDate: "2024-11-07",
     tripNumber: "SK 943",
     travelOrigin: "Copenhagen, Denmark",
-    departureTime: "1:35pm",
+    departureTime: "13:35",
     travelDestination: "Chicago, IL",
-    arrivalTime: "3:50pm",
+    arrivalTime: "15:50",
   },
 ];
 
@@ -144,7 +144,7 @@ const calendar = [
     tripId: 1,
     eventName: "Dinner at Belcanto",
     eventDate: "2024-08-17",
-    eventTime: "7:30pm",
+    eventTime: "19:30",
     eventDescription: "Meet at the restaurant at 7:15pm",
     eventWebsite: "https://www.belcanto.pt/en/",
   },
@@ -153,7 +153,7 @@ const calendar = [
     tripId: 2,
     eventName: "Dinner at Host",
     eventDate: "2024-11-02",
-    eventTime: "7:30pm",
+    eventTime: "19:30",
     eventDescription: "Meet at the restaurant at 7:15pm",
     eventWebsite: "https://cofoco.dk/en/hoest/",
   },
