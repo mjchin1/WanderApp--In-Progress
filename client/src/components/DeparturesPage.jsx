@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-function DeparturesPage( {trip, setDeparture, setDepartures, departures} ) {
+function DeparturesPage( {trip, setDeparture, setDepartures, departures, formatDate, formatTime, timeToDigits} ) {
 
   const navigate = useNavigate()
 
@@ -54,8 +54,8 @@ function DeparturesPage( {trip, setDeparture, setDepartures, departures} ) {
           <div className="departureDetails">
               <p className="departureInfo departureHeading">{departure.traveler_name}</p>
               <p className="departureInfo departureHeading"> {departure.travel_origin} to {departure.travel_destination} </p> 
-              <p className="departureInfo">Traveling on {departure.travel_date} at {departure.departure_time} </p>
-              <p className="departureInfo"> Arriving on {departure.arrival_date} at {departure.arrival_time} </p>
+              <p className="departureInfo">Leaving {departure.travel_origin} on {formatDate(departure.travel_date)} at {formatTime(timeToDigits(departure.departure_time))} </p>
+              <p className="departureInfo"> Arriving in {departure.travel_destination} on {formatDate(departure.arrival_date)} at {formatTime(timeToDigits(departure.arrival_time))} </p>
               <button className="departuresButton" onClick={()=> {
             setDeparture(departure);
             navigate(`/departures/${departure.departure_id}`)

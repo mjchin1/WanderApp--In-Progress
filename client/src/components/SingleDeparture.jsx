@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 import RemoveDepartureButton from './RemoveDepartureButton'
 
-function SingleDeparture({ departure, departures, setDepartures}) {
+function SingleDeparture({ departure, departures, setDepartures, formatDate, formatTime, timeToDigits}) {
 
   const navigate  = useNavigate();
 
@@ -40,9 +40,9 @@ function SingleDeparture({ departure, departures, setDepartures}) {
               <p className="departureInfo departureHeading">{departure.traveler_name}</p>
               <p className="departureInfo">Flight/Travel Number: {departure.trip_number}</p>
               <p className="departureInfo">Departure City: {departure.travel_origin}</p>
-              <p className="departureInfo">Departure Date/Time: {departure.travel_date} at {departure.departure_time}</p>
+              <p className="departureInfo">Departure Date/Time: {formatDate(departure.travel_date)} at {formatTime(timeToDigits(departure.departure_time))}</p>
               <p className="departureInfo">Destination City: {departure.travel_destination}</p>
-              <p className="departureInfo">Arrival Date/Time: {departure.arrival_date} at {departure.arrival_time}</p>
+              <p className="departureInfo">Arrival Date/Time: {formatDate(departure.arrival_date)} at {formatTime(timeToDigits(departure.arrival_time))}</p>
             </div>
           </div>
       </div> <br/>
