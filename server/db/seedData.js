@@ -1,6 +1,6 @@
 const trips = [
   {
-    destination: "Lisbon, Portugal",
+    destination: "Lisbon",
     startDate: "2024-08-16",
     endDate: "2024-08-23",
     tripPhoto:
@@ -8,7 +8,7 @@ const trips = [
   },
 
   {
-    destination: "Copenhagen, Denmark",
+    destination: "Copenhagen",
     startDate: "2024-10-31",
     endDate: "2024-11-07",
     tripPhoto:
@@ -23,9 +23,9 @@ const arrivals = [
     travelDate: "2024-08-16",
     arrivalDate: "2024-08-17",
     tripNumber: "TP 244",
-    travelOrigin: "Chicago, IL",
+    travelOrigin: "Chicago",
     departureTime: "18:00",
-    travelDestination: "Lisbon, Portugal",
+    travelDestination: "Lisbon",
     arrivalTime: "07:55",
   },
 
@@ -35,9 +35,9 @@ const arrivals = [
     travelDate: "2024-08-16",
     arrivalDate: "2024-08-17",
     tripNumber: "TP 244",
-    travelOrigin: "Chicago, IL",
+    travelOrigin: "Chicago",
     departureTime: "18:00",
-    travelDestination: "Lisbon, Portugal",
+    travelDestination: "Lisbon",
     arrivalTime: "07:55",
   },
 
@@ -47,9 +47,9 @@ const arrivals = [
     travelDate: "2024-10-31",
     arrivalDate: "2024-11-01",
     tripNumber: "SK 944",
-    travelOrigin: "Chicago, IL",
+    travelOrigin: "Chicago",
     departureTime: "20:10",
-    travelDestination: "Copenhagen, Denmark",
+    travelDestination: "Copenhagen",
     arrivalTime: "10:05",
   },
 
@@ -59,9 +59,9 @@ const arrivals = [
     travelDate: "2024-10-31",
     arrivalDate: "2024-11-01",
     tripNumber: "SK 944",
-    travelOrigin: "Chicago, IL",
+    travelOrigin: "Chicago",
     departureTime: "20:10",
-    travelDestination: "Copenhagen, Denmark",
+    travelDestination: "Copenhagen",
     arrivalTime: "10:05",
   },
 ];
@@ -73,9 +73,9 @@ const departures = [
     travelDate: "2024-08-23",
     arrivalDate: "2024-08-23",
     tripNumber: "TP 243",
-    travelOrigin: "Lisbon, Portugal",
+    travelOrigin: "Lisbon",
     departureTime: "12:40",
-    travelDestination: "Chicago, IL",
+    travelDestination: "Chicago",
     arrivalTime: "16:00",
   },
 
@@ -85,9 +85,9 @@ const departures = [
     travelDate: "2024-08-23",
     arrivalDate: "2024-08-23",
     tripNumber: "TP 243",
-    travelOrigin: "Lisbon, Portugal",
+    travelOrigin: "Lisbon",
     departureTime: "12:40",
-    travelDestination: "Chicago, IL",
+    travelDestination: "Chicago",
     arrivalTime: "16:00",
   },
 
@@ -97,9 +97,9 @@ const departures = [
     travelDate: "2024-11-07",
     arrivalDate: "2024-11-07",
     tripNumber: "SK 943",
-    travelOrigin: "Copenhagen, Denmark",
+    travelOrigin: "Copenhagen",
     departureTime: "13:35",
-    travelDestination: "Chicago, IL",
+    travelDestination: "Chicago",
     arrivalTime: "15:50",
   },
 
@@ -109,9 +109,9 @@ const departures = [
     travelDate: "2024-11-07",
     arrivalDate: "2024-11-07",
     tripNumber: "SK 943",
-    travelOrigin: "Copenhagen, Denmark",
+    travelOrigin: "Copenhagen",
     departureTime: "13:35",
-    travelDestination: "Chicago, IL",
+    travelDestination: "Chicago",
     arrivalTime: "15:50",
   },
 ];
