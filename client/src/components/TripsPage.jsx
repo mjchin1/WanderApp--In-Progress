@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-function TripsPage({ trip, setTrip, trips, setTrips }) {
+function TripsPage({ trip, setTrip, trips, setTrips, formatDate }) {
   const navigate = useNavigate()
 
   function navToTripsPage() {
@@ -45,7 +45,7 @@ function TripsPage({ trip, setTrip, trips, setTrips }) {
             <div className="tripCard">
             <div className="tripDetails">
               <p className="tripHeading">{trip.destination}</p>
-              <p className="tripDates">{trip.start_date} to {trip.end_date}</p>
+              <p className="tripDates">{formatDate(trip.start_date)} to {formatDate(trip.end_date)}</p>
               <img className="tripPhoto"src={trip.trip_photo}></img> <br/>
               <button key={trip.trip_id} onClick={()=> {
             setTrip(trip)

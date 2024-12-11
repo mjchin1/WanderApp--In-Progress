@@ -39,7 +39,7 @@ function App() {
     return time.charAt(0)+ time.charAt(1) + time.charAt(3) + time.charAt(4)
   }
 
-  function getFormattedTime(fourDigitTime){
+  function formatTime(fourDigitTime){
     let hours24 = parseInt(fourDigitTime.substring(0,2));
     let hours = ((hours24 + 11) % 12) + 1;
     let amPm = hours24 > 11 ? 'pm' : 'am';
@@ -60,14 +60,14 @@ function App() {
     <div className="appBody">
   
     <Routes>
-    <Route path='/' element={<TripsPage trips={trips} setTrips={setTrips} trip={trip} setTrip={setTrip} formatDate={formatDate} timeToDigits={timeToDigits} getFormattedTime={getFormattedTime}/> } />
+    <Route path='/' element={<TripsPage trips={trips} setTrips={setTrips} trip={trip} setTrip={setTrip} formatDate={formatDate} timeToDigits={timeToDigits} formatTime={formatTime}/> } />
     <Route path='/activities' element={<ActivitiesPage trip={trip} activity={activity} setActivity={setActivity} activities={activities} setActivities={setActivities}/>} />
     <Route path='/activities/:id' element={<SingleActivity activity={activity} setActivity={setActivity} activities={activities} setActivities={setActivities}/>} />
-    <Route path='/arrivals' element={<ArrivalsPage trip={trip} arrivals={arrivals} setArrivals={setArrivals} arrival={arrival} setArrival={setArrival} formatDate={formatDate} timeToDigits={timeToDigits} getFormattedTime={getFormattedTime}/>} />
-    <Route path='/departures' element={<DeparturesPage setDeparture={setDeparture} setDepartures={setDepartures} departures={departures} trip={trip} formatDate={formatDate} timeToDigits={timeToDigits} getFormattedTime={getFormattedTime} />} />
-    <Route path='/arrivals/:id' element={<SingleArrival arrivals={arrivals} setArrivals={setArrivals} arrival={arrival} setArrival={setArrival} formatDate={formatDate} timeToDigits={timeToDigits} getFormattedTime={getFormattedTime}/>}/>
-    <Route path='/trip/:id' element={<SingleTrip trips={trips} setTrips={setTrips} trip={trip} arrival={arrival} departure={departure} formatDate={formatDate} timeToDigits={timeToDigits} getFormattedTime={getFormattedTime}/>} />
-    <Route path='/departures/:id' element={<SingleDeparture trip={trip}  departure={departure} setDepartures={setDepartures} departures={departures} formatDate={formatDate} timeToDigits={timeToDigits} getFormattedTime={getFormattedTime}/>} />
+    <Route path='/arrivals' element={<ArrivalsPage trip={trip} arrivals={arrivals} setArrivals={setArrivals} arrival={arrival} setArrival={setArrival} formatDate={formatDate} timeToDigits={timeToDigits} formatTime={formatTime}/>} />
+    <Route path='/departures' element={<DeparturesPage setDeparture={setDeparture} setDepartures={setDepartures} departures={departures} trip={trip} formatDate={formatDate} timeToDigits={timeToDigits} formatTime={formatTime} />} />
+    <Route path='/arrivals/:id' element={<SingleArrival arrivals={arrivals} setArrivals={setArrivals} arrival={arrival} setArrival={setArrival} formatDate={formatDate} timeToDigits={timeToDigits} formatTime={formatTime}/>}/>
+    <Route path='/trip/:id' element={<SingleTrip trips={trips} setTrips={setTrips} trip={trip} arrival={arrival} departure={departure} formatDate={formatDate} timeToDigits={timeToDigits} formatTime={formatTime}/>} />
+    <Route path='/departures/:id' element={<SingleDeparture trip={trip}  departure={departure} setDepartures={setDepartures} departures={departures} formatDate={formatDate} timeToDigits={timeToDigits} formatTime={formatTime}/>} />
     <Route path='/add-arrival' element={<AddArrivalForm trip={trip}/>}/> 
     <Route path='/add-departure' element={<AddDepartureForm trip={trip}/>}/> 
     <Route path='/add-activity' element={<AddActivityForm trip={trip}/>}/> 

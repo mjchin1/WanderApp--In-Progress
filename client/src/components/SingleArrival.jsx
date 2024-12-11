@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import RemoveArrivalButton from './RemoveArrivalButton'
 
-function SingleArrival({ arrivals, setArrivals, arrival, setArrival }) {
+function SingleArrival({ arrivals, setArrivals, arrival, setArrival, formatDate, formatTime, timeToDigits}) {
 
   const navigate  = useNavigate();
 
@@ -42,9 +42,9 @@ function SingleArrival({ arrivals, setArrivals, arrival, setArrival }) {
             <p className="arrivalInfo arrivalHeading">{arrival.traveler_name}</p>
               <p className="arrivalInfo">Flight/Travel Number: {arrival.trip_number}</p>
               <p className="arrivalInfo">Departure City: {arrival.travel_origin}</p>
-              <p className="arrivalInfo">Arrival Date/Time: {arrival.travel_date} at {arrival.arrival_time}</p>
+              <p className="arrivalInfo">Arrival Date/Time: {formatDate(arrival.travel_date)} at {formatTime(timeToDigits(arrival.arrival_time))}</p>
               <p className="arrivalInfo">Destination City: {arrival.travel_destination}</p>
-              <p className="arrivalInfo">Arrival Date/Time: {arrival.arrival_date} at {arrival.arrival_time}</p>
+              <p className="arrivalInfo">Arrival Date/Time: {formatDate(arrival.arrival_date)} at {formatTime(timeToDigits(arrival.arrival_time))}</p>
             </div>
           </div>
       </div> <br/>
