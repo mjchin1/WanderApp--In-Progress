@@ -44,8 +44,10 @@ function TripsPage({ trip, setTrip, trips, setTrips, formatDate }) {
           <>
             <div className="tripCard">
             <div className="tripDetails">
+              <div className="tripDivBanner">
               <p className="tripHeading">{trip.destination}</p>
               <p className="tripDates">{formatDate(trip.start_date)} to {formatDate(trip.end_date)}</p>
+              </div> <br/>
               <img className="tripPhoto"src={trip.trip_photo}></img> <br/>
               <button key={trip.trip_id} onClick={()=> {
             setTrip(trip)

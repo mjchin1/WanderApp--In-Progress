@@ -109,6 +109,14 @@ button:focus-visible {
   margin-left: 10px;
   margin-right: 10px;
 }
+.tripDivBanner {
+  border:solid;
+  border-top-left-radius:30px;
+  border-top-right-radius:30px;
+  background-color:aliceblue;
+  border-color: aliceblue;
+  border-bottom-color: black;
+}
 
 .tripsContainer {
   display: flex;
