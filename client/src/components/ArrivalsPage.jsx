@@ -57,7 +57,9 @@ function ArrivalsPage({ trip, arrivals, setArrivals, setArrival, formatDate, for
           <>
           <div key={arrival.arrival_id} className="arrivalCard" >
             <div className="arrivalDetails">
+              <div className="arrivalBanner">
               <p className="arrivalInfo arrivalHeading">{arrival.traveler_name}</p>
+              </div>
               <p className="arrivalInfo arrivalHeading">{arrival.travel_origin} to {arrival.travel_destination} </p>
               <p className="arrivalInfo">Leaving {arrival.travel_origin} on {formatDate(arrival.travel_date)}  at {formatTime(timeToDigits(arrival.departure_time))}</p>
               <p className="arrivalInfo"> Arriving in {arrival.travel_destination} on {formatDate(arrival.arrival_date)} at {formatTime(timeToDigits(arrival.arrival_time))} </p>
