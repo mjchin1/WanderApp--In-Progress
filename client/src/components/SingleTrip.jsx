@@ -44,9 +44,11 @@ function SingleTrip({ trips, setTrips, trip, setTrip, arrival, departure, format
 
   return (
     <>
-
+      <div className="singleTripContainer">
+      <div className="singleTripBanner">
       <h1>Your Trip to {trip.destination}</h1>
       <h1 className="tripDates">{formatDate(trip.start_date)} - {formatDate(trip.end_date)}</h1>
+      </div> <br/>
       <div className="singleTripCard">
         
         <div className="tripButtonDiv">
@@ -68,6 +70,7 @@ function SingleTrip({ trips, setTrips, trip, setTrip, arrival, departure, format
         navToHome()
       }}>Back to All Trips</button>
       <RemoveTripButton trip={trip} trips={trips} setTrips={setTrips}/>
+    </div> <br/> <br/>
 
     </div>
        
