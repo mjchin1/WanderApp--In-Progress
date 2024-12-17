@@ -334,41 +334,43 @@ a {
   margin-top: 330px;
   margin-top: 80px;
 }
+
+.appHeaderContainer {
+  margin-top: 20px;
+
+}
 .appHeader {
-  width: 100vw;
-  /* height: 320px;
-  justify-content: center; */
+  width: 95vw;
   font-size: 90px;
   height: 70px;
   font-size: 20px;
-  justify-content: left;
-  margin-bottom: 40px;
   display: flex;
   align-items: center;
-  background-color: #3de068;
+  /* background-color: #3de068;
   background-color: #414673;
   background-color: black;
-  background-color: #AFDBF5;
-  color: white;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  /* animation: shrink forwards;
-  animation-timeline: scroll(); */
+  background-color: #AFDBF5; */
+  background-color: white;
+  color:black;
+  font-family: "Poiret One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.subHeader {
+  border-bottom: solid;
+  margin: 0 auto;
+  font-size: 60px;
+  width: 450px;
+  font-family: "Dawning of a New Day", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .navBar {
-  /* margin-top: 320px; */
-  margin-top: 70px;
-  margin-bottom: 0;
-  position: fixed;
-  background-color: white;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding-top: 20px;
-  height: 40px;
+  display: flex; 
+  margin-top: 35px;
+  justify-content: right;
+  width: 95vw;
 
 }
 

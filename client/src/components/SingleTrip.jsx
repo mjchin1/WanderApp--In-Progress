@@ -44,6 +44,7 @@ function SingleTrip({ trips, setTrips, trip, setTrip, arrival, departure, format
 
   return (
     <>
+      <br/>
       <div className="singleTripContainer">
       <div className="singleTripBanner">
       <h1>Your Trip to {trip.destination}</h1>
