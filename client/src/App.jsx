@@ -52,9 +52,10 @@ function App() {
     <div className="appHeaderContainer">
     <div className="appHeader">
       <h1>Wander</h1>
-      <Navigations/> <br/> <br/>
-    </div> <br/>
-      <h2 className="subHeader"> Don't miss a thing.</h2>
+      <h2 className="subHeader"> Don't miss a thing.</h2> <br/>
+      <Navigations/>
+    </div> <br/> <br/>
+    <div className="pageDivider"></div>
     </div>
     
 

@@ -357,13 +357,20 @@ a {
   font-style: normal;
 }
 .subHeader {
-  border-bottom: solid;
-  margin: 0 auto;
+  margin-top: 70px;
   font-size: 60px;
   width: 450px;
   font-family: "Dawning of a New Day", cursive;
   font-weight: 400;
   font-style: normal;
+  width: 100vw;
+  margin-left: 150px;
+}
+
+.pageDivider {
+  width: 30vw;
+  border-bottom: solid;
+  margin: 0 auto;
 }
 
 .navBar {
