@@ -49,13 +49,12 @@ function TripsPage({ trip, setTrip, trips, setTrips, formatDate }) {
               <button className="tripHeading clearButton"key={trip.trip_id} onClick={()=> {
                 setTrip(trip)
                 navigate(`/trip/${trip.trip_id}`)
-                }}>{trip.destination}</button>
-              <p className="tripDatesBottom">{formatDate(trip.start_date)} to {formatDate(trip.end_date)}</p>
+                }}>{trip.destination}</button> <br/>
+              <button className="tripDatesBottom clearButton notBold" key={trip.trip_id} onClick={()=> {
+              setTrip(trip)
+              navigate(`/trip/${trip.trip_id}`)
+              }}>{formatDate(trip.start_date)} to {formatDate(trip.end_date)}</button>
               </div>
-              <button className="clearButton" key={trip.trip_id} onClick={()=> {
-            setTrip(trip)
-            navigate(`/trip/${trip.trip_id}`)
-          }}> See Trip </button> <br/> <br/>
             </div>
             </div>
         

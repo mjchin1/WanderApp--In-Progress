@@ -139,6 +139,10 @@ button:focus-visible {
   margin-left: -1.3vw;
 }
 
+.notBold {
+  font-weight: 500
+}
+
 
 .activityContainer {
   display: inline-flex;
