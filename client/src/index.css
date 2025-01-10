@@ -72,9 +72,10 @@ button:focus-visible {
 
 .tripPhoto {
   width: 35vw;
-  height: 325px;
+  height: 30vw;
   object-fit: cover;
   margin-bottom: 10px;
+  border-radius: 30px;
 }
 
 .singleTripCard {
