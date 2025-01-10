@@ -65,7 +65,8 @@ button:focus-visible {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+    background-color:black;
+    color: white;
   }
 }
 
@@ -109,14 +110,6 @@ button:focus-visible {
   margin-left: 10px;
   margin-right: 10px;
 }
-.tripDivBanner {
-  border:solid;
-  border-top-left-radius:30px;
-  border-top-right-radius:30px;
-  background-color:aliceblue;
-  border-color: aliceblue;
-  border-bottom-color: black;
-}
 
 .tripsContainer {
   display: flex;
@@ -132,17 +125,9 @@ button:focus-visible {
   border: solid;
   width: 80vw;
   border-radius: 30px;
+  margin: 0 auto;
 }
 
-.singleTripBanner {
-  border:solid;
-  border-top-left-radius:30px;
-  border-top-right-radius:30px;
-  background-color:aliceblue;
-  border-color: aliceblue;
-  border-bottom-color: black;
-
-}
 
 .activityContainer {
   display: inline-flex;
@@ -364,7 +349,6 @@ a {
   font-weight: 400;
   font-style: normal;
   width: 100vw;
-  margin-left: 150px;
 }
 
 .pageDivider {
