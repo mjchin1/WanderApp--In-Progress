@@ -105,17 +105,21 @@ button:focus-visible {
 
 .tripCard {
   margin-bottom: 20px;
-  border: solid;
-  width: 40vw;
+  width: 35vw;
   border-radius: 30px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .tripsContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.tripInfo {
+  text-align: left;
+  width: 30vw;
 }
 
 .tripActionButtons {
@@ -127,6 +131,12 @@ button:focus-visible {
   width: 80vw;
   border-radius: 30px;
   margin: 0 auto;
+}
+
+.clearButton {
+  background-color: white;
+  color: black;
+  margin-left: -1.3vw;
 }
 
 
