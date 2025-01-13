@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export default function AddTripForm ({ destination, setDestination, destinationPic, setDestinationPic, trip, setTrip }) {
+export default function AddTripForm ({ destination, setDestination, destinationPic, setDestinationPic, trip, setTrip, formatDate }) {
   const [startDate, setStartDate] = useState("");
   const [startConfirmation, setStartConfirmation] = useState(null)
   const [endDate, setEndDate] = useState("");
@@ -43,7 +43,7 @@ export default function AddTripForm ({ destination, setDestination, destinationP
    {destination && startConfirmation && endConfirmation ? <div >
     <h1>Trip to {destination} </h1>
     {/* <img className="tripPhoto" src={destinationPic}></img>  */}
-    <h1>{startDate} to {endDate}</h1>
+    <h1>{formatDate(startDate)} to {formatDate(endDate)}</h1>
     </div> : null } 
 
 

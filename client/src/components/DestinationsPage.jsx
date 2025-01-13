@@ -14,7 +14,7 @@ function DestinationsPage({destination, setDestination, destinationPic, setDesti
     {
       cityName: "Brussels",
       countryName: "Belgium",
-      imageUrl: "https://fortune.com/img-assets/wp-content/uploads/2024/05/Brussels-Andrey-DenisyUK-GettyImages-1456761179-e1717061553838.jpg"
+      imageUrl: "https://a.storyblok.com/f/95452/5370x3284/892dc3547d/belgium-brussels-grand-place.jpg"
     },
     {
       cityName: "Cartagena",
@@ -114,7 +114,7 @@ function DestinationsPage({destination, setDestination, destinationPic, setDesti
 
   return (
     <>
-      <h1>Where To?</h1>
+      <h1>Where Are We Going?</h1>
       {destinations.map((destination) => (
         <button className="destinationButton" onClick={() => {
           setDestination(destination.cityName);

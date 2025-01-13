@@ -35,9 +35,9 @@ function TripsPage({setTrip, trips, setTrips, formatDate }) {
 
   return (
     <>
-      {trips? <h1>Upcoming Trips</h1> :  <h1> No Upcoming Trips</h1> }
-
       <button onClick={() => {navToTripsPage()}}> Plan a Trip</button> <br/> <br/>
+      
+      {trips? <h1>Upcoming Trips</h1> :  <h1> No Upcoming Trips</h1> }
 
       <div className="tripsContainer">
       {trips.map((trip) => (

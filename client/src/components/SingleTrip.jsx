@@ -44,11 +44,10 @@ function SingleTrip({ trips, setTrips, trip, setTrip, arrival, departure, format
 
   return (
     <>
-      <br/>
       <div className="singleTripContainer">
       <div className="singleTripBanner">
-      <h1>Your Trip to {trip.destination}</h1>
-      <h1 className="tripDates">{formatDate(trip.start_date)} - {formatDate(trip.end_date)}</h1>
+      <h1 className="singleTripHeading">Your Trip to {trip.destination} | {formatDate(trip.start_date)} - {formatDate(trip.end_date)} </h1>
+      {/* <h1 className="tripDates">{formatDate(trip.start_date)} - {formatDate(trip.end_date)}</h1> */}
       </div> <br/>
       <div className="singleTripCard">
         
@@ -74,6 +73,7 @@ function SingleTrip({ trips, setTrips, trip, setTrip, arrival, departure, format
     </div> <br/> <br/>
 
     </div>
+    <br/> <br/> <br/>
        
 
     </> )
