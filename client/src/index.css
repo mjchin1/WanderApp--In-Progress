@@ -105,6 +105,8 @@ button:focus-visible {
 }
 
 .tripCard {
+  display: flex;
+  justify-content: center; 
   margin-bottom: 20px;
   width: 35vw;
   border-radius: 30px;
@@ -116,6 +118,10 @@ button:focus-visible {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.tripDetails {
+  margin: 0 auto;
 }
 
 .tripInfo {
