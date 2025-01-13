@@ -158,6 +158,10 @@ button:focus-visible {
   border: none;
 }
 
+.extraBold {
+  font-weight: 900
+}
+
 .bold {
   font-weight: 700
 }
@@ -422,29 +426,26 @@ a {
 .destinationButton {
   width: 30vw;
   background-color: white;
-  /* border: solid; */
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
-  border-radius: 0%;
+  border: none;
+
 }
 
 .destinationButtonPic {
-  padding-top: 20px;
-  width: 25vw;
-  height: 300px;
+  width: 26vw;
+  height: 21vw;
   object-fit: cover;
-  border-radius: 50px;
+  border-radius: 30px;
 }
 
 .destinationButtonText {
-  font-size: 30px;
+  font-size: 20px;
   text-align: left;
-  border-width: thick;
-  font-family: Palatino,URW Palladio L,serif;
   padding-bottom: 5px;
-  padding-left: 30px;
+  padding-left: 15px;
 }
 
 .tripFormText {
