@@ -11,6 +11,11 @@ function TripsPage({ trip, setTrip, trips, setTrips, formatDate }) {
 
   }
 
+  function navToSingleTrip() {
+    setTrip(trip)
+    navigate(`/trip/${trip.trip_id}`)
+  }
+
   useEffect(() => {
     async function fetchTrips() {
       try {
@@ -44,15 +49,15 @@ function TripsPage({ trip, setTrip, trips, setTrips, formatDate }) {
           <>
             <div className="tripCard">
             <div className="tripDetails">
-              <img className="tripPhoto"src={trip.trip_photo}></img> <br/>
+              <button className="imageButton"key={trip.trip_id} onClick={()=> {
+                navToSingleTrip()
+            }}> <img className="tripPhoto"src={trip.trip_photo}></img> </button> <br/>
               <div className="tripInfo">
-              <button className="tripHeading clearButton"key={trip.trip_id} onClick={()=> {
-                setTrip(trip)
-                navigate(`/trip/${trip.trip_id}`)
+              <button className="tripHeading clearButton bold"key={trip.trip_id} onClick={()=> {
+                navToSingleTrip()
                 }}>{trip.destination}</button> <br/>
               <button className="tripDatesBottom clearButton notBold" key={trip.trip_id} onClick={()=> {
-              setTrip(trip)
-              navigate(`/trip/${trip.trip_id}`)
+              navToSingleTrip()
               }}>{formatDate(trip.start_date)} to {formatDate(trip.end_date)}</button>
               </div>
             </div>

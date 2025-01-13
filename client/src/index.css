@@ -38,11 +38,12 @@ h1 {
 button {
   border-radius: 100px;
   border: 1px solid transparent;
+  border-color: black;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: white;
   cursor: pointer;
   transition: border-color 0.25s;
   margin-left: 5px;
@@ -65,8 +66,8 @@ button:focus-visible {
     color: #747bff;
   }
   button {
-    background-color:black;
-    color: white;
+    background-color:white;
+    color: black;
   }
 }
 
@@ -136,9 +137,24 @@ button:focus-visible {
 .clearButton {
   background-color: white;
   color: black;
-  margin-left: -1.3vw;
+  border: none;
 }
 
+.clearButton:hover {
+  border: none;
+}
+
+.imageButton {
+  background-color: white;
+  border: none;
+}
+.imageButton:hover {
+  border: none;
+}
+
+.bold {
+  font-weight: 700
+}
 .notBold {
   font-weight: 500
 }
