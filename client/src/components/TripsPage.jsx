@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-function TripsPage({ trip, setTrip, trips, setTrips, formatDate }) {
+function TripsPage({setTrip, trips, setTrips, formatDate }) {
   const navigate = useNavigate()
 
   function navToTripsPage() {
@@ -9,11 +9,6 @@ function TripsPage({ trip, setTrip, trips, setTrips, formatDate }) {
     navigate("/destinations")
     window.scroll(0,0)
 
-  }
-
-  function navToSingleTrip() {
-    setTrip(trip)
-    navigate(`/trip/${trip.trip_id}`)
   }
 
   useEffect(() => {
@@ -47,17 +42,20 @@ function TripsPage({ trip, setTrip, trips, setTrips, formatDate }) {
       <div className="tripsContainer">
       {trips.map((trip) => (
           <>
-            <div className="tripCard">
+            <div className="tripCard" key={trip.trip_id}>
             <div className="tripDetails">
-              <button className="imageButton"key={trip.trip_id} onClick={()=> {
-                navToSingleTrip()
+              <button className="imageButton" onClick={()=> {
+                    setTrip(trip)
+                    navigate(`/trip/${trip.trip_id}`)
             }}> <img className="tripPhoto"src={trip.trip_photo}></img> </button> <br/>
               <div className="tripInfo">
               <button className="tripHeading clearButton bold"key={trip.trip_id} onClick={()=> {
-                navToSingleTrip()
+                    setTrip(trip)
+                    navigate(`/trip/${trip.trip_id}`)
                 }}>{trip.destination}</button> <br/>
               <button className="tripDatesBottom clearButton notBold" key={trip.trip_id} onClick={()=> {
-              navToSingleTrip()
+                  setTrip(trip)
+                  navigate(`/trip/${trip.trip_id}`)
               }}>{formatDate(trip.start_date)} to {formatDate(trip.end_date)}</button>
               </div>
             </div>
