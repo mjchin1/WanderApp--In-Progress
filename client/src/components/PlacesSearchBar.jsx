@@ -18,6 +18,8 @@ export default function PlacesSearchBar(destination, setDestination) {
   const handleOnPlacesChanged = () => {
     let address = inputref.current.getPlaces();
     console.log("address", address)
+    console.log(address[0].formatted_address)
+    console.log(address[0].name)
   }
 
   return (
