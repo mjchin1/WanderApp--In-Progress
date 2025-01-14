@@ -432,6 +432,33 @@ a {
   color: black;
 }
 
+.destinationSearchBar {
+  display: inline-flex;
+  justify-content: center; 
+  width: 100vw;
+}
+
+.searchBarText {
+  font-size: 30px;
+}
+
+.searchBarInput {
+  margin-top: 17px;
+  margin-left: 10px;
+  border-radius: 30px;
+  border-width: thin;
+  padding-left: 15px;
+}
+
+.searchBarButton {
+  width: 100px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 17px;
+}
+
 .destinationButton {
   width: 30vw;
   background-color: white;

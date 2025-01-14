@@ -9,6 +9,7 @@ export default function Navigations() {
             {/* <Link to = '/departures'>Departures</Link> */}
             <Link to = '/add-arrival'>Arrival Form</Link>
             <Link to = '/add-departure'>Departure Form</Link>
+            <Link to = '/place-search'>Search</Link>
             {/* <Link to = '/add-activity'>Activity Form</Link> */}
             {/* <Link to = '/add-trip'>Add Trip Form</Link> */}
             {/* <Link to = '/destinations'>Destinations</Link> */}

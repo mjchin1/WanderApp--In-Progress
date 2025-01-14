@@ -114,7 +114,16 @@ function DestinationsPage({destination, setDestination, destinationPic, setDesti
 
   return (
     <>
-      <h1>Where Are We Going?</h1>
+      <div>
+      <form>
+      <label className="destinationSearchBar">
+          <p className="searchBarText">Where Are We Going?</p>
+          <input className="searchBarInput" name="searchBar" value={destination.cityName} onChange={(event) => setDestination(event.target.value)}/>
+          <button className="searchBarButton" onClick={navToForm} >Next</button>
+        </label>
+      </form>
+      </div> <br/>
+
       {destinations.map((destination) => (
         <button className="destinationButton" onClick={() => {
           setDestination(destination.cityName);
