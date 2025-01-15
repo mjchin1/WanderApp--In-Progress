@@ -54,12 +54,14 @@ export default function PlacesSearchBar2 ({ }) {
       </form>
       </div>
       
+      <div className="searchResultsContainer">
     {searchResults.map((result)=>(
-      <div>
-        <button className="searchResultButton">{result.placePrediction.text.text}</button>
-      </div>
+      
+        <button className="searchResultsButton clearButton">{result.placePrediction.text.text}</button>
+    
     ))
     }
+      </div>
     </>
   );
 };

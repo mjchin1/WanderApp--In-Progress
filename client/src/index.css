@@ -459,6 +459,26 @@ a {
   margin-top: 17px;
 }
 
+.searchResultsContainer {
+  border: solid;
+  border-right: solid;
+  border-width: thin;
+  width: 21vw;
+  margin: 0 auto;
+}
+
+.searchResultsButton {
+  width: 20vw;
+  border-radius: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.searchResultsButton:hover {
+  background-color:#DCDCDC;
+}
+
 .destinationButton {
   width: 30vw;
   background-color: white;
