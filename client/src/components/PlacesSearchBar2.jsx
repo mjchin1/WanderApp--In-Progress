@@ -5,12 +5,14 @@ export default function PlacesSearchBar2 ({ }) {
 
   const [input, setInput] = useState("London");
   const [searchResults, setSearchResults] = useState([]);
+  const [selectedValue, setSelectedValue] = useState("");
 
   function handleInputChange(event) {
     event.preventDefault();
     setInput(event.target.value)
     input && handleSubmit(event)
   }
+
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -56,9 +58,11 @@ export default function PlacesSearchBar2 ({ }) {
       
       <div className="searchResultsContainer">
     {searchResults.map((result)=>(
-      
-        <button className="searchResultsButton clearButton">{result.placePrediction.text.text}</button>
-    
+        <div key={result.placePrediction.placeId}>
+        <button className="searchResultsButton clearButton" 
+        onClick={() => setInput(result.placePrediction.text.text)}
+        >{result.placePrediction.text.text}</button>
+        </div>
     ))
     }
       </div>
