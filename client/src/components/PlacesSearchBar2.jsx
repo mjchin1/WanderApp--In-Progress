@@ -3,11 +3,13 @@ import { useNavigate } from 'react-router-dom';
 
 export default function PlacesSearchBar2 ({ }) {
 
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState("London");
   const [searchResults, setSearchResults] = useState([]);
 
   function handleInputChange(event) {
+    event.preventDefault();
     setInput(event.target.value)
+    input && handleSubmit(event)
   }
 
   async function handleSubmit(event) {
@@ -34,7 +36,8 @@ export default function PlacesSearchBar2 ({ }) {
     } catch (error) {
     }
 
-  }
+
+    }
 
   return (
     <>
@@ -42,9 +45,9 @@ export default function PlacesSearchBar2 ({ }) {
       <form onSubmit={handleSubmit}>
       <label className="destinationSearchBar">
           <p className="searchBarText">Where Are We Going?</p>
-          <input className="searchBarInput" id="searchBar" 
+          <input className="searchBarInput" placeHolder="Search Here"
             value={input}
-            onChange={(event) => setInput(event.target.value)}
+            onChange={handleInputChange}
           />
           <button className="searchBarButton">Next</button>
         </label>
@@ -53,10 +56,12 @@ export default function PlacesSearchBar2 ({ }) {
       
     {searchResults.map((result)=>(
       <div>
-        <p>{result.placePrediction.text.text}</p>
+        <button className="searchResultButton">{result.placePrediction.text.text}</button>
       </div>
     ))
     }
     </>
   );
 };
+
+
