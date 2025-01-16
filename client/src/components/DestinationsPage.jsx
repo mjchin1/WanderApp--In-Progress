@@ -7,6 +7,11 @@ function DestinationsPage({destination, setDestination, destinationPic, setDesti
   const destinations = [
 
     {
+      cityName: "Amsterdam",
+      countryName: "Netherlands",
+      imageUrl: "https://media.cntraveler.com/photos/62747dc06673cadbbd825338/master/pass/Amsteradm_eirik-skarstein-Vgr-_65__lw-unsplash.jpg"
+    },
+    {
       cityName: "Bali",
       countryName: "Indonesia",
       imageUrl: "https://www.agoda.com/wp-content/uploads/2018/05/Hotels_indonesia_bali_the-anvaya-beach-resort-bali-1.jpg"
@@ -23,6 +28,11 @@ function DestinationsPage({destination, setDestination, destinationPic, setDesti
       imageUrl: "https://a.storyblok.com/f/95452/5370x3284/892dc3547d/belgium-brussels-grand-place.jpg"
     },
     {
+      cityName: "Cape Town",
+      countryName: "South Africa",
+      imageUrl: "https://www.datocms-assets.com/32623/1708462515-cape_town_south_africa.jpeg"
+    },
+    {
       cityName: "Cartagena",
       countryName: "Colombia",
       imageUrl: "https://conbio.org/images/content_static_pages/ICCB2017_Cartagena.jpg"
@@ -31,6 +41,16 @@ function DestinationsPage({destination, setDestination, destinationPic, setDesti
       cityName: "Copenhagen",
       countryName: "Denmark",
       imageUrl: "https://media.cntraveler.com/photos/5c002c7745e16c465f875830/2:1/w_2560%2Cc_limit/GettyImages-1011529218.jpg",
+    },
+    {
+      cityName: "Edinburgh",
+      countryName: "Scotland",
+      imageUrl: "https://i.natgeofe.com/n/f2ffaf35-7c4b-4661-871c-0c1e2d5757d9/old-town-edinburgh-scotland.jpg",
+    },
+    {
+      cityName: "Hanoi",
+      countryName: "Vietnam",
+      imageUrl: "https://travelpassero.com/wp-content/uploads/2022/12/Day-Tour-from-Hanoi-Vietnam.jpg",
     },
     {
       cityName: "Lisbon",
@@ -96,6 +116,16 @@ function DestinationsPage({destination, setDestination, destinationPic, setDesti
       cityName: "Santorini",
       countryName: "Greece",
       imageUrl: "https://images.saymedia-content.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:eco%2Cw_1200/MjA0MjExMDI2MjY5MzE2NzQ4/what-to-see-in-santorini.jpg"
+    },
+    {
+      cityName: "Sydney",
+      countryName: "Australia",
+      imageUrl: "https://delivery-cqucontenthub.stylelabs.cloud/api/public/content/Sydney-Opera-House-and-Harbour-Bridge-full-page.jpg?v=d0a86cb2"
+    },
+    {
+      cityName: "Tokyo",
+      countryName: "Japan",
+      imageUrl: "https://www.advantour.com/img/japan/images/tokyo.jpg"
     },
     {
       cityName: "Tulum",
