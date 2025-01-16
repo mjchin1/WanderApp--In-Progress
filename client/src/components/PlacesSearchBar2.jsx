@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export default function PlacesSearchBar2 ({ }) {
+export default function PlacesSearchBar2 ({setDestination}) {
 
   const [input, setInput] = useState("London");
   const [searchResults, setSearchResults] = useState([]);
-  const [selectedValue, setSelectedValue] = useState("");
+
+  const navigate = useNavigate()
 
   function handleInputChange(event) {
     event.preventDefault();
@@ -21,7 +22,7 @@ export default function PlacesSearchBar2 ({ }) {
         method: "POST",
         headers: {
           'Content-Type': 'application/json', 
-          'X-Goog-Api-Key': 
+          'X-Goog-Api-Key': import.meta.env.VITE_PLACES_API_KEY
         },
         body: JSON.stringify({
           input,
@@ -51,7 +52,10 @@ export default function PlacesSearchBar2 ({ }) {
             value={input}
             onChange={handleInputChange}
           />
-          <button className="searchBarButton">Next</button>
+          <button className="searchBarButton"
+          onClick={() => {
+                navigate("/add-trip")}
+          }>Next</button>
         </label>
       </form>
       </div>
@@ -60,7 +64,9 @@ export default function PlacesSearchBar2 ({ }) {
     {searchResults.map((result)=>(
         <div key={result.placePrediction.placeId}>
         <button className="searchResultsButton clearButton" 
-        onClick={() => setInput(result.placePrediction.text.text)}
+        onClick={() => {setInput(result.placePrediction.text.text)
+          setDestination(result.placePrediction.text.text)
+        }}
         >{result.placePrediction.text.text}</button>
         </div>
     ))
