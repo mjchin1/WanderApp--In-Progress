@@ -18,6 +18,7 @@ import ActivityTypes from './components/ActivityTypes'
 import PlacesSearchBar from './components/PlacesSearchBar'
 import PlacesSearchBar2 from './components/PlacesSearchBar2'
 import PlacePhoto from './components/PlacePhoto'
+import PlacePhoto2 from './components/PlacePhoto2'
 import './App.css'
 import moment from 'moment'
 
@@ -83,6 +84,7 @@ function App() {
     <Route path='/place-search' element={<PlacesSearchBar destination={destination} setDestination={setDestination}/>}/> 
     <Route path='/place-search2' element={<PlacesSearchBar2 setPlaceId={setPlaceId} destination={destination} setDestination={setDestination}/>}/> 
     <Route path='/place-photo' element={<PlacePhoto photoName={photoName} setPhotoName={setPhotoName} setPlaceId={setPlaceId} placeId={placeId} destination={destination} setDestination={setDestination}/>}/> 
+    <Route path='/place-photo2' element={<PlacePhoto2 photoName={photoName} setPhotoName={setPhotoName} setPlaceId={setPlaceId} placeId={placeId} destination={destination} setDestination={setDestination}/>}/> 
     </Routes>
     </div>
     </>

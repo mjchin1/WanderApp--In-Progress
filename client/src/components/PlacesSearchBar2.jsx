@@ -62,7 +62,7 @@ export default function PlacesSearchBar2 ({setDestination, setPlaceId}) {
       <form onSubmit={handleSubmit}>
       <label className="destinationSearchBar">
           <p className="searchBarText">Where Are We Going?</p>
-          <input className="searchBarInput" placeHolder="Search Here"
+          <input className="searchBarInput" placeholder="Search Here"
             value={input}
             onChange={handleInputChange}
           />
