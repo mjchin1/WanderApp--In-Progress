@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
+import PlacesSearchBar2 from './PlacesSearchBar2'
 
-function DestinationsPage({destination, setDestination, destinationPic, setDestinationPic}) {
+function DestinationsPage({destination, setDestination, destinationPic, setDestinationPic, setPlaceId}) {
 
   const navigate = useNavigate()
 
@@ -151,13 +152,14 @@ function DestinationsPage({destination, setDestination, destinationPic, setDesti
   return (
     <>
       <div>
-      <form>
+      {/* <form>
       <label className="destinationSearchBar">
           <p className="searchBarText">Where Are We Going?</p>
           <input className="searchBarInput" name="searchBar" value={destination.cityName} onChange={(event) => setDestination(event.target.value)}/>
           <button className="searchBarButton" onClick={navToForm} >Next</button>
         </label>
-      </form>
+      </form> */}
+      <PlacesSearchBar2 setDestinationPic={setDestinationPic} destination={destination} destinations={destinations} setDestination={setDestination} setPlaceId={setPlaceId}/>
       </div> <br/>
 
       {destinations.map((destination) => (

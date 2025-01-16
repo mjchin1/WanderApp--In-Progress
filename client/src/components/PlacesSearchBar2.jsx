@@ -1,12 +1,27 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export default function PlacesSearchBar2 ({setDestination, setPlaceId}) {
+export default function PlacesSearchBar2 ({destinations, setDestinationPic, setDestination, destination, setPlaceId, googlePhotoUrl}) {
 
   const [input, setInput] = useState("");
   const [searchResults, setSearchResults] = useState([]);
 
   const navigate = useNavigate()
+
+  function choosePhoto() {
+    let destinationsArray= destinations;
+    console.log(destination)
+    let destinationCity = destination.split(",")[0]
+    console.log(destinationCity)
+    for (let i=0; i <destinationsArray.length; i++) {
+      let place = destinationsArray[i];
+      console.log(place.imageUrl)
+      if (place.cityName===destinationCity){
+        setDestinationPic(place.imageUrl)
+      } 
+    }
+  
+      }
 
   function handleInputChange(event) {
     event.preventDefault();
@@ -81,6 +96,7 @@ export default function PlacesSearchBar2 ({setDestination, setPlaceId}) {
         onClick={() => {setInput(result.placePrediction.text.text)
           setDestination(formatDestination(result.placePrediction.text.text))
           setPlaceId(result.placePrediction.placeId)
+          choosePhoto()
         }}
         >{result.placePrediction.text.text}</button>
         </div>
