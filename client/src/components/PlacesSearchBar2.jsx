@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 export default function PlacesSearchBar2 ({setDestination}) {
 
-  const [input, setInput] = useState("London");
+  const [input, setInput] = useState("");
   const [searchResults, setSearchResults] = useState([]);
 
   const navigate = useNavigate()

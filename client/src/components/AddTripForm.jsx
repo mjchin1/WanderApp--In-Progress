@@ -9,6 +9,21 @@ export default function AddTripForm ({ destination, setDestination, destinationP
   const [tripPhoto, setTripPhoto] = useState(destinationPic);
   const navigate = useNavigate();
 
+  function formatDestination(string) {
+    let splitString = string.split(",");
+    let city = splitString[0].trim();
+    let state = splitString[1].trim();
+    let country = splitString[splitString.length-1].trim();
+    let reformattedString = ""
+    
+    if (country === "USA") {
+      reformattedString = `${city + ", " + state}`
+    } else {
+    reformattedString = `${city + ", " + country}`
+    }
+    return (reformattedString)
+  } 
+
   async function handleSubmit(event) {
     event.preventDefault();
     try {
@@ -41,7 +56,7 @@ export default function AddTripForm ({ destination, setDestination, destinationP
     <>
 
    {destination && startConfirmation && endConfirmation ? <div >
-    <h1>Trip to {destination} </h1>
+    <h1>Trip to {formatDestination(destination)} </h1>
     {/* <img className="tripPhoto" src={destinationPic}></img>  */}
     <h1>{formatDate(startDate)} to {formatDate(endDate)}</h1>
     </div> : null } 
@@ -54,7 +69,7 @@ export default function AddTripForm ({ destination, setDestination, destinationP
       <form className="tripForm" onSubmit={handleSubmit}>
         
         {!startConfirmation && !endConfirmation? <label className="tripFormText">
-          When are you going to {destination}? <br/>
+          When are you going to {formatDestination(destination)}? <br/>
           <input className="tripInput" type="date" value={startDate} onChange={(event) => setStartDate(event.target.value)}/> <br/>
           <button className="dateConfirmationButton" onClick={()=> {setStartConfirmation("confirmed")}}>Next</button>
         </label> : null}
