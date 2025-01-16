@@ -13,12 +13,6 @@ function DestinationsPage({destination, setDestination, destinationPic, setDesti
       imageUrl: "https://media.cntraveler.com/photos/62747dc06673cadbbd825338/master/pass/Amsteradm_eirik-skarstein-Vgr-_65__lw-unsplash.jpg"
     },
     {
-      cityName: "Bali",
-      countryName: "Indonesia",
-      imageUrl: "https://www.agoda.com/wp-content/uploads/2018/05/Hotels_indonesia_bali_the-anvaya-beach-resort-bali-1.jpg"
-    },
-
-    {
       cityName: "Barcelona",
       countryName: "Spain",
       imageUrl: "https://www.thetrainline.com/cms/media/5673/alleys_in_gothic_quarter_in_barcelona_spain.jpg?mode=crop&width=660&height=440&quality=70"
@@ -44,8 +38,13 @@ function DestinationsPage({destination, setDestination, destinationPic, setDesti
       imageUrl: "https://media.cntraveler.com/photos/5c002c7745e16c465f875830/2:1/w_2560%2Cc_limit/GettyImages-1011529218.jpg",
     },
     {
+      cityName: "Dublin",
+      countryName: "Ireland",
+      imageUrl: "https://bucket-files.city-sightseeing.com/blog/2023/02/cityview-dublin-scaled.jpg",
+    },
+    {
       cityName: "Edinburgh",
-      countryName: "Scotland",
+      countryName: "United Kingdom",
       imageUrl: "https://i.natgeofe.com/n/f2ffaf35-7c4b-4661-871c-0c1e2d5757d9/old-town-edinburgh-scotland.jpg",
     },
     {
