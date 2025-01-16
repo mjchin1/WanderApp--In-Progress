@@ -80,7 +80,7 @@ function App() {
     <Route path='/add-activity' element={<AddActivityForm trip={trip}/>}/> 
     <Route path='/activity-types' element={<ActivityTypes />}/> 
     <Route path='/add-trip' element={<AddTripForm formatDate={formatDate} trip ={trip} setTrip={setTrip} destination={destination} setDestination={setDestination} destinationPic={destinationPic} setDestinationPic={setDestinationPic}/>}/> 
-    <Route path='/destinations' element={<DestinationsPage destination={destination} setDestination={setDestination} destinationPic={destinationPic} setDestinationPic={setDestinationPic}/>}/> 
+    <Route path='/destinations' element={<DestinationsPage destination={destination} setDestination={setDestination} destinationPic={destinationPic} setDestinationPic={setDestinationPic} setPlaceId={setPlaceId}/>}/> 
     <Route path='/place-search' element={<PlacesSearchBar destination={destination} setDestination={setDestination}/>}/> 
     <Route path='/place-search2' element={<PlacesSearchBar2 setPlaceId={setPlaceId} destination={destination} setDestination={setDestination}/>}/> 
     <Route path='/place-photo' element={<PlacePhoto photoName={photoName} setPhotoName={setPhotoName} setPlaceId={setPlaceId} placeId={placeId} destination={destination} setDestination={setDestination}/>}/> 

@@ -159,7 +159,7 @@ function DestinationsPage({destination, setDestination, destinationPic, setDesti
           <button className="searchBarButton" onClick={navToForm} >Next</button>
         </label>
       </form> */}
-      <PlacesSearchBar2 setDestinationPic={setDestinationPic} destination={destination} destinations={destinations} setDestination={setDestination} setPlaceId={setPlaceId}/>
+      <PlacesSearchBar2 setDestinationPic={setDestinationPic} destinationPic={destinationPic} destination={destination} destinations={destinations} setDestination={setDestination} setPlaceId={setPlaceId}/>
       </div> <br/>
 
       {destinations.map((destination) => (
