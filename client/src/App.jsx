@@ -17,6 +17,7 @@ import DestinationsPage from './components/DestinationsPage'
 import ActivityTypes from './components/ActivityTypes'
 import PlacesSearchBar from './components/PlacesSearchBar'
 import PlacesSearchBar2 from './components/PlacesSearchBar2'
+import PlacePhoto from './components/PlacePhoto'
 import './App.css'
 import moment from 'moment'
 
@@ -32,6 +33,8 @@ function App() {
   const [destinationPic, setDestinationPic] = useState("");
   const [trips, setTrips] = useState([])
   const [activities, setActivities] = useState([])
+  const [placeId, setPlaceId] = useState([])
+  const [photoName, setPhotoName] = useState([])
 
   function formatDate(date) {
     return moment(date).format("MMM Do, YYYY");
@@ -78,7 +81,8 @@ function App() {
     <Route path='/add-trip' element={<AddTripForm formatDate={formatDate} trip ={trip} setTrip={setTrip} destination={destination} setDestination={setDestination} destinationPic={destinationPic} setDestinationPic={setDestinationPic}/>}/> 
     <Route path='/destinations' element={<DestinationsPage destination={destination} setDestination={setDestination} destinationPic={destinationPic} setDestinationPic={setDestinationPic}/>}/> 
     <Route path='/place-search' element={<PlacesSearchBar destination={destination} setDestination={setDestination}/>}/> 
-    <Route path='/place-search2' element={<PlacesSearchBar2 destination={destination} setDestination={setDestination}/>}/> 
+    <Route path='/place-search2' element={<PlacesSearchBar2 setPlaceId={setPlaceId} destination={destination} setDestination={setDestination}/>}/> 
+    <Route path='/place-photo' element={<PlacePhoto photoName={photoName} setPhotoName={setPhotoName} setPlaceId={setPlaceId} placeId={placeId} destination={destination} setDestination={setDestination}/>}/> 
     </Routes>
     </div>
     </>

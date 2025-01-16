@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export default function PlacesSearchBar2 ({setDestination}) {
+export default function PlacesSearchBar2 ({setDestination, setPlaceId}) {
 
   const [input, setInput] = useState("");
   const [searchResults, setSearchResults] = useState([]);
@@ -80,6 +80,7 @@ export default function PlacesSearchBar2 ({setDestination}) {
         <button className="searchResultsButton clearButton" 
         onClick={() => {setInput(result.placePrediction.text.text)
           setDestination(formatDestination(result.placePrediction.text.text))
+          setPlaceId(result.placePrediction.placeId)
         }}
         >{result.placePrediction.text.text}</button>
         </div>
