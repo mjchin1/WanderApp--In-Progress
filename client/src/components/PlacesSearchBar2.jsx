@@ -14,6 +14,20 @@ export default function PlacesSearchBar2 ({setDestination}) {
     input && handleSubmit(event)
   }
 
+  function formatDestination(string) {
+    let splitString = string.split(",");
+    let city = splitString[0].trim();
+    let state = splitString[1].trim();
+    let country = splitString[splitString.length-1].trim();
+    let reformattedString = ""
+    
+    if (country === "USA") {
+      reformattedString = `${city + ", " + state}`
+    } else {
+    reformattedString = `${city + ", " + country}`
+    }
+    return (reformattedString)
+  } 
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -65,7 +79,7 @@ export default function PlacesSearchBar2 ({setDestination}) {
         <div key={result.placePrediction.placeId}>
         <button className="searchResultsButton clearButton" 
         onClick={() => {setInput(result.placePrediction.text.text)
-          setDestination(result.placePrediction.text.text)
+          setDestination(formatDestination(result.placePrediction.text.text))
         }}
         >{result.placePrediction.text.text}</button>
         </div>
