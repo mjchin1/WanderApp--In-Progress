@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import PlacePhoto2 from './PlacePhoto2'
 
 export default function PlacePhoto ({photoName, setPhotoName, setDestination, setPlaceId, placeId}) {
   useEffect(() => {
@@ -30,7 +31,7 @@ export default function PlacePhoto ({photoName, setPhotoName, setDestination, se
 
   return (
     <>
-    <p>photo</p>
+    <PlacePhoto2 photoName={photoName}/>
     </>
   );
 };

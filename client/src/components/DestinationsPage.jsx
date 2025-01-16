@@ -7,6 +7,12 @@ function DestinationsPage({destination, setDestination, destinationPic, setDesti
   const destinations = [
 
     {
+      cityName: "Bali",
+      countryName: "Indonesia",
+      imageUrl: "https://www.agoda.com/wp-content/uploads/2018/05/Hotels_indonesia_bali_the-anvaya-beach-resort-bali-1.jpg"
+    },
+
+    {
       cityName: "Barcelona",
       countryName: "Spain",
       imageUrl: "https://www.thetrainline.com/cms/media/5673/alleys_in_gothic_quarter_in_barcelona_spain.jpg?mode=crop&width=660&height=440&quality=70"
@@ -42,7 +48,7 @@ function DestinationsPage({destination, setDestination, destinationPic, setDesti
       imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/da/01/47/vieux-lyon.jpg?w=1200&h=-1&s=1"
     },
     {
-      cityName: "Marrakech",
+      cityName: "Marrakesh",
       countryName: "Morocco",
       imageUrl: "https://www.muchbetteradventures.com/magazine/content/images/2023/01/marrakech.jpg"
     },

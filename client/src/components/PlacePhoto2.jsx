@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export default function PlacePhoto ({photoName, setPhotoName, setDestination, setPlaceId, placeId}) {
+export default function PlacePhoto ({photoName}) {
 
   const [googlePhotoUrl, setGooglePhotoUrl] = useState("")
   async function fetchPhoto() {
