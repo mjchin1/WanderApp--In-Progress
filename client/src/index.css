@@ -495,6 +495,7 @@ a {
 
 }
 
+
 .destinationButtonPic {
   width: 26vw;
   height: 21vw;
@@ -509,6 +510,10 @@ a {
   padding-left: 15px;
 }
 
+.tripForm {
+  display: inline-flex;
+}
+
 .tripFormText {
   font-size: 50px;
 }
@@ -517,11 +522,31 @@ a {
   font-size: 30px;
   margin-left: 10px;
 }
+.addTripButton {
+  display: flex;
+  font-size: 30px;
+  margin-left: 10px;
+  height: 50px;
+  align-items: center;
+  margin-top: 12px;
+}
 
 .tripInput {
   height: 50px;
   font-size: 40px;
+  border-radius: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
+.dateInputs {
+  display: inline-flex;
+}
+.dateDividerText {
+  margin-top: -12px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 
 .formFields {
   text-align: left;

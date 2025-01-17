@@ -68,36 +68,38 @@ export default function AddTripForm ({ destination, destinations, setDestination
     <div className="tripFormCard">
       
       <div className="tripFormBorder">
+      <p className="tripFormText"> When will you be in {destination}? <br/> </p>
 
       <form className="tripForm" onSubmit={handleSubmit}>
-        
+      
         {!startConfirmation && !endConfirmation? <label className="tripFormText">
-          When are you going to {destination}? <br/>
-          <input className="tripInput" type="date" value={startDate} onChange={(event) => setStartDate(event.target.value)}/>
-          <button className="dateConfirmationButton" onClick={()=> {
-            setStartConfirmation("confirmed")
-            setDestinationPic(choosePhoto())}}>Next</button>
+          <div className="dateInputs">
+          <p className="dateDividerText">From</p>
+          <input className="tripInput" type="date" value={startDate} onChange={(event) => setStartDate(event.target.value)}/> 
+          <p className="dateDividerText">to</p>
+          <input className="tripInput" type="date" value={endDate} onChange={(event) => setEndDate(event.target.value)}/>
+          </div>
         </label> : null} <br/>
+        <button className="addTripButton" onClick={()=> {
+            setDestinationPic(choosePhoto())}}>Confirm Trip Details</button> <br/>
+        </form> <br/>
+    
 
-       {startConfirmation && !endConfirmation? <label className="tripFormText">
+       {/* {startConfirmation && !endConfirmation? <label className="tripFormText">
           When are you returning from {destination}? <br/>
           <input className="tripInput" type="date" value={endDate} onChange={(event) => setEndDate(event.target.value)}/> <br/>
           <button className="dateConfirmationButton" onClick={()=> {
             setEndConfirmation("confirmed")
             setDestinationPic(choosePhoto())}}>Next</button>
-        </label> : null}
-        
-        {/* <label> 
-         Trip Photo: <input value={tripPhoto} onChange={(event) => setTripPhoto(event.target.value)}/> <br/>
-        </label> <br/> */}
+        </label> : null} */}
 
 
       {!photoAvailable ? <PlacePhoto choosePhoto={choosePhoto} photoName={photoName} setPhotoName={setPhotoName} placeId={placeId} googlePhotoUrl={googlePhotoUrl} setGooglePhotoUrl={setGooglePhotoUrl}/> : <img className="searchResultPic" src={destinationPic}/>}
 
-       {startConfirmation && endConfirmation ? <button className="addTripButton">Confirm Trip Details</button> : null}
+
 
        
-      </form>
+      
       </div>
 
     </div>
