@@ -8,19 +8,19 @@ export default function PlacesSearchBar2 ({destinations, setDestinationPic, dest
 
   const navigate = useNavigate()
 
-  function choosePhoto() {
-    let destinationsArray= destinations;
-    console.log(destination)
-    let destinationCity = destination.split(",")[0]
-    console.log(destinationCity)
-    for (let i=0; i <destinationsArray.length; i++) {
-      let place = destinationsArray[i];
-      if (place.cityName===destinationCity){
-        setDestinationPic(place.imageUrl)
-        console.log("pic:", destinationPic)
-      } 
-    }
-      }
+  // function choosePhoto() {
+  //   let destinationsArray= destinations;
+  //   console.log(destination)
+  //   let destinationCity = destination.split(",")[0]
+  //   console.log(destinationCity)
+  //   for (let i=0; i <destinationsArray.length; i++) {
+  //     let place = destinationsArray[i];
+  //     if (place.cityName===destinationCity){
+  //       setDestinationPic(place.imageUrl)
+  //       console.log("pic:", destinationPic)
+  //     } 
+  //   }
+  //     }
 
   function handleInputChange(event) {
     event.preventDefault();
@@ -95,7 +95,7 @@ export default function PlacesSearchBar2 ({destinations, setDestinationPic, dest
         onClick={() => {setInput(result.placePrediction.text.text)
           setDestination(formatDestination(result.placePrediction.text.text))
           setPlaceId(result.placePrediction.placeId)
-          choosePhoto()
+          // choosePhoto()
         }}
         >{result.placePrediction.text.text}</button>
         </div>

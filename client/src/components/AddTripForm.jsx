@@ -1,13 +1,28 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export default function AddTripForm ({ destination, setDestination, destinationPic, setDestinationPic, trip, setTrip, formatDate }) {
+export default function AddTripForm ({ destination, destinations, setDestination, destinationPic, setDestinationPic, trip, setTrip, formatDate }) {
   const [startDate, setStartDate] = useState("");
   const [startConfirmation, setStartConfirmation] = useState(null)
   const [endDate, setEndDate] = useState("");
   const [endConfirmation, setEndConfirmation] = useState(null)
   const [tripPhoto, setTripPhoto] = useState(destinationPic);
   const navigate = useNavigate();
+
+
+  function choosePhoto() {
+    let destinationsArray= destinations;
+    console.log(destination)
+    let destinationCity = destination.split(",")[0]
+    console.log(destinationCity)
+    for (let i=0; i <destinationsArray.length; i++) {
+      let place = destinationsArray[i];
+      if (place.cityName===destinationCity){
+        setDestinationPic(place.imageUrl)
+        console.log("pic:", destinationPic)
+      } 
+    }
+      }
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -21,10 +36,11 @@ export default function AddTripForm ({ destination, setDestination, destinationP
           destination, 
           startDate, 
           endDate, 
-          tripPhoto
+          tripPhoto: destinationPic
         })
       });
       const result = await response.json();
+      choosePhoto()
       setDestination("");
       setStartDate("");
       setEndDate("");
@@ -56,13 +72,17 @@ export default function AddTripForm ({ destination, setDestination, destinationP
         {!startConfirmation && !endConfirmation? <label className="tripFormText">
           When are you going to {destination}? <br/>
           <input className="tripInput" type="date" value={startDate} onChange={(event) => setStartDate(event.target.value)}/> <br/>
-          <button className="dateConfirmationButton" onClick={()=> {setStartConfirmation("confirmed")}}>Next</button>
+          <button className="dateConfirmationButton" onClick={()=> {
+            setStartConfirmation("confirmed")
+            choosePhoto()}}>Next</button>
         </label> : null}
 
        {startConfirmation && !endConfirmation? <label className="tripFormText">
           When are you returning from {destination}? <br/>
           <input className="tripInput" type="date" value={endDate} onChange={(event) => setEndDate(event.target.value)}/> <br/>
-          <button className="dateConfirmationButton" onClick={()=> {setEndConfirmation("confirmed")}}>Next</button>
+          <button className="dateConfirmationButton" onClick={()=> {
+            setEndConfirmation("confirmed")
+            choosePhoto()}}>Next</button>
         </label> : null}
         
         {/* <label> 
