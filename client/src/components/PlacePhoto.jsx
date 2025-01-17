@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import PlacePhoto2 from './PlacePhoto2'
 
-export default function PlacePhoto ({photoName, setPhotoName, setDestination, setPlaceId, placeId}) {
+export default function PlacePhoto ({photoName, setPhotoName, setDestination, setPlaceId, placeId, setGooglePhotoUrl, googlePhotoUrl}) {
   useEffect(() => {
     fetchPhoto();
   }, [placeId])
@@ -31,7 +31,7 @@ export default function PlacePhoto ({photoName, setPhotoName, setDestination, se
 
   return (
     <>
-    <PlacePhoto2 photoName={photoName}/>
+    <PlacePhoto2 photoName={photoName} googlePhotoUrl={googlePhotoUrl} setGooglePhotoUrl={setGooglePhotoUrl}/>
     </>
   );
 };

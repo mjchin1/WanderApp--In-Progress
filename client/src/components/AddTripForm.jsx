@@ -1,28 +1,30 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import PlacePhoto from './PlacePhoto'
 
-export default function AddTripForm ({ destination, destinations, setDestination, destinationPic, setDestinationPic, trip, setTrip, formatDate }) {
+export default function AddTripForm ({ destination, destinations, setDestination, destinationPic, setDestinationPic, trip, setTrip, formatDate, photoName, setPhotoName, placeId, googlePhotoUrl, setGooglePhotoUrl, }) {
   const [startDate, setStartDate] = useState("");
   const [startConfirmation, setStartConfirmation] = useState(null)
   const [endDate, setEndDate] = useState("");
   const [endConfirmation, setEndConfirmation] = useState(null)
   const [tripPhoto, setTripPhoto] = useState(destinationPic);
   const navigate = useNavigate();
-
+  const [photoAvailable, setPhotoAvailable] = useState(null)
 
   function choosePhoto() {
-    let destinationsArray= destinations;
+    let destinationsArray = destinations;
     console.log(destination)
     let destinationCity = destination.split(",")[0]
     console.log(destinationCity)
     for (let i=0; i <destinationsArray.length; i++) {
       let place = destinationsArray[i];
       if (place.cityName===destinationCity){
-        setDestinationPic(place.imageUrl)
-        console.log("pic:", destinationPic)
-      } 
-    }
+        setPhotoAvailable("yes")
+        return place.imageUrl
       }
+    }
+    return googlePhotoUrl
+  }
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -40,8 +42,8 @@ export default function AddTripForm ({ destination, destinations, setDestination
         })
       });
       const result = await response.json();
-      choosePhoto()
-      setDestination("");
+      // choosePhoto()
+      // setDestination("");
       setStartDate("");
       setEndDate("");
       setTripPhoto("");
@@ -71,18 +73,18 @@ export default function AddTripForm ({ destination, destinations, setDestination
         
         {!startConfirmation && !endConfirmation? <label className="tripFormText">
           When are you going to {destination}? <br/>
-          <input className="tripInput" type="date" value={startDate} onChange={(event) => setStartDate(event.target.value)}/> <br/>
+          <input className="tripInput" type="date" value={startDate} onChange={(event) => setStartDate(event.target.value)}/>
           <button className="dateConfirmationButton" onClick={()=> {
             setStartConfirmation("confirmed")
-            choosePhoto()}}>Next</button>
-        </label> : null}
+            setDestinationPic(choosePhoto())}}>Next</button>
+        </label> : null} <br/>
 
        {startConfirmation && !endConfirmation? <label className="tripFormText">
           When are you returning from {destination}? <br/>
           <input className="tripInput" type="date" value={endDate} onChange={(event) => setEndDate(event.target.value)}/> <br/>
           <button className="dateConfirmationButton" onClick={()=> {
             setEndConfirmation("confirmed")
-            choosePhoto()}}>Next</button>
+            setDestinationPic(choosePhoto())}}>Next</button>
         </label> : null}
         
         {/* <label> 
@@ -90,7 +92,11 @@ export default function AddTripForm ({ destination, destinations, setDestination
         </label> <br/> */}
 
 
+      {!photoAvailable ? <PlacePhoto photoName={photoName} setPhotoName={setPhotoName} placeId={placeId} googlePhotoUrl={googlePhotoUrl} setGooglePhotoUrl={setGooglePhotoUrl}/> : <img src={destinationPic}/>}
+
        {startConfirmation && endConfirmation ? <button className="addTripButton">Confirm Trip Details</button> : null}
+
+       
       </form>
       </div>
 

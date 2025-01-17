@@ -36,6 +36,7 @@ function App() {
   const [activities, setActivities] = useState([])
   const [placeId, setPlaceId] = useState([])
   const [photoName, setPhotoName] = useState([])
+  const [googlePhotoUrl, setGooglePhotoUrl] = useState("")
 
   function formatDate(date) {
     return moment(date).format("MMM Do, YYYY");
@@ -218,7 +219,7 @@ function App() {
     <Route path='/add-departure' element={<AddDepartureForm trip={trip}/>}/> 
     <Route path='/add-activity' element={<AddActivityForm trip={trip}/>}/> 
     <Route path='/activity-types' element={<ActivityTypes />}/> 
-    <Route path='/add-trip' element={<AddTripForm destinations={destinations} formatDate={formatDate} trip ={trip} setTrip={setTrip} destination={destination} setDestination={setDestination} destinationPic={destinationPic} setDestinationPic={setDestinationPic}/>}/> 
+    <Route path='/add-trip' element={<AddTripForm googlePhotoUrl={googlePhotoUrl} setGooglePhotoUrl={setGooglePhotoUrl} photoName={photoName} setPhotoName={setPhotoName} setPlaceId={setPlaceId} placeId={placeId} destinations={destinations} formatDate={formatDate} trip ={trip} setTrip={setTrip} destination={destination} setDestination={setDestination} destinationPic={destinationPic} setDestinationPic={setDestinationPic}/>}/> 
     <Route path='/destinations' element={<DestinationsPage destination={destination} setDestination={setDestination} destinationPic={destinationPic} setDestinationPic={setDestinationPic} setPlaceId={setPlaceId}/>}/> 
     <Route path='/place-search' element={<PlacesSearchBar destination={destination} setDestination={setDestination}/>}/> 
     <Route path='/place-search2' element={<PlacesSearchBar2 setPlaceId={setPlaceId} destination={destination} setDestination={setDestination}/>}/> 
