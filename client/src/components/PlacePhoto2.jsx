@@ -5,7 +5,7 @@ export default function PlacePhoto ({photoName, setGooglePhotoUrl, googlePhotoUr
 
   async function fetchPhoto() {
     try {
-      const response = await fetch(`https://places.googleapis.com/v1/${photoName}/media?skipHttpRedirect=true&maxHeightPx=400&maxWidthPx=400&key=${import.meta.env.VITE_PLACES_API_KEY}`);
+      const response = await fetch(`https://places.googleapis.com/v1/${photoName}/media?skipHttpRedirect=true&maxHeightPx=800&maxWidthPx=800&key=${import.meta.env.VITE_PLACES_API_KEY}`);
       const result = await response.json();
       console.log(result)
       setGooglePhotoUrl(result.photoUri)
@@ -20,7 +20,7 @@ export default function PlacePhoto ({photoName, setGooglePhotoUrl, googlePhotoUr
 
   return (
     <>
-    <img src={choosePhoto()}/>
+    <img className="searchResultPic" src={choosePhoto()}/>
     </>
   );
 };

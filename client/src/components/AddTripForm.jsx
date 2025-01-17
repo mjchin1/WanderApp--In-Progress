@@ -92,7 +92,7 @@ export default function AddTripForm ({ destination, destinations, setDestination
         </label> <br/> */}
 
 
-      {!photoAvailable ? <PlacePhoto choosePhoto={choosePhoto} photoName={photoName} setPhotoName={setPhotoName} placeId={placeId} googlePhotoUrl={googlePhotoUrl} setGooglePhotoUrl={setGooglePhotoUrl}/> : <img src={destinationPic}/>}
+      {!photoAvailable ? <PlacePhoto choosePhoto={choosePhoto} photoName={photoName} setPhotoName={setPhotoName} placeId={placeId} googlePhotoUrl={googlePhotoUrl} setGooglePhotoUrl={setGooglePhotoUrl}/> : <img className="searchResultPic" src={destinationPic}/>}
 
        {startConfirmation && endConfirmation ? <button className="addTripButton">Confirm Trip Details</button> : null}
 

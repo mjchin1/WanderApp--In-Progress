@@ -475,6 +475,12 @@ a {
   font-size: 20px;
 }
 
+.searchResultPic {
+  width: 30vw;
+  height: 25vw;
+  border-radius: 30px;
+}
+
 .searchResultsButton:hover {
   background-color:#DCDCDC;
 }
