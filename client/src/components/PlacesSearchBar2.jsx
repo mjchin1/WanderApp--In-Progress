@@ -73,10 +73,11 @@ export default function PlacesSearchBar2 ({destinations, setDestinationPic, dest
   return (
     <>
       <div>
+      <p className="searchBarText">Where Are We Going?</p>
       <form onSubmit={handleSubmit}>
       <label className="destinationSearchBar">
-          <p className="searchBarText">Where Are We Going?</p>
-          <input className="searchBarInput" placeholder="Search Here"
+          <p className="searchBarText">Browse locations below or search here.</p> 
+          <input className="searchBarInput"
             value={input}
             onChange={handleInputChange}
           />
