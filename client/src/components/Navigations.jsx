@@ -9,12 +9,13 @@ export default function Navigations() {
             {/* <Link to = '/departures'>Departures</Link> */}
             <Link to = '/add-arrival'>Arrival Form</Link>
             <Link to = '/add-departure'>Departure Form</Link>
-            <Link to = '/place-search2'>Search2</Link>
-            <Link to = '/place-photo'>Photo</Link>
-            <Link to = '/place-photo2'>Photo2</Link>
+            {/* <Link to = '/place-search2'>Search2</Link> */}
+            <Link to = '/activity-search'>Activity Search</Link>
+            {/* <Link to = '/place-photo'>Photo</Link>
+            <Link to = '/place-photo2'>Photo2</Link> */}
             {/* <Link to = '/add-activity'>Activity Form</Link> */}
             {/* <Link to = '/add-trip'>Add Trip Form</Link> */}
-            {/* <Link to = '/destinations'>Destinations</Link> */}
+            <Link to = '/destinations'>Destinations</Link>
             {/* <Link to = '/trip/:id'>Single Trip</Link> */}
             {/* <Link to = '/activity-types'>Activity Types</Link> */}
 
