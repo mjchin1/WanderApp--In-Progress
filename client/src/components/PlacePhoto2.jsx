@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export default function PlacePhoto ({photoName, setGooglePhotoUrl, googlePhotoUrl}) {
+export default function PlacePhoto ({photoName, setGooglePhotoUrl, googlePhotoUrl, choosePhoto}) {
 
   async function fetchPhoto() {
     try {
@@ -20,7 +20,7 @@ export default function PlacePhoto ({photoName, setGooglePhotoUrl, googlePhotoUr
 
   return (
     <>
-    <img src={googlePhotoUrl}/>
+    <img src={choosePhoto()}/>
     </>
   );
 };
