@@ -15,7 +15,7 @@ import AddActivityForm from './components/AddActivityForm'
 import AddTripForm from './components/AddTripForm'
 import DestinationsPage from './components/DestinationsPage'
 import ActivityTypes from './components/ActivityTypes'
-import PlacesSearchBar from './components/PlacesSearchBar'
+import ActivitySearchBar2 from './components/ActivitySearchBar2'
 import PlacesSearchBar2 from './components/PlacesSearchBar2'
 import PlacePhoto from './components/PlacePhoto'
 import PlacePhoto2 from './components/PlacePhoto2'
@@ -222,7 +222,7 @@ function App() {
     <Route path='/activity-types' element={<ActivityTypes />}/> 
     <Route path='/add-trip' element={<AddTripForm googlePhotoUrl={googlePhotoUrl} setGooglePhotoUrl={setGooglePhotoUrl} photoName={photoName} setPhotoName={setPhotoName} setPlaceId={setPlaceId} placeId={placeId} destinations={destinations} formatDate={formatDate} trip ={trip} setTrip={setTrip} destination={destination} setDestination={setDestination} destinationPic={destinationPic} setDestinationPic={setDestinationPic}/>}/> 
     <Route path='/destinations' element={<DestinationsPage destination={destination} setDestination={setDestination} destinationPic={destinationPic} setDestinationPic={setDestinationPic} setPlaceId={setPlaceId}/>}/> 
-    <Route path='/place-search' element={<PlacesSearchBar destination={destination} setDestination={setDestination}/>}/> 
+    <Route path='/place-search' element={<ActivitySearchBar2 activity={activity} setActivity={setActivity} activities={activities} setActivities={setActivities}/>}/> 
     <Route path='/place-search2' element={<PlacesSearchBar2 setPlaceId={setPlaceId} destination={destination} setDestination={setDestination}/>}/> 
     <Route path='/place-photo' element={<PlacePhoto photoName={photoName} setPhotoName={setPhotoName} setPlaceId={setPlaceId} placeId={placeId} destination={destination} setDestination={setDestination}/>}/> 
     <Route path='/place-photo2' element={<PlacePhoto2 photoName={photoName} setPhotoName={setPhotoName} setPlaceId={setPlaceId} placeId={placeId} destination={destination} setDestination={setDestination}/>}/> 
