@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import { GoogleMap, useJsApiLoader, StandaloneSearchBox } from '@react-google-maps/api'
 
 
-export default function PlacesSearchBar(destination, setDestination) {
+export default function ActivitySearchBar2() {
 
   const inputref= useRef(null)
 
@@ -11,7 +11,7 @@ export default function PlacesSearchBar(destination, setDestination) {
 
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: import.meta.env.PLACES_API_KEY,
+    googleMapsApiKey: import.meta.env.VITE_PLACES_API_KEY,
     libraries:["places"]
   })
 
@@ -32,7 +32,7 @@ export default function PlacesSearchBar(destination, setDestination) {
           onLoad={(ref)=> inputref.current = ref}
           onPlacesChanged={handleOnPlacesChanged}>
           <input className="searchBarInput" name="searchBar" 
-          value={destination.cityName} onChange={(event) => setDestination(event.target.value)}
+          value={activityName} onChange={(event) => setActivity(event.target.value)}
           />
           </StandaloneSearchBox>
           }
