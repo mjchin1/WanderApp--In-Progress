@@ -27,36 +27,31 @@ export default function AddActivityForm ({trip}) {
   const activityTypes = [
 
     {
-      description: "Dine",
+      description: "Dining",
       image: Dine
     },
 
     {
-      description: "Drink",
+      description: "Grabbing a Drink",
       image: Drink
     },
 
     {
-      description: "Entertainment",
-      image: Entertainment
-    },
-
-    {
-      description: "Nature",
+      description: "Enjoying Nature",
       image: Nature
     },
 
     {
-      description: "Dance",
+      description: "Dancing",
       image: Dancing
     },
 
     {
-      description: "Shop",
+      description: "Shopping",
       image: Shopping
     },
     {
-      description: "Explore",
+      description: "Exploring",
       image: Explore
     },
    
@@ -98,13 +93,11 @@ export default function AddActivityForm ({trip}) {
       <div className="activityFormBorder">
       <h1> Add an Activity</h1>
 
-      <h2>{activityName}</h2>
-
      <ActivitySearchBar2 activityName={activityName} setActivityName={setActivityName}/> 
       
 
      { !activityDescription && !activityPhoto? <div className="activityCategoriesContainer">
-      <h2>Choose an Activity Category: </h2>
+      <h2>What will you be doing at {activityName}? </h2>
       {activityTypes.map((type) => (
       <button className="activityTypeButton" onClick={()=>{
         setActivityDescription(type.description)
@@ -120,7 +113,7 @@ export default function AddActivityForm ({trip}) {
     
       <form className="activityForm" onSubmit={handleSubmit}>
       
-      { activityDescription && activityPhoto && !activityNameStatus ? 
+      {/* { activityDescription && activityPhoto && !activityNameStatus ? 
       <>
       <label className="formText">
          Name of your activity <br/>
@@ -131,7 +124,7 @@ export default function AddActivityForm ({trip}) {
         }}>Next</button>
 
         </>
-      : null}
+      : null} */}
      
         {/* <label>
           Activity Description: <input value={activityDescription} onChange={(event) => setActivityDescription(event.target.value)}/><br/>

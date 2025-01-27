@@ -185,6 +185,7 @@ button:focus-visible {
 
 .activityCategoriesContainer {
   width: 60vw;
+  margin: 0 auto;
 }
 
 .activityPhoto {
@@ -217,8 +218,10 @@ button:focus-visible {
 
 .activityTypeButton {
   background-color: white;
-  width: 200px;
+  width: 15vw;
+  height: 15vw;
   border: solid;
+  border-radius: 30px;
   font-size: 20px;
   margin-left: 10px;
   margin-right: 10px;

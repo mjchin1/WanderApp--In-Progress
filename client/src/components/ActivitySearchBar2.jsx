@@ -25,15 +25,22 @@ export default function ActivitySearchBar2({ activityName, setActivityName }) {
     console.log(address[0].name)
   }
 
+  function confirmActivity() {
+    let address = inputref.current.getPlaces();
+    setActivityName(address[0].name)
+  }
+
   return (
     <div>
       <form>
       <label className="destinationSearchBar">
-          <p className="searchBarText">What would you like to do?</p>
+          <p className="searchBarText">What place would you like to visit?</p>
           {isLoaded &&
           <StandaloneSearchBox 
           onLoad={(ref)=> inputref.current = ref}
-          onPlacesChanged={handleOnPlacesChanged}>
+          onPlacesChanged={() =>{
+            confirmActivity()
+            handleOnPlacesChanged()}}>
           <input className="searchBarInput" name="searchBar" 
           value={activityName} onChange={(event) => setActivityName(event.target.value)}
           />

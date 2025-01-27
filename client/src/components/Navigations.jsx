@@ -11,7 +11,7 @@ export default function Navigations() {
             <Link to = '/add-departure'>Departure Form</Link>
             {/* <Link to = '/place-search2'>Search2</Link> */}
             <Link to = '/place-search'>Search</Link>
-            <Link to = '/activity-search'>Activity Search</Link>
+            <Link to = '/add-activity'>Activity Form</Link>
             {/* <Link to = '/place-photo'>Photo</Link>
             <Link to = '/place-photo2'>Photo2</Link> */}
             {/* <Link to = '/add-activity'>Activity Form</Link> */}
