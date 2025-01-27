@@ -7,6 +7,7 @@ import Nature from "../assets/Nature.png"
 import Dancing from "../assets/Dancing.png"
 import Shopping from "../assets/Shopping.png"
 import Explore from "../assets/Explore.png"
+import ActivitySearchBar2 from "./ActivitySearchBar2"
 
 export default function AddActivityForm ({trip}) {
   const [activityName, setActivityName] = useState("");
@@ -96,6 +97,11 @@ export default function AddActivityForm ({trip}) {
       
       <div className="activityFormBorder">
       <h1> Add an Activity</h1>
+
+      <h2>{activityName}</h2>
+
+     <ActivitySearchBar2 activityName={activityName} setActivityName={setActivityName}/> 
+      
 
      { !activityDescription && !activityPhoto? <div className="activityCategoriesContainer">
       <h2>Choose an Activity Category: </h2>

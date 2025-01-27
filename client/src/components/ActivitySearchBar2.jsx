@@ -1,9 +1,12 @@
 import React from 'react'
 import { useRef } from 'react';
 import { GoogleMap, useJsApiLoader, StandaloneSearchBox } from '@react-google-maps/api'
+import { useNavigate } from 'react-router-dom';
 
 
-export default function ActivitySearchBar2() {
+export default function ActivitySearchBar2({ activityName, setActivityName }) {
+  
+  const navigate= useNavigate()
 
   const inputref= useRef(null)
 
@@ -26,17 +29,17 @@ export default function ActivitySearchBar2() {
     <div>
       <form>
       <label className="destinationSearchBar">
-          <p className="searchBarText">Where Are We Going?</p>
+          <p className="searchBarText">What would you like to do?</p>
           {isLoaded &&
           <StandaloneSearchBox 
           onLoad={(ref)=> inputref.current = ref}
           onPlacesChanged={handleOnPlacesChanged}>
           <input className="searchBarInput" name="searchBar" 
-          value={activityName} onChange={(event) => setActivity(event.target.value)}
+          value={activityName} onChange={(event) => setActivityName(event.target.value)}
           />
           </StandaloneSearchBox>
           }
-          <button className="searchBarButton">Next</button>
+          <button onClick={()=>{navigate("/add-activity")}} className="searchBarButton">Next</button>
         </label>
       </form>
       </div>
