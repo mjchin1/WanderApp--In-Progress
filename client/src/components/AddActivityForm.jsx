@@ -17,6 +17,7 @@ export default function AddActivityForm ({trip}) {
   const [tripId, setTripId] = useState(trip.trip_id);
   const [activityNameStatus, setActivityNameStatus] = useState(null)
   const [activityWebsiteStatus, setActivityWebsiteStatus] = useState(null)
+  const [activityVerb, setActivityVerb] = useState("")
 
   const navigate = useNavigate();
 
@@ -27,32 +28,38 @@ export default function AddActivityForm ({trip}) {
   const activityTypes = [
 
     {
-      description: "Dining",
-      image: Dine
+      description: "Dine",
+      image: Dine,
+      activityVerb:"dine"
     },
 
     {
-      description: "Grabbing a Drink",
-      image: Drink
+      description: "Grab a Drink",
+      image: Drink,
+      activityVerb:"grab a drink"
     },
 
     {
-      description: "Enjoying Nature",
-      image: Nature
+      description: "Enjoy Nature",
+      image: Nature, 
+      activityVerb: "enjoy nature"
     },
 
     {
-      description: "Dancing",
-      image: Dancing
+      description: "Dance",
+      image: Dancing, 
+      activityVerb: "dance"
     },
 
     {
-      description: "Shopping",
-      image: Shopping
+      description: "Shop",
+      image: Shopping, 
+      activityVerb: "shop"
     },
     {
-      description: "Exploring",
-      image: Explore
+      description: "Explore",
+      image: Explore, 
+      activityVerb: "explore"
     },
    
   ];
@@ -93,23 +100,23 @@ export default function AddActivityForm ({trip}) {
       <div className="activityFormBorder">
       <h1> Add an Activity</h1>
 
-     <ActivitySearchBar2 activityName={activityName} setActivityName={setActivityName}/> 
-      
+    { activityPhoto? <ActivitySearchBar2 activityName={activityName} setActivityName={setActivityName} activityVerb={activityVerb}/>: null } 
 
-     { !activityDescription && !activityPhoto? <div className="activityCategoriesContainer">
-      <h2>What will you be doing at {activityName}? </h2>
+   { ! activityPhoto? <div className="activityCategoriesContainer">
+      <h2>What would you like to do? </h2>
       {activityTypes.map((type) => (
       <button className="activityTypeButton" onClick={()=>{
         setActivityDescription(type.description)
         setActivityPhoto(type.image)
+        setActivityVerb(type.activityVerb)
       }}>
         {type.description} <br/> <br/>
       <img className="activityIcon" src={type.image}></img> 
       </button>
       ))} <br/> <br/>
 
-    </div>
-    : null}
+    </div> : null}
+
     
       <form className="activityForm" onSubmit={handleSubmit}>
       
