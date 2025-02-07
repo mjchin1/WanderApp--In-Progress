@@ -232,6 +232,7 @@ button:focus-visible {
   width: 255px;
   border: solid;
   font-size: 20px;
+  border-radius : 30px;
 }
 
 .formText {

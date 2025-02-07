@@ -164,7 +164,7 @@ export default function AddActivityForm ({trip}) {
         <img className="activityIcon" src={activityPhoto}></img> 
         </button> <br/>
 
-        <button className="addActivityButton">Add Activity</button>
+        <button className="addActivityButton">Add This Activity</button>
 
         </>
 
