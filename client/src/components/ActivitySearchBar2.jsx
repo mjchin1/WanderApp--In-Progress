@@ -47,7 +47,7 @@ export default function ActivitySearchBar2({ activityName, setActivityName, acti
           </StandaloneSearchBox>
           }
           <button onClick={()=>{
-            navigate("/add-activity")}} className="searchBarButton">Next</button>
+            navigate("/activities")}} className="searchBarButton">Next</button>
         </label>
       </form>
       </div>
