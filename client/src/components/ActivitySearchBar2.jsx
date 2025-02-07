@@ -4,7 +4,7 @@ import { GoogleMap, useJsApiLoader, StandaloneSearchBox } from '@react-google-ma
 import { useNavigate } from 'react-router-dom';
 
 
-export default function ActivitySearchBar2({ activityName, setActivityName, activityVerb }) {
+export default function ActivitySearchBar2({ activityName, setActivityName, activityVerb, setActivityNameStatus }) {
   
   const navigate= useNavigate()
 
@@ -47,7 +47,7 @@ export default function ActivitySearchBar2({ activityName, setActivityName, acti
           </StandaloneSearchBox>
           }
           <button onClick={()=>{
-            navigate("/activities")}} className="searchBarButton">Next</button>
+            setActivityNameStatus("confirmed")}} className="searchBarButton">Next</button>
         </label>
       </form>
       </div>

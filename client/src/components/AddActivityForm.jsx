@@ -100,7 +100,7 @@ export default function AddActivityForm ({trip}) {
       <div className="activityFormBorder">
       <h1> Add an Activity</h1>
 
-    { activityPhoto? <ActivitySearchBar2 activityName={activityName} setActivityName={setActivityName} activityVerb={activityVerb}/>: null } 
+    { activityPhoto && !activityNameStatus? <ActivitySearchBar2 activityName={activityName} setActivityNameStatus={setActivityNameStatus} setActivityName={setActivityName} activityVerb={activityVerb}/>: null } 
 
    { ! activityPhoto? <div className="activityCategoriesContainer">
       <h2>What would you like to do? </h2>
@@ -144,7 +144,7 @@ export default function AddActivityForm ({trip}) {
         { activityDescription && activityPhoto && activityNameStatus && !activityWebsiteStatus ? 
         <>
         <label className="formText">
-         Add a Website <br/> 
+         Add a Website? <br/> 
          <input value={activityWebsite} onChange={(event) => setActivityWebsite(event.target.value)}/>
         </label> <br/> <br/>
        { activityWebsite ? <button onClick={()=>{
@@ -157,7 +157,7 @@ export default function AddActivityForm ({trip}) {
         : null}
 
        
-       { activityDescription && activityPhoto && activityNameStatus && activityWebsiteStatus ? 
+       { activityPhoto && activityName && activityNameStatus && activityWebsiteStatus? 
        <>
         <button className="activityTypeButton" >
         {activityName} <br/> <br/>
