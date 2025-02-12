@@ -207,7 +207,7 @@ function App() {
     <div className="appBody">
   
     <Routes>
-    <Route path='/' element={<TripsPage trips={trips} setTrips={setTrips} trip={trip} setTrip={setTrip} formatDate={formatDate} timeToDigits={timeToDigits} formatTime={formatTime}/> } />
+    <Route path='/trips' element={<TripsPage trips={trips} setTrips={setTrips} trip={trip} setTrip={setTrip} formatDate={formatDate} timeToDigits={timeToDigits} formatTime={formatTime}/> } />
     <Route path='/activities' element={<ActivitiesPage trip={trip} activity={activity} setActivity={setActivity} activities={activities} setActivities={setActivities}/>} />
     <Route path='/activities/:id' element={<SingleActivity activity={activity} setActivity={setActivity} activities={activities} setActivities={setActivities}/>} />
     <Route path='/arrivals' element={<ArrivalsPage trip={trip} arrivals={arrivals} setArrivals={setArrivals} arrival={arrival} setArrival={setArrival} formatDate={formatDate} timeToDigits={timeToDigits} formatTime={formatTime}/>} />
@@ -220,7 +220,7 @@ function App() {
     <Route path='/add-activity' element={<AddActivityForm trip={trip}/>}/> 
     <Route path='/activity-types' element={<ActivityTypes />}/> 
     <Route path='/add-trip' element={<AddTripForm googlePhotoUrl={googlePhotoUrl} setGooglePhotoUrl={setGooglePhotoUrl} photoName={photoName} setPhotoName={setPhotoName} setPlaceId={setPlaceId} placeId={placeId} destinations={destinations} formatDate={formatDate} trip ={trip} setTrip={setTrip} destination={destination} setDestination={setDestination} destinationPic={destinationPic} setDestinationPic={setDestinationPic}/>}/> 
-    <Route path='/destinations' element={<DestinationsPage destination={destination} setDestination={setDestination} destinationPic={destinationPic} setDestinationPic={setDestinationPic} setPlaceId={setPlaceId}/>}/> 
+    <Route path='/' element={<DestinationsPage destination={destination} setDestination={setDestination} destinationPic={destinationPic} setDestinationPic={setDestinationPic} setPlaceId={setPlaceId}/>}/> 
     <Route path='/place-search' element={<ActivitySearchBar2 activity={activity} setActivity={setActivity} activities={activities} setActivities={setActivities}/>}/> 
     <Route path='/place-search2' element={<PlacesSearchBar2 setPlaceId={setPlaceId} destination={destination} setDestination={setDestination}/>}/> 
     <Route path='/place-photo' element={<PlacePhoto photoName={photoName} setPhotoName={setPhotoName} setPlaceId={setPlaceId} placeId={placeId} destination={destination} setDestination={setDestination}/>}/> 
