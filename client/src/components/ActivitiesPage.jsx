@@ -39,6 +39,8 @@ function ActivitiesPage( { activity, setActivity, trip, activities, setActivitie
     <>
       <h1>Trip Activities</h1>
 
+      {activities.length===0? <p> No activities currently listed for this trip.</p> : null}
+
       <button onClick={()=> {
         navToForm()
       }}>Add an Activity</button>  <br/> <br/>
