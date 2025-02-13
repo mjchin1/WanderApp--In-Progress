@@ -280,18 +280,6 @@ a {
   padding-right: 20px;
   padding-bottom: 20px;
 }
-.arrivalBanner {
-  display: flex;
-  justify-content: center;
-  margin-left: -19px;
-  width: 32.5vw;
-  border:solid;
-  border-top-left-radius:20px;
-  border-top-right-radius:20px;
-  background-color:aliceblue;
-  border-color: aliceblue;
-  border-bottom-color: black;
-}
 
 .arrivalInfo {
   text-align: left;
