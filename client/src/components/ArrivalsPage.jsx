@@ -39,7 +39,7 @@ function ArrivalsPage({ trip, arrivals, setArrivals, setArrival, formatDate, for
     <>
       <h1>Arrivals</h1>
 
-      { arrivals.length===0 ? <p> No arrivals currently listed. </p> : null }
+      { arrivals.length===0 ? <p> No arrivals currently listed for this trip. </p> : null }
 
       <button onClick={()=>{
         navToTrip()

@@ -39,6 +39,8 @@ function DeparturesPage( {trip, setDeparture, setDepartures, departures, formatD
     <>
       <h1>Departures</h1>
 
+      {departures.length===0? <p>No departures currently listed for this trip.</p> : null}
+
        <button onClick={()=>{
         navToTrip()
       }}>Back to Trip</button>
