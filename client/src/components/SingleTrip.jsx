@@ -3,8 +3,9 @@ import { useNavigate } from 'react-router-dom'
 import RemoveTripButton from './RemoveTripButton'
 import moment from 'moment'
 
-function SingleTrip({ trips, setTrips, trip, setTrip, arrival, departure, formatDate}) {
+function SingleTrip({ trips, setTrips, trip, setTrip, arrival, departure, formatDate, arrivals}) {
   const navigate = useNavigate()
+  console.log(arrivals)
 
   useEffect(() => {
     async function fetchTrip() {
@@ -27,6 +28,7 @@ function SingleTrip({ trips, setTrips, trip, setTrip, arrival, departure, format
   function navToArrivals() {
     navigate("/arrivals")
   }
+
   function navToDepartures() {
     navigate("/departures")
   }
@@ -52,7 +54,7 @@ function SingleTrip({ trips, setTrips, trip, setTrip, arrival, departure, format
       <div className="singleTripCard">
         
         <div className="tripButtonDiv">
-        <button className="tripButton" onClick={()=>{navToArrivals()}}>Arrivals</button> 
+        <button className="tripButton" onClick={()=>{navToArrivals()}}>Arrivals</button>
         <button className="tripButton" onClick={()=>{navToDepartures()}}>Departures</button> 
         <button className="tripButton" onClick={()=>{navToActivities()}}>Activities</button>
         <button className="tripButton">Travelers</button>

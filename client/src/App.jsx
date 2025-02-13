@@ -213,7 +213,7 @@ function App() {
     <Route path='/arrivals' element={<ArrivalsPage trip={trip} arrivals={arrivals} setArrivals={setArrivals} arrival={arrival} setArrival={setArrival} formatDate={formatDate} timeToDigits={timeToDigits} formatTime={formatTime}/>} />
     <Route path='/departures' element={<DeparturesPage setDeparture={setDeparture} setDepartures={setDepartures} departures={departures} trip={trip} formatDate={formatDate} timeToDigits={timeToDigits} formatTime={formatTime} />} />
     <Route path='/arrivals/:id' element={<SingleArrival arrivals={arrivals} setArrivals={setArrivals} arrival={arrival} setArrival={setArrival} formatDate={formatDate} timeToDigits={timeToDigits} formatTime={formatTime}/>}/>
-    <Route path='/trip/:id' element={<SingleTrip trips={trips} setTrips={setTrips} trip={trip} arrival={arrival} departure={departure} formatDate={formatDate} timeToDigits={timeToDigits} formatTime={formatTime}/>} />
+    <Route path='/trip/:id' element={<SingleTrip arrivals={arrivals} trips={trips} setTrips={setTrips} trip={trip} arrival={arrival} departure={departure} formatDate={formatDate} timeToDigits={timeToDigits} formatTime={formatTime}/>} />
     <Route path='/departures/:id' element={<SingleDeparture trip={trip}  departure={departure} setDepartures={setDepartures} departures={departures} formatDate={formatDate} timeToDigits={timeToDigits} formatTime={formatTime}/>} />
     <Route path='/add-arrival' element={<AddArrivalForm trip={trip}/>}/> 
     <Route path='/add-departure' element={<AddDepartureForm trip={trip}/>}/> 
