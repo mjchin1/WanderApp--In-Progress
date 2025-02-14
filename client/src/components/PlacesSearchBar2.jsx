@@ -41,8 +41,11 @@ export default function PlacesSearchBar2 ({destinations, setDestinationPic, dest
   function handleInputChange(event) {
     event.preventDefault();
     setInput(event.target.value)
-    input && handleSubmit(event)
+    if (event.target.value) handleSubmit(event)
     photoAvailable(input)
+    if(!event.target.value) {
+      setSearchResults(null)
+    }
   }
 
   function formatDestination(string) {
@@ -81,7 +84,6 @@ export default function PlacesSearchBar2 ({destinations, setDestinationPic, dest
       console.log(input)
       setPlaceId(null)
       
-      
     } catch (error) {
     }
 
@@ -108,7 +110,7 @@ export default function PlacesSearchBar2 ({destinations, setDestinationPic, dest
       </div>
       
       <div className="searchResultsContainer">
-    {searchResults.map((result)=>(
+    {searchResults?.map((result)=>(
         <div key={result.placePrediction.placeId}>
         <button className="searchResultsButton clearButton" 
         onClick={() => {setInput(result.placePrediction.text.text)
