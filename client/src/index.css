@@ -457,6 +457,10 @@ a {
   border-width: thin;
   width: 21vw;
   margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: white;
 }
 
 .searchResultsButton {
