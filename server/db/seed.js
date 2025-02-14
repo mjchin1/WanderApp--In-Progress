@@ -70,6 +70,7 @@ const createTables = async () => {
           activity_id SERIAL PRIMARY KEY,
           trip_id INTEGER REFERENCES trips(trip_id) ON DELETE CASCADE,
           activity_name TEXT,
+          activity_address TEXT,
           activity_description TEXT,
           activity_photo TEXT, 
           activity_website TEXT
@@ -174,12 +175,13 @@ const createInitialActivities = async () => {
     for (const activity of activities) {
       await client.query(
         `
-          INSERT INTO activities(trip_id, activity_name, activity_description, activity_photo, activity_website)
-          VALUES($1, $2, $3, $4, $5);
+          INSERT INTO activities(trip_id, activity_name, activity_address, activity_description, activity_photo, activity_website)
+          VALUES($1, $2, $3, $4, $5, $6);
         `,
         [
           activity.tripId,
           activity.activityName,
+          activity.activityAddress,
           activity.activityDescription,
           activity.activityPhoto,
           activity.activityWebsite,

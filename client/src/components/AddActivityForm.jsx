@@ -18,6 +18,7 @@ export default function AddActivityForm ({trip}) {
   const [activityNameStatus, setActivityNameStatus] = useState(null)
   const [activityWebsiteStatus, setActivityWebsiteStatus] = useState(null)
   const [activityVerb, setActivityVerb] = useState("")
+  const [activityAddress, setActivityAddress] = useState("")
 
   const navigate = useNavigate();
 
@@ -75,6 +76,7 @@ export default function AddActivityForm ({trip}) {
         body: JSON.stringify({
           tripId, 
           activityName,
+          activityAddress,
           activityDescription,
           activityPhoto,
           activityWebsite,
@@ -100,7 +102,7 @@ export default function AddActivityForm ({trip}) {
       <div className="activityFormBorder">
       <h1> Add an Activity</h1>
 
-    { activityPhoto && !activityNameStatus? <ActivitySearchBar2 activityName={activityName} setActivityNameStatus={setActivityNameStatus} setActivityName={setActivityName} activityVerb={activityVerb}/>: null } 
+    { activityPhoto && !activityNameStatus? <ActivitySearchBar2 activityAddress={activityAddress} setActivityAddress={setActivityAddress} activityName={activityName} setActivityNameStatus={setActivityNameStatus} setActivityName={setActivityName} activityVerb={activityVerb}/>: null } 
 
    { ! activityPhoto? <div className="activityCategoriesContainer">
       <h2>What would you like to do? </h2>

@@ -4,6 +4,8 @@ import RemoveActivityButton from './RemoveActivityButton'
 
 function SingleActivity( { activity, activities, setActivities }) {
 
+  console.log(activity)
+
   useEffect(() => {
     async function fetchActivity() {
       try {
@@ -31,6 +33,7 @@ function SingleActivity( { activity, activities, setActivities }) {
 
       <div className="singleActivityContainer">
       <h1>{activity.activity_name}</h1>
+      <h2>{activity.activity_address}</h2>
   
           <div key={activity.activity_id} className="activityCard">
             <div className="singleActivityDetails">

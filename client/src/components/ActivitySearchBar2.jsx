@@ -4,13 +4,11 @@ import { GoogleMap, useJsApiLoader, StandaloneSearchBox } from '@react-google-ma
 import { useNavigate } from 'react-router-dom';
 
 
-export default function ActivitySearchBar2({ activityName, setActivityName, activityVerb, setActivityNameStatus }) {
+export default function ActivitySearchBar2({ activityName, setActivityName, activityAddress, setActivityAddress, activityVerb, setActivityNameStatus }) {
   
   const navigate= useNavigate()
 
   const inputref= useRef(null)
-
-  console.log(import.meta.env.PLACES_API_KEY);
 
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
@@ -28,6 +26,7 @@ export default function ActivitySearchBar2({ activityName, setActivityName, acti
   function confirmActivity() {
     let address = inputref.current.getPlaces();
     setActivityName(address[0].name)
+    setActivityAddress(address[0].formatted_address)
   }
 
   return (
@@ -39,7 +38,6 @@ export default function ActivitySearchBar2({ activityName, setActivityName, acti
           <StandaloneSearchBox 
           onLoad={(ref)=> inputref.current = ref}
           onPlacesChanged={() =>{
-            confirmActivity()
             handleOnPlacesChanged()}}>
           <input className="searchBarInput" name="searchBar" 
           value={activityName} onChange={(event) => setActivityName(event.target.value)}
@@ -47,7 +45,9 @@ export default function ActivitySearchBar2({ activityName, setActivityName, acti
           </StandaloneSearchBox>
           }
           <button onClick={()=>{
-            setActivityNameStatus("confirmed")}} className="searchBarButton">Next</button>
+            setActivityNameStatus("confirmed")
+            confirmActivity()}} className="searchBarButton">Next</button>
+            
         </label>
       </form>
       </div>
