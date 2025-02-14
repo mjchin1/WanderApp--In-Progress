@@ -207,7 +207,7 @@ button:focus-visible {
   margin-left: 20px;
   margin-right: 20px;
   padding-bottom: 20px;
-  object-fit: cover;
+  object-fit: contain;
   /* border: solid; */
   border-radius: 30px;
 }

@@ -1,8 +1,14 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import RemoveActivityButton from './RemoveActivityButton'
 
 function SingleActivity( { activity, activities, setActivities }) {
+
+const navigate = useNavigate()
+
+function navToActivities(){
+  navigate("/activities")
+}
 
   console.log(activity)
 
@@ -47,6 +53,7 @@ function SingleActivity( { activity, activities, setActivities }) {
               </div>
             </div>
           </div>
+          <button onClick={navToActivities}>Back</button>
       </div>
 
     </> )
