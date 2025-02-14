@@ -109,8 +109,8 @@ export default function PlacesSearchBar2 ({destinations, setDestinationPic, dest
       </form>
       </div>
       
-      <div className="searchResultsContainer">
-    {searchResults?.map((result)=>(
+    {searchResults? <div className="searchResultsContainer">
+    {searchResults.map((result)=>(
         <div key={result.placePrediction.placeId}>
         <button className="searchResultsButton clearButton" 
         onClick={() => {setInput(result.placePrediction.text.text)
@@ -118,10 +118,11 @@ export default function PlacesSearchBar2 ({destinations, setDestinationPic, dest
           !photoAvailable(input) && setPlaceId(result.placePrediction.placeId)
         }}
         >{result.placePrediction.text.text}</button>
-        </div>
+        </div> 
     ))
     }
-      </div>
+    <br/>
+      </div> : null}
     </>
   );
 };
