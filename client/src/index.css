@@ -363,7 +363,7 @@ a {
 }
 
 .appHeaderContainer {
-  margin-top: 20px;
+  width: 80vw;
 
 }
 .appHeader {
@@ -379,9 +379,12 @@ a {
   background-color: #AFDBF5; */
   background-color: white;
   color:black;
-  font-family: "Poiret One", serif;
   font-weight: 400;
   font-style: normal;
+  position: absolute;
+  top: 1vw;; 
+  left: 2vw;
+  margin: 0 auto; 
 }
 .subHeader {
   margin-top: 70px;
