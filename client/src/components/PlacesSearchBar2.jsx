@@ -109,7 +109,7 @@ export default function PlacesSearchBar2 ({destinations, setDestinationPic, dest
       </form>
       </div>
       
-    {searchResults? <div className="searchResultsContainer">
+    {searchResults.length !== 0? <div className="searchResultsContainer">
     {searchResults.map((result)=>(
         <div key={result.placePrediction.placeId}>
         <button className="searchResultsButton clearButton" 
@@ -122,7 +122,7 @@ export default function PlacesSearchBar2 ({destinations, setDestinationPic, dest
     ))
     }
     <br/>
-      </div> : null}
+    </div> : null}
     </>
   );
 };
