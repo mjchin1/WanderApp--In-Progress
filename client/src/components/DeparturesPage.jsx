@@ -41,12 +41,14 @@ function DeparturesPage( {trip, setDeparture, setDepartures, departures, formatD
 
       {departures.length===0? <p>No departures currently listed for this trip.</p> : null}
 
+      <button onClick={()=>{
+        navToDepartureForm()
+      }}>Add a Departure</button> <br/> <br/>
+      
        <button onClick={()=>{
         navToTrip()
       }}>Back to Trip</button>
-       <button onClick={()=>{
-        navToDepartureForm()
-      }}>Add a Departure</button> <br/> <br/>
+       
 
       <div className="departuresPageContainer">
       {departures.map((departure) => (

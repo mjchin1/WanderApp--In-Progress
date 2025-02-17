@@ -42,13 +42,14 @@ function ArrivalsPage({ trip, arrivals, setArrivals, setArrival, formatDate, for
       { arrivals.length===0 ? <p> No arrivals currently listed for this trip. </p> : null }
 
       <button onClick={()=>{
-        navToTrip()
-      }}>Back to Trip</button>
-      
-      <button onClick={()=>{
         navToArrivalForm()
       }}>Add an Arrival</button> 
       
+      <button onClick={()=>{
+        navToTrip()
+      }}>Back to Trip</button>
+      
+ 
      
 <br/> <br/>
 
