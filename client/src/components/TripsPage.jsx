@@ -35,7 +35,7 @@ function TripsPage({setTrip, trips, setTrips, formatDate }) {
 
   return (
     <>
-      <button onClick={() => {navToTripsPage()}}> Add a New Trip</button> <br/> <br/>
+      <button onClick={() => {navToTripsPage()}}> Add a New Trip</button> <br/>
       
       {trips? <h1>Upcoming Trips</h1> :  <h1> No Upcoming Trips</h1> }
 
