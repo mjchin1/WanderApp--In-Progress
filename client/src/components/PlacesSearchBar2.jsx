@@ -8,21 +8,6 @@ export default function PlacesSearchBar2 ({destinations, setDestinationPic, dest
 
   const navigate = useNavigate()
 
-  // function choosePhoto() {
-  //   let destinationsArray= destinations;
-  //   console.log(destination)
-  //   let destinationCity = destination.split(",")[0]
-  //   console.log(destinationCity)
-  //   for (let i=0; i <destinationsArray.length; i++) {
-  //     let place = destinationsArray[i];
-  //     if (place.cityName===destinationCity){
-  //       setDestinationPic(place.imageUrl)
-  //       console.log("pic:", destinationPic)
-  //     } 
-  //   }
-  //     }
-
-
   function photoAvailable(input) {
     let destinationsArray = destinations;
     console.log(destination)
@@ -83,6 +68,7 @@ export default function PlacesSearchBar2 ({destinations, setDestinationPic, dest
       console.log(result)
       console.log(input)
       setPlaceId(null)
+      console.log("results:", searchResults)
       
     } catch (error) {
     }
@@ -109,7 +95,7 @@ export default function PlacesSearchBar2 ({destinations, setDestinationPic, dest
       </form>
       </div>
       
-    {searchResults.length !== 0? <div className="searchResultsContainer">
+    {searchResults?.length ? <div className="searchResultsContainer">
     {searchResults.map((result)=>(
         <div key={result.placePrediction.placeId}>
         <button className="searchResultsButton clearButton" 
