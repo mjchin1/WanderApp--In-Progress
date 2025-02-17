@@ -199,11 +199,10 @@ function App() {
     <div className="appHeader">
       <h1>Wander</h1>
       <Navigations/>
-    </div> <br/> <br/>
+    </div> <br/> <br/> <br></br> <br/> <br/>
     </div>
+    <p className="headerCenterText"> All of your plans in one place.</p>
     
-
-
     <div className="appBody">
   
     <Routes>

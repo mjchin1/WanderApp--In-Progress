@@ -6,7 +6,7 @@ function TripsPage({setTrip, trips, setTrips, formatDate }) {
 
   function navToTripsPage() {
 
-    navigate("/destinations")
+    navigate("/")
     window.scroll(0,0)
 
   }
@@ -35,7 +35,7 @@ function TripsPage({setTrip, trips, setTrips, formatDate }) {
 
   return (
     <>
-      <button onClick={() => {navToTripsPage()}}> Plan a Trip</button> <br/> <br/>
+      <button onClick={() => {navToTripsPage()}}> Add a New Trip</button> <br/> <br/>
       
       {trips? <h1>Upcoming Trips</h1> :  <h1> No Upcoming Trips</h1> }
 
