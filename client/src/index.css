@@ -504,7 +504,18 @@ a {
   margin-bottom: 10px;
   border: none;
   border-radius: 30px;
+  animation: appear; 
+  animation-timeline: view();
+  animation-range: entry 10% cover 40%;
+}
 
+
+@keyframes appear {
+  from {
+    opacity: 0}
+  to {
+    opacity: 1
+  }
 }
 
 
