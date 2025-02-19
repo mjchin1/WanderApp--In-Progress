@@ -79,7 +79,7 @@ export default function PlacesSearchBar2 ({destinations, setDestinationPic, dest
   return (
     <>
       <div>
-      <p className="searchBarText">Let's plan your trip itinerary. Where Are You Headed?</p>
+      <p className="searchBarText">Let's plan your trip itinerary. Where are you headed?</p>
       <form onSubmit={handleSubmit}>
       <label className="destinationSearchBar">
           <p className="searchBarText">Browse destinations below or search here.</p> 
