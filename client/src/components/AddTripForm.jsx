@@ -82,17 +82,8 @@ export default function AddTripForm ({ destination, destinations, setDestination
         </label> : null} <br/>
         <button className="addTripButton" onClick={()=> {
             setDestinationPic(choosePhoto())}}>Confirm Trip Details</button> <br/>
-        </form> <br/>
+        </form> <br/> <br/>
     
-
-       {/* {startConfirmation && !endConfirmation? <label className="tripFormText">
-          When are you returning from {destination}? <br/>
-          <input className="tripInput" type="date" value={endDate} onChange={(event) => setEndDate(event.target.value)}/> <br/>
-          <button className="dateConfirmationButton" onClick={()=> {
-            setEndConfirmation("confirmed")
-            setDestinationPic(choosePhoto())}}>Next</button>
-        </label> : null} */}
-
 
       {!photoAvailable ? <PlacePhoto choosePhoto={choosePhoto} photoName={photoName} setPhotoName={setPhotoName} placeId={placeId} googlePhotoUrl={googlePhotoUrl} setGooglePhotoUrl={setGooglePhotoUrl}/> : <img className="searchResultPic" src={destinationPic}/>}
 
