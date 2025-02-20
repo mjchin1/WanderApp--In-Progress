@@ -6,11 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wander</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Amatic+SC:wght@400;700&family=Antic+Slab&family=Bungee+Shade&family=Cinzel:wght@400..900&family=Comfortaa:wght@300..700&family=Cormorant+SC:wght@300;400;500;600;700&family=Dawning+of+a+New+Day&family=GFS+Didot&family=Hepta+Slab:wght@1..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Julius+Sans+One&family=Kaisei+Tokumin&family=Koulen&family=Lexend+Exa:wght@100..900&family=Marcellus&family=Nixie+One&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playwrite+BR:wght@100..400&family=Playwrite+ES+Deco:wght@100..400&family=Playwrite+GB+J+Guides:ital@0;1&family=Playwrite+GB+J:ital,wght@0,100..400;1,100..400&family=Playwrite+ZA:wght@100..400&family=Poiret+One&family=Radley:ital@0;1&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sigmar+One&family=Trykker&family=Ysabeau+SC:wght@1..1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Amatic+SC:wght@400;700&family=Antic+Slab&family=Bungee+Shade&family=Cinzel:wght@400..900&family=Comfortaa:wght@300..700&family=Cormorant+SC:wght@300;400;500;600;700&family=Dawning+of+a+New+Day&family=GFS+Didot&family=Hepta+Slab:wght@1..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Julius+Sans+One&family=Kaisei+Tokumin&family=Koulen&family=Lexend+Exa:wght@100..900&family=Marcellus&family=Nixie+One&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playwrite+BR:wght@100..400&family=Playwrite+ES+Deco:wght@100..400&family=Playwrite+GB+J+Guides:ital@0;1&family=Playwrite+GB+J:ital,wght@0,100..400;1,100..400&family=Playwrite+ZA:wght@100..400&family=Poiret+One&family=Radley:ital@0;1&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sigmar+One&family=Trykker&family=Ysabeau+SC:wght@1..1000&display=swap" rel="stylesheet">
+ 
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.15/index.global.min.js'></script>
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'resourceTimelineWeek'
+        });
+        calendar.render();
+      });
+
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <div id='calendar'></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
