@@ -162,6 +162,7 @@ button:focus-visible {
 .imageButton {
   background-color: white;
   border: none;
+  border-radius: 30px;
 }
 .imageButton:hover {
   border: none;
@@ -385,7 +386,7 @@ a {
   top: 1vw;; 
   left: 2vw;
   margin: 0 auto;
-  animation: textcolor 15s linear infinite; 
+  animation: textcolor 10s linear infinite; 
 }
 
 

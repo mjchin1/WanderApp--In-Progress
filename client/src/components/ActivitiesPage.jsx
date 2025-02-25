@@ -12,6 +12,9 @@ function ActivitiesPage( { activity, setActivity, trip, activities, setActivitie
   function navToForm() {
     navigate("/add-activity")
   }
+  function navToTrip() {
+    navigate(`/trip/${trip.trip_id}`)
+  }
 
   useEffect(() => {
     async function fetchActivities() {
@@ -43,7 +46,13 @@ function ActivitiesPage( { activity, setActivity, trip, activities, setActivitie
 
       <button onClick={()=> {
         navToForm()
-      }}>Add an Activity</button>  <br/> <br/>
+      }}>Add an Activity</button> 
+      
+      <button onClick={()=> {
+        navToTrip()
+      }}>Back to Trip</button>  <br/> <br/>
+
+     
 
       <div className="activityContainer">
       {activities.map((activity) => (
@@ -62,7 +71,6 @@ function ActivitiesPage( { activity, setActivity, trip, activities, setActivitie
       ))}
 
       </div>
-     
 
     </> )
 }
