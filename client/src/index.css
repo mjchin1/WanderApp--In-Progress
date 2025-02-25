@@ -384,9 +384,40 @@ a {
   position: absolute;
   top: 1vw;; 
   left: 2vw;
-  margin: 0 auto; 
+  margin: 0 auto;
+  animation: textcolor 15s linear infinite; 
 }
 
+
+@keyframes textcolor{
+  0% {
+    color: red;
+  }
+
+  20% {
+    color: orange;
+  }
+
+
+  40% {
+    color: yellow;
+  }
+
+  60% {
+    color: green;
+  }
+
+  80% {
+    color: blue;
+  }
+
+  100% {
+    color: red;
+  }
+
+
+
+}
 .navBar {
   display: flex; 
   margin-top: 35px;
