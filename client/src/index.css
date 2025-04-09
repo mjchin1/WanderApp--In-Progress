@@ -386,34 +386,22 @@ a {
   top: 1vw;; 
   left: 2vw;
   margin: 0 auto;
-  animation: textcolor 10s linear infinite; 
+  animation: textcolor 10s;
+  animation-fill-mode: forwards;
 }
 
 
 @keyframes textcolor{
   0% {
-    color: red;
-  }
-
-  20% {
-    color: orange;
-  }
-
-
-  40% {
-    color: yellow;
-  }
-
-  60% {
-    color: green;
+    color:white;
   }
 
   80% {
-    color: blue;
+    color: black;
   }
 
   100% {
-    color: red;
+    color:black;
   }
 
 
