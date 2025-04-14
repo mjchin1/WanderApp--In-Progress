@@ -117,16 +117,17 @@ button:focus-visible {
   display: flex;
   justify-content: center; 
   margin-bottom: 20px;
-  width: 35vw;
+  width: 25vw;
   border-radius: 30px;
-  margin-left:10px;
-  margin-right: 10px;
+  margin-left:15px;
+  margin-right: 15px;
 }
 
 .tripsContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
 }
 
 .tripDetails {

@@ -201,7 +201,7 @@ function App() {
       <Navigations/>
     </div> <br/> <br/> <br></br> <br/> <br/>
     </div>
-    <p className="headerCenterText"> All of your plans in one place.</p>
+    {/* <p className="headerCenterText"> All of your plans in one place.</p> */}
     
     <div className="appBody">
   
