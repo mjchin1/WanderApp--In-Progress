@@ -4,7 +4,7 @@ export default function RemoveTripButton({trip, trips, setTrips }) {
 
   const navigate = useNavigate()
   function navToTrips() {
-    navigate("/")
+    navigate("/trips")
   }
 
   async function handleClick() {

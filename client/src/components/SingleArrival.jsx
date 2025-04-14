@@ -10,6 +10,8 @@ function SingleArrival({ arrivals, setArrivals, arrival, setArrival, formatDate,
     navigate("/arrivals")
   }
 
+  console.log(arrival.departure_time)
+
   useEffect(() => {
     async function fetchArrival() {
       try {
@@ -42,7 +44,7 @@ function SingleArrival({ arrivals, setArrivals, arrival, setArrival, formatDate,
             <p className="arrivalInfo arrivalHeading">{arrival.traveler_name}</p>
               <p className="arrivalInfo">Flight/Travel Number: {arrival.trip_number}</p>
               <p className="arrivalInfo">Departure City: {arrival.travel_origin}</p>
-              <p className="arrivalInfo">Arrival Date/Time: {formatDate(arrival.travel_date)} at {formatTime(timeToDigits(arrival.arrival_time))}</p>
+              <p className="arrivalInfo">Arrival Date/Time: {formatDate(arrival.travel_date)} at {formatTime(timeToDigits(arrival.departure_time))}</p>
               <p className="arrivalInfo">Destination City: {arrival.travel_destination}</p>
               <p className="arrivalInfo">Arrival Date/Time: {formatDate(arrival.arrival_date)} at {formatTime(timeToDigits(arrival.arrival_time))}</p>
             </div>
